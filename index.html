@@ -237,44 +237,112 @@
         class="lg:hidden hidden border-t border-slate-200 bg-white"
       >
         <div class="max-w-7xl mx-auto px-4 py-4 space-y-2">
-          <a class="block py-2" href="#">Home</a>
-          <a class="block py-2" href="#">Our Story</a>
-          <details class="py-2">
-            <summary class="cursor-pointer flex items-center justify-between">
-              Services <i class="fa-solid fa-chevron-down text-xs"></i>
+          <a class="block py-2" href="./index.html">Home</a>
+          <a class="block py-2" href="./ourStory.html">Our Story</a>
+          <details class="" id="servicesMenu">
+            <summary class="list-none cursor-pointer">
+              <div class="flex items-center justify-between">
+                <a
+                  href="./services.html"
+                  class="hover:text-[#E41E26]"
+                  onclick="event.stopPropagation()"
+                >
+                  Services
+                </a>
+
+                <button
+                  type="button"
+                  class="p-2 -mr-2"
+                  onclick="event.preventDefault(); event.stopPropagation(); const d=this.closest('details'); d.open=!d.open; this.firstElementChild.classList.toggle('rotate-180');"
+                >
+                  <i
+                    class="fa-solid fa-chevron-down text-xs transition-transform"
+                  ></i>
+                </button>
+              </div>
             </summary>
+
             <div class="pl-4 pt-2 space-y-1">
               <a class="block py-1" href="#">Counseling</a>
               <a class="block py-1" href="#">Test Prep</a>
               <a class="block py-1" href="#">Visa Guidance</a>
             </div>
           </details>
-          <details class="py-2">
-            <summary class="cursor-pointer flex items-center justify-between">
-              Study Destinations
-              <i class="fa-solid fa-chevron-down text-xs"></i>
+
+          <details class="" id="destinationsMenu">
+            <summary class="list-none cursor-pointer">
+              <div class="flex items-center justify-between">
+                <a
+                  href="./studyDestination.html"
+                  class="hover:text-[#E41E26]"
+                  onclick="event.stopPropagation()"
+                >
+                  Study Destinations
+                </a>
+
+                <button
+                  type="button"
+                  class="p-2 -mr-2"
+                  aria-expanded="false"
+                  aria-controls="destinationsSubmenu"
+                  onclick="event.preventDefault(); event.stopPropagation();
+                 const d=this.closest('details'); d.open=!d.open;
+                 this.setAttribute('aria-expanded', d.open);
+                 this.firstElementChild.classList.toggle('rotate-180');"
+                >
+                  <i
+                    class="fa-solid fa-chevron-down text-xs transition-transform"
+                  ></i>
+                </button>
+              </div>
             </summary>
-            <div class="pl-4 pt-2 space-y-1">
+
+            <div id="destinationsSubmenu" class="pl-4 pt-2 space-y-1">
               <a class="block py-1" href="#">Australia</a>
               <a class="block py-1" href="#">Canada</a>
               <a class="block py-1" href="#">UK</a>
             </div>
           </details>
-          <details class="py-2">
-            <summary class="cursor-pointer flex items-center justify-between">
-              Events &amp; Webinars
-              <i class="fa-solid fa-chevron-down text-xs"></i>
+
+          <details class="" id="eventsMenu">
+            <summary class="list-none cursor-pointer">
+              <div class="flex items-center justify-between">
+                <a
+                  href="./events.html"
+                  class="hover:text-[#E41E26]"
+                  onclick="event.stopPropagation()"
+                >
+                  Events &amp; Webinars
+                </a>
+
+                <button
+                  type="button"
+                  class="p-2 -mr-2"
+                  aria-expanded="false"
+                  aria-controls="eventsSubmenu"
+                  onclick="event.preventDefault(); event.stopPropagation();
+                 const d=this.closest('details'); d.open=!d.open;
+                 this.setAttribute('aria-expanded', d.open);
+                 this.firstElementChild.classList.toggle('rotate-180');"
+                >
+                  <i
+                    class="fa-solid fa-chevron-down text-xs transition-transform"
+                  ></i>
+                </button>
+              </div>
             </summary>
-            <div class="pl-4 pt-2 space-y-1">
+
+            <div id="eventsSubmenu" class="pl-4 pt-2 space-y-1">
               <a class="block py-1" href="#">Upcoming Events</a>
               <a class="block py-1" href="#">Past Webinars</a>
             </div>
           </details>
-          <a class="block py-2" href="#">Blog</a>
-          <a class="block py-2" href="#">News</a>
-          <a class="block py-2" href="#">FAQ's</a>
+
+          <a class="block py-2" href="./blog.html">Blog</a>
+          <a class="block py-2" href="./news.html">News</a>
+          <a class="block py-2" href="./faq.html">FAQ's</a>
           <a
-            href="#"
+            href="./contact.html"
             class="inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-4 py-2 rounded-md mt-2"
             >Contact Us <i class="fa-solid fa-arrow-right"></i
           ></a>
