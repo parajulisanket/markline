@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./assets/markline 1.png" type="image/png" />
+    <title>Markline</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--  top bar-->
+    <div class="bg-[#0E3A5A] text-white text-sm hidden md:block">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between py-2 gap-14">
+          <!-- Left-->
+
+          <ul class="flex items-center gap-5 ml-auto">
+            <li><a href="#" class="hover:text-amber-300">Accomodation</a></li>
+            <li><a href="#" class="hover:text-amber-300">Compare</a></li>
+            <li>
+              <a href="#" class="hover:text-amber-300">Date Converter</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-amber-300">Currency Converter</a>
+            </li>
+          </ul>
+
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="bg-[#E41E26] hover:bg-[#c71826] text-white font-medium px-4 py-2 rounded-md shadow-sm"
+            >
+              OHSC Payment
+            </a>
+
+            <div class="flex items-center bg-[#E21D2D] overflow-hidden">
+              <a
+                aria-label="Facebook"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                aria-label="Instagram"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                aria-label="LinkedIn"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                aria-label="YouTube"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Theme -->
+          <div class="flex items-center gap-2 relative">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <button
+              id="themeBtn"
+              class="flex items-center gap-2 hover:text-amber-300"
+            >
+              Theme <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+
+            <!-- (optional) dropdown; keep as-is if you already use it -->
+            <div
+              id="themeMenu"
+              class="dropdown-panel absolute right-0 top-full mt-2 w-40 bg-white text-slate-700 rounded-md shadow-lg p-2 opacity-0 pointer-events-none translate-y-1"
+            >
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                Default
+              </button>
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                Dark
+              </button>
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                High Contrast
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- navigation -->
+    <header
+      class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-md"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="./index.html" class="">
+            <img
+              src="./assets/markline 1.png"
+              alt="Markline Logo"
+              class="w-full rounded h-10"
+            />
+          </a>
+
+          <!-- Desktop Nav Links -->
+          <nav
+            class="hidden lg:flex items-center gap-6 text-[#02519e] font-light"
+          >
+            <a href="./index.html" class="hover:text-[#c71826]">Home</a>
+            <a href="./ourStory.html" class="hover:text-[#c71826]">Our Story</a>
+
+            <!-- services -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a
+                  href="./services.html"
+                  class="inline-flex items-center gap-2"
+                >
+                  Services
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <!-- Example dropdown panel -->
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Counseling</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Test Prep</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Visa Guidance</a
+                >
+              </div>
+            </div>
+            <!-- study desitination -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a
+                  href="./studyDestination.html"
+                  class="inline-flex items-center gap-2 hover:text-[#c71826]"
+                >
+                  Study Destinations
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Australia</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Canada</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >UK</a
+                >
+              </div>
+            </div>
+            <!-- events -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a href="./events.html" class="inline-flex items-center gap-2">
+                  Events &amp; Webinars
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Upcoming Events</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Past Webinars</a
+                >
+              </div>
+            </div>
+
+            <a href="./blog.html" class="hover:text-[#c71826]">Blog</a>
+            <a href="./news.html" class="hover:text-[#c71826]">News</a>
+            <a href="faq.html" class="hover:text-[#c71826]">FAQ's</a>
+          </nav>
+
+          <div class="hidden sm:flex">
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 bg-[#02519e] text-white px-5 py-3 rounded-lg font-medium"
+            >
+              Contact Us <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-3 lg:hidden">
+            <a
+              href="#"
+              class="hidden xs:inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-3 py-2 rounded-md text-sm"
+              >Contact</a
+            >
+            <button
+              id="mainNavToggle"
+              class="inline-flex items-center justify-center w-10 h-10"
+            >
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden hidden border-t border-slate-200 bg-white"
+      >
+        <div class="max-w-7xl mx-auto px-4 py-4 space-y-2">
+          <a class="block py-2" href="#">Home</a>
+          <a class="block py-2" href="#">Our Story</a>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Services <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Counseling</a>
+              <a class="block py-1" href="#">Test Prep</a>
+              <a class="block py-1" href="#">Visa Guidance</a>
+            </div>
+          </details>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Study Destinations
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Australia</a>
+              <a class="block py-1" href="#">Canada</a>
+              <a class="block py-1" href="#">UK</a>
+            </div>
+          </details>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Events &amp; Webinars
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Upcoming Events</a>
+              <a class="block py-1" href="#">Past Webinars</a>
+            </div>
+          </details>
+          <a class="block py-2" href="#">Blog</a>
+          <a class="block py-2" href="#">News</a>
+          <a class="block py-2" href="#">FAQ's</a>
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-4 py-2 rounded-md mt-2"
+            >Contact Us <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <!--faq hero -->
+    <section class="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
+      <img
+        src="./assets/faq-hero.jpg"
+        alt="About Hero"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#03519E] to-transparent"
+      ></div>
+
+      <!-- Content -->
+      <div class="relative z-10 h-full">
+        <div class="mx-auto max-w-7xl h-full flex items-center">
+          <div class="px-6 py-20 md:py-0 md:px-6 text-white max-w-2xl">
+            <h1
+              class="tracking-wider leading-tight md:leading-[2.8rem] text-3xl md:text-4xl mb-6 hero-section-font"
+            >
+              FAQ’s
+            </h1>
+
+            <p
+              class="hero-content text-[#AEC7FB] text-base leading-[1.5rem] max-w-lg font-light"
+            >
+              Got Questions? We’ve Got the Answers
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- category and question -->
+    <section class="hidden md:block max-w-7xl mx-auto p-6">
+      <div class="grid grid-cols-2 items-center border-b border-gray-300">
+        <div class="font-light text-base text-gray-700 my-3 tracking-wide">
+          Category
+        </div>
+        <div class="relative items-start px-2 my-3 right-12">
+          <span class="text-base font-semibold text-[#1e549f] tracking-wide"
+            >Questions</span
+          >
+          <span
+            class="absolute left-0 right-0 -bottom-[13px] h-[2px] w-44 bg-[#1e549f]"
+          ></span>
+        </div>
+      </div>
+    </section>
+    <!-- general question -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-[40%_55%] gap-5 md:gap-20">
+          <div class="space-y-10">
+            <h1 class="hero-content tracking-wide text-4xl text-[#03519E]">
+              General <br />Question
+            </h1>
+          </div>
+          <div class="mt-10 md:mt-0">
+            <div id="faqList" class="space-y-2">
+              <!-- Item 1 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="true"
+                    aria-controls="faq-1"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Can you help me choose the right university?
+                  </h3>
+                </div>
+
+                <div
+                  id="faq-1"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 2  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-2"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How much does the consultation cost?
+                  </h3>
+                </div>
+                <div
+                  id="faq-2"
+                  class="faq-panel px-14 text-slate-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-3"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How long does the visa process take?
+                  </h3>
+                </div>
+                <div
+                  id="faq-3"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 4  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-4"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Do you offer scholarships or help applying for them?
+                  </h3>
+                </div>
+                <div
+                  id="faq-4"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="max-w-7xl mx-auto text-gray-700" />
+    <!-- visa queries -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-[40%_55%] gap-5 md:gap-20">
+          <div class="space-y-10">
+            <h1 class="hero-content tracking-wide text-4xl text-[#03519E]">
+              Visa Queries
+            </h1>
+          </div>
+          <div class="mt-10 md:mt-0">
+            <div id="faqList" class="space-y-2">
+              <!-- Item 1 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="true"
+                    aria-controls="faq-1"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Can you help me choose the right university?
+                  </h3>
+                </div>
+
+                <div
+                  id="faq-1"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 2  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-2"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How much does the consultation cost?
+                  </h3>
+                </div>
+                <div
+                  id="faq-2"
+                  class="faq-panel px-14 text-slate-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-3"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How long does the visa process take?
+                  </h3>
+                </div>
+                <div
+                  id="faq-3"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 4  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-4"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Do you offer scholarships or help applying for them?
+                  </h3>
+                </div>
+                <div
+                  id="faq-4"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="max-w-7xl mx-auto text-gray-700" />
+    <!-- Course Selection -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-[40%_55%] gap-5 md:gap-20">
+          <div class="space-y-10">
+            <h1 class="hero-content tracking-wide text-4xl text-[#03519E]">
+              Course Selection
+            </h1>
+          </div>
+          <div class="mt-10 md:mt-0">
+            <div id="faqList" class="space-y-2">
+              <!-- Item 1 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="true"
+                    aria-controls="faq-1"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Can you help me choose the right university?
+                  </h3>
+                </div>
+
+                <div
+                  id="faq-1"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 2  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-2"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How much does the consultation cost?
+                  </h3>
+                </div>
+                <div
+                  id="faq-2"
+                  class="faq-panel px-14 text-slate-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-3"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How long does the visa process take?
+                  </h3>
+                </div>
+                <div
+                  id="faq-3"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 4  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-4"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Do you offer scholarships or help applying for them?
+                  </h3>
+                </div>
+                <div
+                  id="faq-4"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="max-w-7xl mx-auto text-gray-700" />
+    <!-- Test Requirements -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-[40%_55%] gap-5 md:gap-20">
+          <div class="space-y-10">
+            <h1 class="hero-content tracking-wide text-4xl text-[#03519E]">
+              Test Requirements
+            </h1>
+          </div>
+          <div class="mt-10 md:mt-0">
+            <div id="faqList" class="space-y-2">
+              <!-- Item 1 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="true"
+                    aria-controls="faq-1"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Can you help me choose the right university?
+                  </h3>
+                </div>
+
+                <div
+                  id="faq-1"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 2  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-2"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How much does the consultation cost?
+                  </h3>
+                </div>
+                <div
+                  id="faq-2"
+                  class="faq-panel px-14 text-slate-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-3"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How long does the visa process take?
+                  </h3>
+                </div>
+                <div
+                  id="faq-3"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 4  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-4"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Do you offer scholarships or help applying for them?
+                  </h3>
+                </div>
+                <div
+                  id="faq-4"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="relative bg-[#ECF1FE] text-[#1F3A7A] mt-0 md:mt-32">
+      <div
+        class="grid md:grid-cols-3 border-y border-[#1F3A7A] bg-[#ECF1FE] z-0"
+      >
+        <!-- Address -->
+        <div class="flex items-center justify-center gap-4 px-4 py-2">
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- location pin -->
+            <i class="fa-solid fa-location-dot text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Address:</p>
+            <p class="text-xl tracking-wider hero-content">Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <!-- Phone -->
+        <div
+          class="flex items-center gap-4 px-4 py-2 justify-center border-t md:border-t-0 md:border-x border-[#1F3A7A]"
+        >
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- phone -->
+            <i class="fa-solid fa-phone text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Phone:</p>
+            <p class="text-xl tracking-wider hero-content">+977 984 784 5682</p>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="flex items-center justify-center gap-4 px-4 py-2">
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- mail -->
+            <i class="fa-solid fa-envelope text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Email:</p>
+            <p class="text-xl tracking-wider hero-content">
+              marklineinfo@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="relative bg-[#ECF1FE]">
+        <!-- background map image -->
+
+        <img
+          src="./assets/footer-bg.png"
+          alt="World Map"
+          class="hidden md:block absolute inset-0 mx-auto top-1/2 -translate-y-[30%] scale-110 max-w-3xl h-80 object-contain opacity-20 pointer-events-none z-0"
+        />
+
+        <div class="relative max-w-5xl mx-auto text-center py-14 px-4">
+          <h2
+            class="text-4xl md:text-5xl font-normal tracking-widest leading-snug text-[#02519e]"
+          >
+            Make Your Dream Ture<br class="hidden md:block" />
+            With Markline.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Middle content -->
+      <div class="bg-white/30 z-0">
+        <div
+          class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10 px-4 py-10"
+        >
+          <!-- Brand + about -->
+          <div>
+            <img
+              src="./assets/markline 1.png"
+              alt="markline"
+              class="h-10 w-auto"
+            />
+            <p class="mt-5 text-[#03519E] leading-7 font-light">
+              Guiding Nepalese students to top international universities with
+              expert support and care.
+            </p>
+            <!-- Socials -->
+            <div class="mt-6 flex items-center gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-facebook-f text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-instagram text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-linkedin-in text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-youtube text-[#09315B] text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-4 text-[#234]">
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                >
+                  › Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Study Destinations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Student Resources -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Student Resources
+            </h3>
+            <ul class="space-y-4 text-[#234]">
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› International Student Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Test Preparation Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Sample Documents</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Webinar Form</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Accreditation -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Accreditation
+            </h3>
+            <div class="grid grid-cols-3 gap-4">
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="border-t border-[#1F3A7A] flex flex-col md:flex-row justify-between items-center px-6 py-4 text-sm text-[#02519e] tracking-wide font-light"
+      >
+        <p>Copyright © 2025 Markline || All Rights Reserved</p>
+        <div
+          class="flex items-center gap-6 mt-2 md:mt-0 text-[#02519e] tracking-wider font-light"
+        >
+          <a href="#" class="">Terms & Conditions</a>|
+          <a href="#" class="">Privacy Policy</a>|
+          <a href="#" class="">Disclaimer</a>
+        </div>
+        <div class="flex justify-between gap-2">
+          <p class="mt-2 md:mt-0 flex items-center">Developed by</p>
+          <img src="./assets/Blue Logo.png" class="h-7 w-auto" alt="" />
+        </div>
+      </div>
+
+      <!-- Back to top -->
+      <div id="backToTop" class="fixed bottom-20 right-6 hidden">
+        <button
+          class="w-12 h-12 rounded-full border border-[#1F3A7A] text-[#1F3A7A]"
+        >
+          <i class="fa-solid fa-chevron-up text-2xl text-[#E31E26]"></i>
+        </button>
+      </div>
+    </footer>
+    <!-- scripts -->
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

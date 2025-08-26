@@ -1,0 +1,2156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./assets/markline 1.png" type="image/png" />
+    <title>Markline</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--  top bar-->
+    <div class="bg-[#0E3A5A] text-white text-sm hidden md:block">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between py-2 gap-14">
+          <!-- Left-->
+
+          <ul class="flex items-center gap-5 ml-auto">
+            <li><a href="#" class="hover:text-amber-300">Accomodation</a></li>
+            <li><a href="#" class="hover:text-amber-300">Compare</a></li>
+            <li>
+              <a href="#" class="hover:text-amber-300">Date Converter</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-amber-300">Currency Converter</a>
+            </li>
+          </ul>
+
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="bg-[#E41E26] hover:bg-[#c71826] text-white font-medium px-4 py-2 rounded-md shadow-sm"
+            >
+              OHSC Payment
+            </a>
+
+            <div class="flex items-center bg-[#E21D2D] overflow-hidden">
+              <a
+                aria-label="Facebook"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                aria-label="Instagram"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                aria-label="LinkedIn"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                aria-label="YouTube"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Theme -->
+          <div class="flex items-center gap-2 relative">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <button
+              id="themeBtn"
+              class="flex items-center gap-2 hover:text-amber-300"
+            >
+              Theme <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+
+            <!-- (optional) dropdown; keep as-is if you already use it -->
+            <div
+              id="themeMenu"
+              class="dropdown-panel absolute right-0 top-full mt-2 w-40 bg-white text-slate-700 rounded-md shadow-lg p-2 opacity-0 pointer-events-none translate-y-1"
+            >
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                Default
+              </button>
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                Dark
+              </button>
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                High Contrast
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navigation -->
+    <header
+      class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-md"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="./index.html" class="">
+            <img
+              src="./assets/markline 1.png"
+              alt="Markline Logo"
+              class="w-full rounded h-10"
+            />
+          </a>
+
+          <!-- Desktop Nav Links -->
+          <nav
+            class="hidden lg:flex items-center gap-6 text-[#02519e] font-light"
+          >
+            <a href="./index.html" class="hover:text-[#c71826]">Home</a>
+            <a href="./ourStory.html" class="hover:text-[#c71826]">Our Story</a>
+
+            <!-- services -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a
+                  href="./services.html"
+                  class="inline-flex items-center gap-2"
+                >
+                  Services
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <!-- Example dropdown panel -->
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Counseling</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Test Prep</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Visa Guidance</a
+                >
+              </div>
+            </div>
+            <!-- study desitination -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a
+                  href="./studyDestination.html"
+                  class="inline-flex items-center gap-2 hover:text-[#c71826]"
+                >
+                  Study Destinations
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Australia</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Canada</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >UK</a
+                >
+              </div>
+            </div>
+            <!-- events -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a href="./events.html" class="inline-flex items-center gap-2">
+                  Events &amp; Webinars
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Upcoming Events</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Past Webinars</a
+                >
+              </div>
+            </div>
+
+            <a href="/blog.html" class="hover:text-[#c71826]">Blog</a>
+            <a href="/news.html" class="hover:text-[#c71826]">News</a>
+            <a href="/faq.html" class="hover:text-[#c71826]">FAQ's</a>
+          </nav>
+
+          <div class="hidden sm:flex">
+            <a
+              href="/contact.html"
+              class="inline-flex items-center gap-2 bg-[#02519e] text-white px-5 py-3 rounded-lg font-medium"
+            >
+              Contact Us <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-3 lg:hidden">
+            <a
+              href="#"
+              class="hidden xs:inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-3 py-2 rounded-md text-sm"
+              >Contact</a
+            >
+            <button
+              id="mainNavToggle"
+              class="inline-flex items-center justify-center w-10 h-10"
+            >
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden hidden border-t border-slate-200 bg-white"
+      >
+        <div class="max-w-7xl mx-auto px-4 py-4 space-y-2">
+          <a class="block py-2" href="#">Home</a>
+          <a class="block py-2" href="#">Our Story</a>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Services <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Counseling</a>
+              <a class="block py-1" href="#">Test Prep</a>
+              <a class="block py-1" href="#">Visa Guidance</a>
+            </div>
+          </details>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Study Destinations
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Australia</a>
+              <a class="block py-1" href="#">Canada</a>
+              <a class="block py-1" href="#">UK</a>
+            </div>
+          </details>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Events &amp; Webinars
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Upcoming Events</a>
+              <a class="block py-1" href="#">Past Webinars</a>
+            </div>
+          </details>
+          <a class="block py-2" href="#">Blog</a>
+          <a class="block py-2" href="#">News</a>
+          <a class="block py-2" href="#">FAQ's</a>
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-4 py-2 rounded-md mt-2"
+            >Contact Us <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <section
+      class="hidden md:grid lg:grid-cols-2 gap-10 items-center relative max-w-7xl mx-auto px-4 py-16"
+    >
+      <!-- Left copy -->
+      <div class="space-y-8">
+        <h1 class="text-5xl font-semibold text-[#02519e] hero-section-font">
+          Nepal’s Most Trusted Study
+        </h1>
+        <h1 class="text-5xl font-semibold text-[#02519e] hero-section-font">
+          Abroad Experts
+        </h1>
+        <p
+          class="text-slate-600 max-w-xl hero-content leading-6 font-light tracking-wide text-lg"
+        >
+          We have helped thousands of students study in the UK, USA, Australia,
+          Canada, and beyond offering full support, absolutely free.
+        </p>
+
+        <div class="flex items-center gap-6">
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 bg-[#02519e] text-white px-5 py-3 rounded-lg font-medium shadow"
+          >
+            Get Free Counseling <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <div class="flex items-center gap-3">
+            <div class="flex -space-x-2">
+              <img
+                class="w-8 h-8 rounded-full ring-2 ring-white"
+                src="https://i.pravatar.cc/40?img=12"
+                alt=""
+              />
+              <img
+                class="w-8 h-8 rounded-full ring-2 ring-white"
+                src="https://i.pravatar.cc/40?img=32"
+                alt=""
+              />
+              <img
+                class="w-8 h-8 rounded-full ring-2 ring-white"
+                src="https://i.pravatar.cc/40?img=5"
+                alt=""
+              />
+            </div>
+            <div class="text-xs text-slate-500">
+              <div class="text-amber-400 text-base leading-none">
+                ★★★★☆
+                <span class="align-middle text-[11px] text-slate-400">4.5</span>
+              </div>
+              <div>(10k+ Reviews)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right visual -->
+      <div class="relative">
+        <img
+          src="./assets/hero-img.png"
+          alt="Happy student"
+          class="w-full max-w-sm mx-auto object-cover"
+        />
+
+        <div
+          class="absolute -left-6 top-64 bg-[#f0f4fe] backdrop-blur shadow-lg rounded-xl px-4 py-3 flex items-center gap-3"
+        >
+          <span
+            class="grid place-items-center w-10 h-10 rounded-lg bg-[#1e549f] text-white"
+          >
+            <i class="fa-regular fa-calendar"></i>
+          </span>
+          <div>
+            <div class="font-semibold text-slate-500">450k</div>
+            <div class="text-slate-500 text-sm">Assisted Student</div>
+          </div>
+        </div>
+
+        <div
+          class="absolute right-4 top-80 bg-[#f0f4fe] backdrop-blur shadow-lg rounded-xl px-4 py-3 flex items-center gap-3"
+        >
+          <span
+            class="grid place-items-center w-10 h-10 rounded-lg bg-[#1e549f] text-white"
+          >
+            <i class="fa-solid fa-building-columns"></i>
+          </span>
+          <div>
+            <div class="font-semibold text-slate-500">1000+</div>
+            <div class="text-slate-500 text-sm">Institution Partners</div>
+          </div>
+        </div>
+
+        <div
+          class="absolute left-10 -bottom-4 bg-[#f0f4fe] backdrop-blur shadow-lg rounded-xl px-4 py-3 flex items-center gap-3"
+        >
+          <span
+            class="grid place-items-center w-10 h-10 rounded-lg bg-[#1e549f] text-white"
+          >
+            <i class="fa-solid fa-earth-asia"></i>
+          </span>
+          <div>
+            <div class="font-semibold text-slate-500">20+</div>
+            <div class="text-slate-500 text-sm">Country Worldwide</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden xl:flex flex-col gap-4 fixed right-0 top-1/3 z-50">
+        <a
+          href="#"
+          class="flex flex-col items-center justify-between bg-[#02519e] text-white w-12 h-40 rounded-l-lg py-4"
+        >
+          <span
+            class="text-sm tracking-wide [writing-mode:vertical-rl] rotate-180"
+          >
+            Consult Now
+          </span>
+
+          <img
+            src="./assets/WhatsApp.webp"
+            class="h-8 w-8 -rotate-90"
+            alt="WhatsApp"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="flex flex-col items-center justify-between bg-[#02519e] text-white w-12 h-40 rounded-l-lg py-4"
+        >
+          <span
+            class="tracking-wide text-sm [writing-mode:vertical-rl] rotate-180"
+          >
+            Consult Now
+          </span>
+
+          <img
+            src="./assets/messanger.png"
+            class="h-7 w-7 -rotate-90"
+            alt="Messenger"
+          />
+        </a>
+      </div>
+    </section>
+    <!-- mobile hero -->
+    <section class="relative w-full h-screen overflow-hidden md:hidden">
+      <img
+        src="./assets/Rectangle 241.png"
+        alt="Study destination"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <div class="absolute inset-0 bg-black/5"></div>
+
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6"
+      >
+        <h1 class="text-5xl font-bold leading-tight tracking-wider">
+          Study in <span class="text-[#0c2f49] tracking-wider">USA</span>
+        </h1>
+
+        <p class="mt-3 text-sm leading-5 max-w-sm">
+          Explore world-renowned universities, a diverse culture, and
+          career-driven education in one of the most sought-after study
+          destinations.
+        </p>
+
+        <!-- primary CTA -->
+        <a
+          href="#"
+          class="mt-6 w-full max-w-xs bg-[#02519e] hover:bg-[#0c2f49] text-white font-semibold py-3 rounded-xl shadow-md inline-flex items-center justify-center gap-2"
+        >
+          Get Free Counseling
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </a>
+
+        <!-- secondary CTA -->
+        <a
+          href="#"
+          class="mt-3 w-full max-w-xs bg-white/85 text-[#0f3a5b] font-semibold py-3 rounded-xl border-2 border-[#02519e] inline-flex items-center justify-center gap-2"
+        >
+          Explore Courses <i class="fa-solid fa-chevron-right text-sm"></i>
+        </a>
+      </div>
+
+      <!-- Flags Marquee -->
+      <div class="absolute bottom-6 w-full overflow-hidden">
+        <div class="flex gap-6 animate-marquee" style="width: max-content">
+          <img
+            src="./assets/usa.webp"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="USA"
+          />
+          <img
+            src="./assets/canada.png"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="Canada"
+          />
+          <img
+            src="./assets/australia.png"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="Australia"
+          />
+          <img
+            src="./assets/uk.avif"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="UK"
+          />
+          <img
+            src="./assets/japan.webp"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="japan"
+          />
+          <!-- repeat once for seamless loop -->
+          <img
+            src="./assets/usa.webp"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="USA"
+          />
+          <img
+            src="./assets/canada.png"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="Canada"
+          />
+          <img
+            src="./assets/australia.png"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="Australia"
+          />
+          <img
+            src="./assets/uk.avif"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="UK"
+          />
+          <img
+            src="./assets/japan.webp"
+            class="w-24 h-20 rounded-xl object-cover"
+            alt="japan"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- second block -->
+    <section
+      class="mt-28 grid lg:grid-cols-2 items-center gap-10 relative max-w-7xl mx-auto px-4 py-16"
+    >
+      <!-- Left content -->
+      <div class="order-2 lg:order-1 px-4 md:px-0">
+        <p class="text-[#e41e26] text-lg font-light mb-2">
+          Who says dreams don’t fly?
+        </p>
+        <h2 class="sub-heading">
+          We Make Study Abroad Look Easy<br />
+          (Because It Can Be)
+        </h2>
+        <p
+          class="mt-4 text-gray-600 max-w-xl tracking-wider font-light md:px-0"
+        >
+          At Markline, we don’t just guide students we launch global journeys.
+          From university hunting to visa stamping, we’ve got your back and your
+          backpack. No confusion, no chaos—just clear, honest, expert support
+          every step of the way.
+        </p>
+
+        <a
+          href="#"
+          class="inline-flex items-center gap-3 bg-[#e41e26] hover:bg-[#c71826] text-white px-5 py-3 rounded-lg font-medium shadow mt-6"
+        >
+          Meet Our Experts <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="order-1 lg:order-2 relative overflow-visible">
+        <!-- background image -->
+        <img
+          src="./assets/Decore.png"
+          alt="Decor background"
+          class="absolute top-0 right-10 w-[70%] sm:w-[85%] md:w-[100%] max-w-none z-0 pointer-events-none select-none -right-24 md:-right-24 md:-top-44"
+        />
+
+        <!-- Plane icon -->
+        <div class="absolute left-6 top-10 text-[#1e549f] z-20">
+          <img src="./assets/plane.png" alt="plane" class="w-32 h-auto" />
+        </div>
+
+        <!-- Round badge -->
+        <div
+          class="absolute top-64 w-36 h-36 bg-[#1e549f] text-white rounded-full grid place-items-center shadow border-4 border-[#C6D9FF] z-20"
+        >
+          <div class="text-center hero-content">
+            <div class="text-3xl font-medium">8+</div>
+            <div class="text-sm tracking-wide">Years Of</div>
+            <div class="text-sm tracking-wide">Experiences</div>
+          </div>
+        </div>
+
+        <!-- Traveler image -->
+        <img
+          src="./assets/abt-hero.png"
+          class="relative ml-auto max-w-md rounded-xl object- z-10"
+          alt="Traveler with passport"
+        />
+      </div>
+    </section>
+    <!-- why students trust us -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="sub-heading text-center mb-12">Why Students Trust Us</h2>
+
+        <div
+          class="flex overflow-x-auto gap-4 sm:gap-6 md:gap-8 px-1 snap-x snap-mandatory scroll-smooth md:grid md:grid-cols-3 lg:grid-cols-5 md:overflow-visible md:px-0 hero-content"
+          id="trust-scroll"
+        >
+          <!-- Card 1 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/graduate-university-svgrepo-com 1.png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">5000+</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              Students Counseled
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/aeroplane-plane-svgrepo-com 1.png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">20+</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              Study Destinations
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/school-learn-knowledge-svgrepo-com 1.png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">200+</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              University Partners
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/Frame 2202949.png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">99%</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              Visa Success Rate
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/Group (1).png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">24/7</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              Expert Availability
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- where our student now -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-4xl mx-auto">
+          <!-- Small red subtitle -->
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Who says dreams don’t fly?
+          </p>
+
+          <h2 class="sub-heading">
+            Our students have secured admissions at some of the world’s top
+            universities. Here are a few of their destinations
+          </h2>
+        </div>
+
+        <!-- 3 grids -->
+        <div
+          class="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 hero-content mt-10"
+        >
+          <!-- CARD 1 -->
+          <article class="bg-[#F9FAFC] rounded-xl border border-[#E9F0FF] p-6">
+            <!-- top-->
+            <div class="flex items-start gap-3">
+              <div
+                class="h-12 w-12 rounded-full bg-blue-50 ring-1 ring-blue-100 overflow-hidden"
+              >
+                <img
+                  src="./assets/brock-uni.jpg"
+                  alt="Brock University"
+                  class="h-full w-full object-cover rounded-full"
+                />
+              </div>
+
+              <div class="flex-1">
+                <h3
+                  class="text-[20px] font-semibold text-[#1e549f] leading-tight"
+                >
+                  Brock University
+                </h3>
+                <p class="text-slate-500 text-sm flex items-center gap-2">
+                  <img
+                    src="./assets/round-canada.webp"
+                    alt="Canada flag"
+                    class="h-5 w-5 rounded-full"
+                  />
+                  St. Catharines, Canada
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-5 border-slate-200" />
+
+            <!-- badges row -->
+            <div class="flex items-center justify-between">
+              <span
+                class="text-[12px] px-3 py-1 rounded-md bg-indigo-50 font-medium"
+                >Students 25+</span
+              >
+              <div class="flex items-center gap-2">
+                <div class="text-amber-500 text-sm">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-sm">4.5k</span>
+              </div>
+            </div>
+
+            <!-- students list -->
+            <div class="mt-5 space-y-4 max-h-80 overflow-y-auto pr-2">
+              <!-- student 1 -->
+              <div class="border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./assets/dummy2.webp"
+                      alt=""
+                      class="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-medium text-slate-800">Priya Shakya</p>
+                      <p class="text-slate-400 text-sm -mt-0.5">Student Name</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-[#1e549f]"></i>
+                    <span class="font-semibold">2024</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 pt-3 border-t border-blue-100 flex items-start gap-3"
+                >
+                  <div
+                    class="h-9 w-9 rounded-full bg-blue-50 ring-1 ring-blue-100 grid place-items-center"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-[#1e549f] text-sm"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-medium">
+                      Master of Environmental Health
+                    </p>
+                    <p class="text-slate-400 text-sm -mt-0.5">Admitted To</p>
+                  </div>
+                </div>
+              </div>
+              <!--  student 2-->
+              <div class="border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./assets/dummy4.avif"
+                      alt=""
+                      class="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-medium text-slate-800">Krish Sapkota</p>
+                      <p class="text-slate-400 text-sm -mt-0.5">Student Name</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-[#1e549f]"></i>
+                    <span class="font-semibold">2024</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 pt-3 border-t border-blue-100 flex items-start gap-3"
+                >
+                  <div
+                    class="h-9 w-9 rounded-full bg-blue-50 ring-1 ring-blue-100 grid place-items-center"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-[#1e549f] text-sm"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-medium">Bachelor of Arts</p>
+                    <p class="text-slate-400 text-sm -mt-0.5">Admitted To</p>
+                  </div>
+                </div>
+              </div>
+              <!--  student 3-->
+              <div class="border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./assets/dummy4.avif"
+                      alt=""
+                      class="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-medium text-slate-800">Krish Sapkota</p>
+                      <p class="text-slate-400 text-sm -mt-0.5">Student Name</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-[#1e549f]"></i>
+                    <span class="font-semibold">2024</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 pt-3 border-t border-blue-100 flex items-start gap-3"
+                >
+                  <div
+                    class="h-9 w-9 rounded-full bg-blue-50 ring-1 ring-blue-100 grid place-items-center"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-[#1e549f] text-sm"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-medium">Bachelor of Arts</p>
+                    <p class="text-slate-400 text-sm -mt-0.5">Admitted To</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2  -->
+          <article class="bg-[#F9FAFC] rounded-xl border border-[#E9F0FF] p-6">
+            <div class="flex items-start gap-3">
+              <div
+                class="h-12 w-12 rounded-full bg-blue-50 ring-1 ring-blue-100 overflow-hidden"
+              >
+                <img
+                  src="./assets/simonn-uni.png"
+                  alt="Simon Fraser University"
+                  class="h-full w-full object-cover rounded-full"
+                />
+              </div>
+
+              <div class="flex-1">
+                <h3
+                  class="text-[20px] font-semibold text-[#1e549f] leading-tight"
+                >
+                  Simon Fraser University
+                </h3>
+                <p class="text-slate-500 text-sm flex items-center gap-2">
+                  <img
+                    src="./assets/round-canada.webp"
+                    alt="Canada flag"
+                    class="h-5 w-5 rounded-full"
+                  />
+                  St. Catharines, Canada
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-5 border-slate-200" />
+
+            <div class="flex items-center justify-between">
+              <span
+                class="text-[12px] px-3 py-1 rounded-md bg-indigo-50 font-medium"
+                >Students 25+</span
+              >
+              <div class="flex items-center gap-2">
+                <div class="text-amber-500 text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-sm">4.5k</span>
+              </div>
+            </div>
+
+            <div class="mt-5 space-y-4 max-h-80 overflow-y-auto pr-2">
+              <!-- student 1 -->
+              <div class="border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./assets/dummy2.webp"
+                      alt=""
+                      class="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-medium text-slate-800">Priya Shakya</p>
+                      <p class="text-slate-400 text-sm -mt-0.5">Student Name</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-[#1e549f]"></i>
+                    <span class="font-semibold">2024</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 pt-3 border-t border-blue-100 flex items-start gap-3"
+                >
+                  <div
+                    class="h-9 w-9 rounded-full bg-blue-50 ring-1 ring-blue-100 grid place-items-center"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-[#1e549f] text-sm"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-medium">
+                      Master of Environmental Health
+                    </p>
+                    <p class="text-slate-400 text-sm -mt-0.5">Admitted To</p>
+                  </div>
+                </div>
+              </div>
+              <!--  student 2-->
+              <div class="border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./assets/dummy4.avif"
+                      alt=""
+                      class="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-medium text-slate-800">Krish Sapkota</p>
+                      <p class="text-slate-400 text-sm -mt-0.5">Student Name</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-[#1e549f]"></i>
+                    <span class="font-semibold">2024</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 pt-3 border-t border-blue-100 flex items-start gap-3"
+                >
+                  <div
+                    class="h-9 w-9 rounded-full bg-blue-50 ring-1 ring-blue-100 grid place-items-center"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-[#1e549f] text-sm"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-medium">Bachelor of Arts</p>
+                    <p class="text-slate-400 text-sm -mt-0.5">Admitted To</p>
+                  </div>
+                </div>
+              </div>
+              <!--  student 3-->
+              <div class="border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./assets/dummy4.avif"
+                      alt=""
+                      class="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-medium text-slate-800">Krish Sapkota</p>
+                      <p class="text-slate-400 text-sm -mt-0.5">Student Name</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-[#1e549f]"></i>
+                    <span class="font-semibold">2024</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 pt-3 border-t border-blue-100 flex items-start gap-3"
+                >
+                  <div
+                    class="h-9 w-9 rounded-full bg-blue-50 ring-1 ring-blue-100 grid place-items-center"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-[#1e549f] text-sm"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-medium">Bachelor of Arts</p>
+                    <p class="text-slate-400 text-sm -mt-0.5">Admitted To</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="bg-[#F9FAFC] rounded-xl border border-[#E9F0FF] p-6">
+            <div class="flex items-start gap-3">
+              <div
+                class="h-12 w-12 rounded-full bg-blue-50 ring-1 ring-blue-100 overflow-hidden"
+              >
+                <img
+                  src="./assets/uni-toronto.png"
+                  alt="Simon Fraser University"
+                  class="h-full w-full object-cover rounded-full"
+                />
+              </div>
+              <div class="flex-1">
+                <h3
+                  class="text-[20px] font-semibold text-[#1e549f] leading-tight"
+                >
+                  University of Toronto
+                </h3>
+                <p class="text-slate-500 text-sm flex items-center gap-2">
+                  <img
+                    src="./assets/round-canada.webp"
+                    alt="Canada flag"
+                    class="h-5 w-5 rounded-full"
+                  />
+                  St. Catharines, Canada
+                </p>
+              </div>
+            </div>
+
+            <hr class="my-5 border-slate-200" />
+
+            <div class="flex items-center justify-between">
+              <span
+                class="text-[12px] px-3 py-1 rounded-md bg-indigo-50 font-medium"
+                >Students 25+</span
+              >
+              <div class="flex items-center gap-2">
+                <div class="text-amber-500 text-sm">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-sm">4.5k</span>
+              </div>
+            </div>
+
+            <div class="mt-5 space-y-4 max-h-80 overflow-y-auto pr-2">
+              <!-- student 1 -->
+              <div class="border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./assets/dummy2.webp"
+                      alt=""
+                      class="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-medium text-slate-800">Priya Shakya</p>
+                      <p class="text-slate-400 text-sm -mt-0.5">Student Name</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-[#1e549f]"></i>
+                    <span class="font-semibold">2024</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 pt-3 border-t border-blue-100 flex items-start gap-3"
+                >
+                  <div
+                    class="h-9 w-9 rounded-full bg-blue-50 ring-1 ring-blue-100 grid place-items-center"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-[#1e549f] text-sm"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-medium">
+                      Master of Environmental Health
+                    </p>
+                    <p class="text-slate-400 text-sm -mt-0.5">Admitted To</p>
+                  </div>
+                </div>
+              </div>
+              <!--  student 2-->
+              <div class="border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./assets/dummy4.avif"
+                      alt=""
+                      class="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-medium text-slate-800">Krish Sapkota</p>
+                      <p class="text-slate-400 text-sm -mt-0.5">Student Name</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-[#1e549f]"></i>
+                    <span class="font-semibold">2024</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 pt-3 border-t border-blue-100 flex items-start gap-3"
+                >
+                  <div
+                    class="h-9 w-9 rounded-full bg-blue-50 ring-1 ring-blue-100 grid place-items-center"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-[#1e549f] text-sm"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-medium">Bachelor of Arts</p>
+                    <p class="text-slate-400 text-sm -mt-0.5">Admitted To</p>
+                  </div>
+                </div>
+              </div>
+              <!--  student 3-->
+              <div class="border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./assets/dummy4.avif"
+                      alt=""
+                      class="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p class="font-medium text-slate-800">Krish Sapkota</p>
+                      <p class="text-slate-400 text-sm -mt-0.5">Student Name</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-regular fa-calendar text-[#1e549f]"></i>
+                    <span class="font-semibold">2024</span>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-3 pt-3 border-t border-blue-100 flex items-start gap-3"
+                >
+                  <div
+                    class="h-9 w-9 rounded-full bg-blue-50 ring-1 ring-blue-100 grid place-items-center"
+                  >
+                    <i
+                      class="fa-solid fa-graduation-cap text-[#1e549f] text-sm"
+                    ></i>
+                  </div>
+                  <div>
+                    <p class="text-slate-800 font-medium">Bachelor of Arts</p>
+                    <p class="text-slate-400 text-sm -mt-0.5">Admitted To</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Video Stories -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-4xl mx-auto mb-10">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Student stories
+          </p>
+          <h2 class="sub-heading">
+            Our highlighted students revealing their success stories.
+          </h2>
+        </div>
+
+        <!-- Carousel -->
+        <div class="relative">
+          <!-- Scrollable strip -->
+          <div
+            id="videoStrip"
+            class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide pb-2"
+            aria-label="Student video stories"
+          >
+            <!-- Card 1 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo1.jpeg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+            <!-- Card 2 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo2.jpg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+            <!-- Card 3 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo3.jpg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+            <!-- Card 4 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo4.jpg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+            <!-- Card-5 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo5.jpg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+          </div>
+          <!-- left and right arrow -->
+          <div class="mt-6 flex items-center gap-4">
+            <button
+              id="prevBtn"
+              class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
+              aria-label="Scroll left"
+            >
+              <i class="fa-solid fa-arrow-left text-[#03519E]"></i>
+            </button>
+            <button
+              id="nextBtn"
+              class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
+              aria-label="Scroll right"
+            >
+              <i class="fa-solid fa-arrow-right text-[#03519E]"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- What We Do -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Section Heading -->
+        <div class="text-center max-w-4xl mx-auto mb-12">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            What We Do
+          </p>
+          <h2 class="sub-heading text-[#1e549f]">
+            we don’t just offer services we serve solutions.
+          </h2>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-3">
+          <!-- Card 1-->
+          <div
+            class="bg-[#F9FAFC] rounded-lg border border-[#E9F0FF] p-8 hover:shadow-md transition"
+          >
+            <span
+              class="inline-flex items-center gap-2 px-4 py-1.5 text-base rounded-full bg-[#E4F1EA] text-green-800"
+            >
+              <i class="fa-solid fa-bullseye text-lg"></i>
+              Test Preparation
+            </span>
+
+            <p class="mt-6 text-gray-700 text-sm leading-6">
+              Get access to experienced comprehensive materials, and mock tests
+              tailored to help you achieve top scores in English proficiency
+              exams like IELTS, TOEFL, PTE and more.
+            </p>
+
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center gap-4 text-gray-900 font-normal"
+            >
+              Learn More
+              <i class="fa-solid fa-chevron-right text-sm"></i>
+            </a>
+
+            <!-- Image -->
+            <img
+              src="./assets/testprep.jpg"
+              alt="Test Preparation"
+              class="mt-6 w-full h-48 object-cover rounded-2xl"
+            />
+          </div>
+          <!-- Card 2-->
+          <div
+            class="bg-[#F9FAFC] rounded-lg border border-[#E9F0FF] p-8 hover:shadow-md transition"
+          >
+            <span
+              class="inline-flex items-center gap-2 px-4 py-1.5 text-base rounded-full bg-[#E4EDFA] text-blue-600"
+            >
+              <i class="fa-solid fa-graduation-cap text-xl"></i>
+              Study Abroad Guidance
+            </span>
+
+            <p class="mt-6 text-gray-700 text-sm leading-6">
+              Our counselors help you identify the best-fit destination, course,
+              and university based on your academic background, career
+              aspirations, and budget.
+            </p>
+
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center gap-4 text-gray-900 font-normal"
+            >
+              Learn More
+              <i class="fa-solid fa-chevron-right text-sm"></i>
+            </a>
+
+            <!-- Image -->
+            <img
+              src="./assets/guidence.jpg"
+              alt="Test Preparation"
+              class="mt-6 w-full h-48 object-cover rounded-2xl"
+            />
+          </div>
+          <!-- Card 3-->
+          <div
+            class="bg-[#F9FAFC] rounded-lg border border-[#E9F0FF] p-8 hover:shadow-md transition"
+          >
+            <span
+              class="inline-flex items-center gap-2 px-4 py-1.5 text-base rounded-full bg-[#FAEDE4] text-amber-500"
+            >
+              <i class="fa-solid fa-plane-up text-xl"></i>
+              Visa Assistance
+            </span>
+
+            <p class="mt-6 text-gray-700 text-sm leading-6">
+              We assist you in thoroughly preparing accurate visa documents,
+              carefully booking all required appointments, and confidently
+              getting ready for successful interviews.
+            </p>
+
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center gap-4 text-gray-900 font-normal"
+            >
+              Learn More
+              <i class="fa-solid fa-chevron-right text-sm"></i>
+            </a>
+
+            <!-- Image -->
+            <img
+              src="./assets/passport.png"
+              alt="Test Preparation"
+              class="mt-6 w-full h-48 object-cover rounded-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- got questiion -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-[40%_55%] gap-14">
+          <!-- left -->
+          <div class="space-y-10 self-center">
+            <h1 class="hero-section-font text-4xl text-black">
+              Got Questions? We’ve Got the Answers
+            </h1>
+            <p
+              class="max-w-md tracking-wider text-base text-gray-400 hero-content font-light"
+            >
+              We know studying abroad comes with a lot of “what ifs” so let’s
+              clear them up right here, right now.
+            </p>
+
+            <p class="text-[#02519e]">
+              More FAQ’s
+              <i class="fa fa-chevron-right"></i>
+            </p>
+          </div>
+          <!-- RIGHT: -->
+          <div class="mt-10 md:mt-0">
+            <div id="faqList" class="space-y-2">
+              <!-- Item 1 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="true"
+                    aria-controls="faq-1"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Can you help me choose the right university?
+                  </h3>
+                </div>
+
+                <div
+                  id="faq-1"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 2  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-2"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How much does the consultation cost?
+                  </h3>
+                </div>
+                <div
+                  id="faq-2"
+                  class="faq-panel px-14 text-slate-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-3"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    How long does the visa process take?
+                  </h3>
+                </div>
+                <div
+                  id="faq-3"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 4  -->
+              <article
+                class="faq-item relative rounded-2xl border border-[#E5EDFF] bg-[#F1F0FB] shadow-sm"
+              >
+                <span
+                  class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0B5EBF] rounded-l-2xl"
+                ></span>
+
+                <div class="flex items-start gap-3 p-7">
+                  <button
+                    class="faq-arrow shrink-0 h-7 w-7 text-[#0B5EBF] grid place-items-center"
+                    aria-expanded="false"
+                    aria-controls="faq-4"
+                  >
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <h3 class="text-[#1e549f] text-xl leading-7 tracking-wider">
+                    Do you offer scholarships or help applying for them?
+                  </h3>
+                </div>
+                <div
+                  id="faq-4"
+                  class="faq-panel px-14 text-gray-500 tracking-wide"
+                >
+                  <div class="py-2">
+                    Webflow is a powerful visual development platform that
+                    allows designers to build fully responsive websites without
+                    writing a single line of code. It combines the flexibility
+                    of code with the simplicity of a visual editor, empowering
+                    creators to bring their ideas to life faster and more
+                    efficiently than ever before.
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- lets talks -->
+    <section class="relative py-20 overflow-hidden">
+      <!-- background image -->
+      <div
+        class="absolute inset-0 bg-center bg-cover"
+        style="background-image: url('./assets/lets-talk-bg.png')"
+      ></div>
+      <div class="relative max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-[40%_60%] gap-10 items-start">
+          <!-- LEFT  -->
+          <div class="space-y-6">
+            <p
+              class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+            >
+              Let’s Talk
+            </p>
+            <h2
+              class="text-[#1e549f] font-semibold text-3xl md:text-4xl hero-section-font leading-8"
+            >
+              Not sure what you are <br class="hidden sm:block" />
+              looking for? Don’t worry, <br class="hidden sm:block" />
+              we are here to help.
+            </h2>
+          </div>
+
+          <!-- RIGHT -->
+          <form class="max-w-xl">
+            <div class="space-y-4">
+              <!-- Full Name -->
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="Full Name*"
+                  class="w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] placeholder:text-[#1e549f] placeholder:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                />
+                <span
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                >
+                  <i class="fa-regular fa-user"></i>
+                </span>
+              </div>
+
+              <!-- Mobile -->
+              <div class="relative">
+                <input
+                  type="tel"
+                  placeholder="Mobile"
+                  class="w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] placeholder:text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                />
+                <span
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                >
+                  <i class="fa-solid fa-mobile-screen"></i>
+                </span>
+              </div>
+
+              <!-- Email -->
+              <div class="relative">
+                <input
+                  type="email"
+                  placeholder="Email Address*"
+                  class="w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] placeholder:text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                />
+                <span
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                >
+                  <i class="fa-regular fa-envelope"></i>
+                </span>
+              </div>
+
+              <!-- Nearest Office -->
+              <div class="relative">
+                <select
+                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                >
+                  <option selected>Nearest Markline Office</option>
+                  <option>Kathmandu</option>
+                  <option>Pokhara</option>
+                  <option>Lalitpur</option>
+                </select>
+                <span
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                >
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </div>
+
+              <!-- Preferred destination -->
+              <div class="relative">
+                <select
+                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                >
+                  <option selected>Preferred destination</option>
+                  <option>Canada</option>
+                  <option>USA</option>
+                  <option>UK</option>
+                  <option>Australia</option>
+                </select>
+                <span
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                >
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </div>
+
+              <!-- Preferred intake -->
+              <div class="relative">
+                <select
+                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                >
+                  <option selected>Preferred intake</option>
+                  <option>Spring</option>
+                  <option>Summer</option>
+                  <option>Fall</option>
+                  <option>Winter</option>
+                </select>
+                <span
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                >
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </div>
+
+              <!-- Preferred mode of counseling -->
+              <div class="relative">
+                <select
+                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                >
+                  <option selected>Preferred mode of counseling</option>
+                  <option>In-person</option>
+                  <option>Online</option>
+                  <option>Phone</option>
+                </select>
+                <span
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                >
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </div>
+
+              <!-- Send button -->
+              <button
+                type="submit"
+                class="mt-4 w-full h-14 rounded-lg bg-[#E11D2E] hover:bg-[#C81828] text-white font-medium tracking-wide flex items-center justify-center gap-3"
+              >
+                Send <i class="fa-solid fa-chevron-right text-sm"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="mt-10 text-center sub-heading text-lg tracking-wider">
+          <p>Proudly partnered with leading global education providers</p>
+        </div>
+      </div>
+    </section>
+    <!-- logos part -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div
+          class="flex flex-wrap gap-x-10 gap-y-10 items-center justify-between"
+        >
+          <img
+            src="./assets/logo2.png"
+            alt="Partner 1"
+            class="h-8 w-auto object-contain"
+          />
+          <img
+            src="./assets/logo3.png"
+            alt="Partner 2"
+            class="h-8 w-auto object-contain"
+          />
+          <img
+            src="./assets/logo1.png"
+            alt="Partner 1"
+            class="h-8 w-auto object-contain"
+          />
+          <img
+            src="./assets/logo4.png"
+            alt="Partner 3"
+            class="h-8 w-auto object-contain"
+          />
+          <img
+            src="./assets/logo5.png"
+            alt="Partner 4"
+            class="h-8 w-auto object-contain"
+          />
+          <img
+            src="./assets/logo3.png"
+            alt="Partner 4"
+            class="h-8 w-auto object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="relative bg-[#ECF1FE] text-[#1F3A7A] mt-0 md:mt-32">
+      <div
+        class="grid md:grid-cols-3 border-y border-[#1F3A7A] bg-[#ECF1FE] z-0"
+      >
+        <!-- Address -->
+        <div class="flex items-center justify-center gap-4 px-4 py-2">
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- location pin -->
+            <i class="fa-solid fa-location-dot text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Address:</p>
+            <p class="text-xl tracking-wider hero-content">Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <!-- Phone -->
+        <div
+          class="flex items-center gap-4 px-4 py-2 justify-center border-t md:border-t-0 md:border-x border-[#1F3A7A]"
+        >
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- phone -->
+            <i class="fa-solid fa-phone text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Phone:</p>
+            <p class="text-xl tracking-wider hero-content">+977 984 784 5682</p>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="flex items-center justify-center gap-4 px-4 py-2">
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- mail -->
+            <i class="fa-solid fa-envelope text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Email:</p>
+            <p class="text-xl tracking-wider hero-content">
+              marklineinfo@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="relative bg-[#ECF1FE]">
+        <!-- background map image -->
+
+        <img
+          src="./assets/footer-bg.png"
+          alt="World Map"
+          class="hidden md:block absolute inset-0 mx-auto top-1/2 -translate-y-[30%] scale-110 max-w-3xl h-80 object-contain opacity-20 pointer-events-none z-0"
+        />
+
+        <div class="relative max-w-5xl mx-auto text-center py-14 px-4">
+          <h2
+            class="text-4xl md:text-5xl font-normal tracking-widest leading-snug text-[#02519e]"
+          >
+            Make Your Dream Ture<br class="hidden md:block" />
+            With Markline.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Middle content -->
+      <div class="bg-white/30 z-0">
+        <div
+          class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10 px-4 py-10"
+        >
+          <!-- Brand + about -->
+          <div>
+            <img
+              src="./assets/markline 1.png"
+              alt="markline"
+              class="h-10 w-auto"
+            />
+            <p class="mt-5 text-[#03519E] leading-7 font-light">
+              Guiding Nepalese students to top international universities with
+              expert support and care.
+            </p>
+            <!-- Socials -->
+            <div class="mt-6 flex items-center gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-facebook-f text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-instagram text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-linkedin-in text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-youtube text-[#09315B] text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-4 text-[#234]">
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                >
+                  › Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Study Destinations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Student Resources -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Student Resources
+            </h3>
+            <ul class="space-y-4 text-[#234]">
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› International Student Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Test Preparation Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Sample Documents</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Webinar Form</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Accreditation -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Accreditation
+            </h3>
+            <div class="grid grid-cols-3 gap-4">
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="border-t border-[#1F3A7A] flex flex-col md:flex-row justify-between items-center px-6 py-4 text-sm text-[#02519e] tracking-wide font-light"
+      >
+        <p>Copyright © 2025 Markline || All Rights Reserved</p>
+        <div
+          class="flex items-center gap-6 mt-2 md:mt-0 text-[#02519e] tracking-wider font-light"
+        >
+          <a href="#" class="">Terms & Conditions</a>|
+          <a href="#" class="">Privacy Policy</a>|
+          <a href="#" class="">Disclaimer</a>
+        </div>
+        <div class="flex justify-between gap-2">
+          <p class="mt-2 md:mt-0 flex items-center">Developed by</p>
+          <img src="./assets/Blue Logo.png" class="h-7 w-auto" alt="" />
+        </div>
+      </div>
+
+      <!-- Back to top -->
+      <div id="backToTop" class="fixed bottom-20 right-6 hidden">
+        <button
+          class="w-12 h-12 rounded-full border border-[#1F3A7A] text-[#1F3A7A]"
+        >
+          <i class="fa-solid fa-chevron-up text-2xl text-[#E31E26]"></i>
+        </button>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

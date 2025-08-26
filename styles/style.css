@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.dropdown-panel {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.hero-section-font {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+.hero-content {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+/* for mobile view flags merquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  display: flex;
+  animation: marquee 18s linear infinite;
+}
+
+.sub-heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 2.05rem;
+  line-height: 1.3;
+  color: #1e549f;
+}
+
+/* for faq */
+
+.faq-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-item.open .faq-panel {
+  max-height: 500px; /* big enough for your longest answer */
+}
+
+/* for mobile view flags merquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee-2 {
+  display: flex;
+  animation: marquee 5s linear infinite;
+}
+
+/* why student trust us css for mobile */
+@media (max-width: 767px) {
+  #trust-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  #trust-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* study destination center imagae css */
+.mask-gradient {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
+/* csss of study desitinatoion last part */
+
+@keyframes marqueeY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.mosaic-track {
+  display: flex;
+  flex-direction: column;
+  animation: marqueeY 5s linear infinite;
+  will-change: transform;
+}
+
+
+.mosaic-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeY {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.mosaic-track-down {
+  display: flex;
+  flex-direction: column;
+  animation: marqueeY 20s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mosaic-track-down {
+    animation: none;
+  }
+}

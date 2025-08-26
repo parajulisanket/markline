@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./assets/markline 1.png" type="image/png" />
+    <title>Markline</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--  top bar-->
+    <div class="bg-[#0E3A5A] text-white text-sm hidden md:block">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between py-2 gap-14">
+          <!-- Left-->
+
+          <ul class="flex items-center gap-5 ml-auto">
+            <li><a href="#" class="hover:text-amber-300">Accomodation</a></li>
+            <li><a href="#" class="hover:text-amber-300">Compare</a></li>
+            <li>
+              <a href="#" class="hover:text-amber-300">Date Converter</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-amber-300">Currency Converter</a>
+            </li>
+          </ul>
+
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="bg-[#E41E26] hover:bg-[#c71826] text-white font-medium px-4 py-2 rounded-md shadow-sm"
+            >
+              OHSC Payment
+            </a>
+
+            <div class="flex items-center bg-[#E21D2D] overflow-hidden">
+              <a
+                aria-label="Facebook"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                aria-label="Instagram"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                aria-label="LinkedIn"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                aria-label="YouTube"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Theme -->
+          <div class="flex items-center gap-2 relative">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <button
+              id="themeBtn"
+              class="flex items-center gap-2 hover:text-amber-300"
+            >
+              Theme <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+
+            <!-- (optional) dropdown; keep as-is if you already use it -->
+            <div
+              id="themeMenu"
+              class="dropdown-panel absolute right-0 top-full mt-2 w-40 bg-white text-slate-700 rounded-md shadow-lg p-2 opacity-0 pointer-events-none translate-y-1"
+            >
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                Default
+              </button>
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                Dark
+              </button>
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                High Contrast
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- navigation -->
+    <header
+      class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-md"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="./index.html" class="">
+            <img
+              src="./assets/markline 1.png"
+              alt="Markline Logo"
+              class="w-full rounded h-10"
+            />
+          </a>
+
+          <!-- Desktop Nav Links -->
+          <nav
+            class="hidden lg:flex items-center gap-6 text-[#02519e] font-light"
+          >
+            <a href="./index.html" class="hover:text-[#c71826]">Home</a>
+            <a href="./ourStory.html" class="hover:text-[#c71826]">Our Story</a>
+
+            <!-- services -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a
+                  href="./services.html"
+                  class="inline-flex items-center gap-2"
+                >
+                  Services
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <!-- Example dropdown panel -->
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Counseling</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Test Prep</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Visa Guidance</a
+                >
+              </div>
+            </div>
+            <!-- study desitination -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a
+                  href="./studyDestination.html"
+                  class="inline-flex items-center gap-2 hover:text-[#c71826]"
+                >
+                  Study Destinations
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Australia</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Canada</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >UK</a
+                >
+              </div>
+            </div>
+            <!-- events -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a href="./events.html" class="inline-flex items-center gap-2">
+                  Events &amp; Webinars
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Upcoming Events</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Past Webinars</a
+                >
+              </div>
+            </div>
+
+            <a href="#" class="hover:text-[#c71826]">Blog</a>
+            <a href="#" class="hover:text-[#c71826]">News</a>
+            <a href="#" class="hover:text-[#c71826]">FAQ's</a>
+          </nav>
+
+          <div class="hidden sm:flex">
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 bg-[#02519e] text-white px-5 py-3 rounded-lg font-medium"
+            >
+              Contact Us <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-3 lg:hidden">
+            <a
+              href="#"
+              class="hidden xs:inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-3 py-2 rounded-md text-sm"
+              >Contact</a
+            >
+            <button
+              id="mainNavToggle"
+              class="inline-flex items-center justify-center w-10 h-10"
+            >
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden hidden border-t border-slate-200 bg-white"
+      >
+        <div class="max-w-7xl mx-auto px-4 py-4 space-y-2">
+          <a class="block py-2" href="#">Home</a>
+          <a class="block py-2" href="#">Our Story</a>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Services <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Counseling</a>
+              <a class="block py-1" href="#">Test Prep</a>
+              <a class="block py-1" href="#">Visa Guidance</a>
+            </div>
+          </details>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Study Destinations
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Australia</a>
+              <a class="block py-1" href="#">Canada</a>
+              <a class="block py-1" href="#">UK</a>
+            </div>
+          </details>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Events &amp; Webinars
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Upcoming Events</a>
+              <a class="block py-1" href="#">Past Webinars</a>
+            </div>
+          </details>
+          <a class="block py-2" href="#">Blog</a>
+          <a class="block py-2" href="#">News</a>
+          <a class="block py-2" href="#">FAQ's</a>
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-4 py-2 rounded-md mt-2"
+            >Contact Us <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- our story  hero -->
+    <section class="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
+      <img
+        src="./assets/story-hero.jpg"
+        alt="About Hero"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#03519E] to-transparent"
+      ></div>
+
+      <!-- Content -->
+      <div class="relative z-10 h-full">
+        <div class="mx-auto max-w-7xl h-full flex items-center">
+          <div class="px-6 py-20 md:py-0 md:px-6 text-white max-w-2xl">
+            <p class="text-white/80 text-lg md:text-xl mb-4 hero-content">
+              Who we are
+            </p>
+
+            <h1
+              class="tracking-wider leading-tight md:leading-[2.8rem] text-3xl md:text-4xl mb-6 hero-section-font"
+            >
+              Empowering Students to<br class="hidden md:block" />
+              Achieve Their International<br class="hidden md:block" />
+              Education Dreams
+            </h1>
+
+            <p
+              class="text-white/80 text-base leading-[1.5rem] max-w-lg font-light"
+            >
+              We provide expert guidance, personalized support, and end-to-end
+              services that help students confidently pursue their study abroad
+              journey.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why students trust us -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="sub-heading text-center mb-12">Why Students Trust Us</h2>
+
+        <div
+          class="flex overflow-x-auto gap-4 sm:gap-6 md:gap-8 px-1 snap-x snap-mandatory scroll-smooth md:grid md:grid-cols-3 lg:grid-cols-5 md:overflow-visible md:px-0 hero-content"
+          id="trust-scroll"
+        >
+          <!-- Card 1 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/graduate-university-svgrepo-com 1.png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">5000+</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              Students Counseled
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/aeroplane-plane-svgrepo-com 1.png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">20+</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              Study Destinations
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/school-learn-knowledge-svgrepo-com 1.png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">200+</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              University Partners
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/Frame 2202949.png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">99%</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              Visa Success Rate
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="shrink-0 snap-start min-w-[240px] sm:min-w-[260px] md:min-w-0 bg-[#F8FBFF] rounded-2xl border border-[#E6EEF9] p-6 sm:p-8 text-center shadow-sm hover:shadow-md transition"
+          >
+            <div class="mb-4">
+              <img
+                src="./assets/Group (1).png"
+                class="w-10 h-10 sm:w-12 sm:h-12 mx-auto"
+                alt=""
+              />
+            </div>
+            <div class="text-3xl sm:text-4xl text-[#1e549f]">24/7</div>
+            <div class="mt-2 text-slate-500 text-sm sm:text-base">
+              Expert Availability
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- where our student now -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-4xl mx-auto">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Our Mission and Vision
+          </p>
+
+          <h2 class="sub-heading">
+            Building Brighter Futures <br />
+            Through Global Education
+          </h2>
+        </div>
+
+        <!-- 2 grids -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mt-12">
+          <!-- Left image -->
+          <div class="md:col-span-6">
+            <div class="overflow-hidden rounded-xl">
+              <img
+                src="./assets/our-story-img2.png"
+                alt="Our office"
+                class="w-full h-[40vh] md:h-[45vh] object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Right content -->
+          <div class="md:col-span-6">
+            <h2
+              class="hero-content text-[#c71826] font-light tracking-wide text-4xl sm:text-5xl leading-tight"
+            >
+              Empowering Futures,<br class="hidden sm:block" />
+              Shaping Global Leaders
+            </h2>
+
+            <p
+              class="hero-content mt-6 text-gray-500 text-lg leading-8 tracking-wide max-w-3xl font-light"
+            >
+              At Markline Education Consultancy, we are committed to empowering
+              students by providing expert guidance, personalized counseling,
+              and unwavering support throughout their study abroad journey. Our
+              vision is to become the leading education consultancy in Nepal,
+              fostering a future where every student is equipped with the
+              knowledge, confidence, and global exposure needed to thrive as a
+              successful global citizen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- our leadership -->
+    <section class="py-16 bg-[#ECF1FE]">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Heading -->
+        <div class="text-center max-w-4xl mx-auto">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Our Leaderships
+          </p>
+          <h2 class="sub-heading">Bringing the idea to life</h2>
+        </div>
+
+        <!-- Leaders -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
+          <div class="flex gap-6 items-start">
+            <img
+              src="./assets/story-1.png"
+              alt="Dinesh"
+              class="w-40 h-40 md:w-72 md:h-60 object-cover rounded-lg"
+            />
+            <div>
+              <div class="max-w-xs">
+                <h3 class="text-3xl tracking-wider hero-content text-gray-800">
+                  Dinesh
+                </h3>
+                <p class="text-[#02519e] text-sm italic mt-2">
+                  CEO &amp; Founder
+                </p>
+                <p class="mt-4 text-gray-500 leading-6 font-light text-sm">
+                  We believe in building trust through transparency, offering
+                  personalized guidance, and celebrating each success story.
+                </p>
+                <p class="mt-3 text-gray-500 leading-6 font-light text-sm">
+                  Our dedicated team is here to make your journey smoother,
+                  clearer, and filled with purpose.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-6 items-start">
+            <img
+              src="./assets/story-2.jpg"
+              alt="Meena"
+              class="w-40 h-40 md:w-72 md:h-60 object-cover rounded-lg"
+            />
+            <div>
+              <div class="max-w-xs">
+                <h3 class="text-3xl tracking-wider hero-content text-gray-800">
+                  Meena
+                </h3>
+                <p class="text-[#02519e] text-sm italic mt-2">
+                  President &amp; Founder
+                </p>
+                <p class="mt-4 text-gray-500 leading-6 font-light text-sm">
+                  We believe in building trust through transparency, offering
+                  personalized guidance, and celebrating each success story.
+                </p>
+                <p class="mt-3 text-gray-500 leading-6 font-light text-sm">
+                  Our dedicated team is here to make your journey smoother,
+                  clearer, and filled with purpose.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ourteam -->
+    <section class="pb-16 bg-[#ECF1FE]">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Heading -->
+        <div class="text-center max-w-4xl mx-auto">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Our Team
+          </p>
+          <h2 class="sub-heading">Bringing the idea to life</h2>
+        </div>
+
+        <!-- Leaders -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
+          <div class="flex gap-6 items-start">
+            <img
+              src="./assets/story-3.jpg"
+              alt="Dinesh"
+              class="w-40 h-40 md:w-72 md:h-60 object-cover rounded-lg"
+            />
+            <div>
+              <div class="max-w-xs">
+                <h3 class="text-3xl tracking-wider hero-content text-gray-800">
+                  Dipak
+                </h3>
+                <p class="text-[#02519e] text-sm italic mt-2">Manager</p>
+                <p class="mt-4 text-gray-500 leading-6 font-light text-sm">
+                  We believe in building trust through transparency, offering
+                  personalized guidance, and celebrating each success story.
+                </p>
+                <p class="mt-3 text-gray-500 leading-6 font-light text-sm">
+                  Our dedicated team is here to make your journey smoother,
+                  clearer, and filled with purpose.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-6 items-start">
+            <img
+              src="./assets/story-4.jpg"
+              alt="Meena"
+              class="w-40 h-40 md:w-72 md:h-60 object-cover rounded-lg"
+            />
+            <div>
+              <div class="max-w-xs">
+                <h3 class="text-3xl tracking-wider hero-content text-gray-800">
+                  Sunita
+                </h3>
+                <p class="text-[#02519e] text-sm italic mt-2">Receptionist</p>
+                <p class="mt-4 text-gray-500 leading-6 font-light text-sm">
+                  We believe in building trust through transparency, offering
+                  personalized guidance, and celebrating each success story.
+                </p>
+                <p class="mt-3 text-gray-500 leading-6 font-light text-sm">
+                  Our dedicated team is here to make your journey smoother,
+                  clearer, and filled with purpose.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why choose us -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-4xl mx-auto">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Why Choose Us
+          </p>
+          <h2 class="sub-heading">
+            Building an equitable future by increasing <br />
+            access to quality education all around the <br />world.
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12 max-w-5xl mx-auto"
+        >
+          <div class="text-center">
+            <div
+              class="mx-auto w-28 h-28 rounded-2xl bg-gradient-to-b from-[#0f66c2] to-[#74a9ff] shadow-lg grid place-items-center"
+            >
+              <img src="./assets/message.png" alt="" />
+            </div>
+            <h3 class="mt-6 text-lg font-medium text-gray-700 tracking-wide">
+              Personalized Counseling
+            </h3>
+            <p
+              class="mt-3 text-sm text-[#919191] leading-6 max-w-sm mx-auto font-light"
+            >
+              We understand that every student is unique. Our expert advisors
+              offer one-on-one guidance tailored to your goals, background, and
+              preferred destination.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="mx-auto w-28 h-28 rounded-2xl bg-gradient-to-b from-[#0f66c2] to-[#74a9ff] shadow-lg grid place-items-center"
+            >
+              <img src="./assets/graduation.png" alt="" />
+            </div>
+            <h3 class="mt-6 text-lg font-medium text-gray-700 tracking-wide">
+              Global University Network
+            </h3>
+            <p
+              class="mt-3 text-sm text-[#919191] leading-6 max-w-sm mx-auto font-light"
+            >
+              We understand that every student is unique. Our expert advisors
+              offer one-on-one guidance tailored to your goals, background, and
+              preferred destination.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="mx-auto w-28 h-28 rounded-2xl bg-gradient-to-b from-[#0f66c2] to-[#74a9ff] shadow-lg grid place-items-center"
+            >
+              <img src="./assets/support.png" alt="" />
+            </div>
+            <h3 class="mt-6 text-lg font-medium text-gray-700 tracking-wide">
+              Complete Application Support
+            </h3>
+            <p
+              class="mt-3 text-sm text-[#919191] leading-6 max-w-sm mx-auto font-light"
+            >
+              We understand that every student is unique. Our expert advisors
+              offer one-on-one guidance tailored to your goals, background, and
+              preferred destination.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- process-->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-4xl mx-auto">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Process
+          </p>
+          <h2
+            class="sub-heading text-center whitespace-normal md:whitespace-nowrap text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+          >
+            A step-by-step approach to your study abroad journey
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-10 mt-16">
+          <!-- Card 1 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-1.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >01</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              Student Inquiry & Initial<br />Counseling
+            </h3>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-2.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >02</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              Academic & Career<br />Profiling
+            </h3>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-3.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >03</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              Course, University &<br />Country Selection
+            </h3>
+          </div>
+          <!-- Card 4 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-4.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >04</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              ⁠Test Preparation Support <br />(If Needed)
+            </h3>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-5.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >05</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              Document Collection & <br />
+              SOP Writing
+            </h3>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-6.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >06</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              ⁠Application Submission
+            </h3>
+          </div>
+          <!-- Card 7 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-7.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >07</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              ⁠Offer Letter & Admission <br />Confirmation
+            </h3>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-8.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >08</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              ⁠Financial Planning & Bank <br />
+              Documentation
+            </h3>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-9.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >09</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              Visa Application Process
+            </h3>
+          </div>
+          <!-- Card 10 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-10.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >10</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              Pre-Departure Briefing
+            </h3>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-11.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >11</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              ⁠Post-Visa Support
+            </h3>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="relative h-44 md:h-72 rounded-xl overflow-hidden">
+            <img
+              src="./assets/process-12.jpg"
+              alt=""
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/50"></div>
+            <span
+              class="absolute top-14 right-6 text-white/80 font-semibold text-3xl md:text-7xl"
+              >12</span
+            >
+            <h3
+              class="hero-content absolute left-6 bottom-6 text-md md:text-3xl font-semibold leading-tight text-[#AEC7FB]"
+            >
+              Follow-up & Feedback
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Awards and Achievements -->
+    <section class="py-16">
+      <div class="text-center max-w-4xl mx-auto">
+        <p
+          class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+        >
+          Awards and Achievements
+        </p>
+        <h2 class="sub-heading">Proud Moments That Define Our Journey</h2>
+      </div>
+      <div class="w-full overflow-hidden mt-10">
+        <div class="flex animate-marquee-2 space-x-8">
+          <img
+            src="./assets/awards-1.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+          <img
+            src="./assets/awards-2.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+          <img
+            src="./assets/awards-3.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+          <img
+            src="./assets/awards-4.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+          <img
+            src="./assets/awards-5.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+
+          <!-- duplicate set -->
+          <img
+            src="./assets/awards-1.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+          <img
+            src="./assets/awards-2.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+          <img
+            src="./assets/awards-3.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+          <img
+            src="./assets/awards-4.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+          <img
+            src="./assets/awards-5.png"
+            class="rounded-xl h-28 md:h-40 lg:h-72 flex-shrink-0"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Video Stories -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <div class="text-center max-w-4xl mx-auto mb-10">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Student stories
+          </p>
+          <h2 class="sub-heading">
+            Our highlighted students revealing their success stories.
+          </h2>
+        </div>
+
+        <!-- Carousel -->
+        <div class="relative">
+          <!-- Scrollable strip -->
+          <div
+            id="videoStrip"
+            class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide pb-2"
+            aria-label="Student video stories"
+          >
+            <!-- Card 1 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo1.jpeg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+            <!-- Card 2 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo2.jpg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+            <!-- Card 3 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo3.jpg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+            <!-- Card 4 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo4.jpg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+            <!-- Card-5 -->
+            <article
+              class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
+            >
+              <div class="relative">
+                <video
+                  class="w-full h-80 object-cover block"
+                  preload="none"
+                  playsinline
+                  muted
+                  data-caption="Mukesh Kumar, Canada"
+                  poster="./assets/photo5.jpg"
+                  src="YOUR_VIDEO_1.mp4"
+                ></video>
+
+                <!-- Play overlay -->
+                <button
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
+                  aria-label="Play video"
+                >
+                  <i
+                    class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
+                  ></i>
+                </button>
+
+                <!-- Caption -->
+                <p
+                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
+                >
+                  Mukesh Kumar, Canada
+                </p>
+              </div>
+            </article>
+          </div>
+          <!-- left and right arrow -->
+          <div class="mt-6 flex items-center gap-4">
+            <button
+              id="prevBtn"
+              class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
+              aria-label="Scroll left"
+            >
+              <i class="fa-solid fa-arrow-left text-[#03519E]"></i>
+            </button>
+            <button
+              id="nextBtn"
+              class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
+              aria-label="Scroll right"
+            >
+              <i class="fa-solid fa-arrow-right text-[#03519E]"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="relative bg-[#ECF1FE] text-[#1F3A7A] mt-0 md:mt-32">
+      <div
+        class="grid md:grid-cols-3 border-y border-[#1F3A7A] bg-[#ECF1FE] z-0"
+      >
+        <!-- Address -->
+        <div class="flex items-center justify-center gap-4 px-4 py-2">
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- location pin -->
+            <i class="fa-solid fa-location-dot text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Address:</p>
+            <p class="text-xl tracking-wider hero-content">Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <!-- Phone -->
+        <div
+          class="flex items-center gap-4 px-4 py-2 justify-center border-t md:border-t-0 md:border-x border-[#1F3A7A]"
+        >
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- phone -->
+            <i class="fa-solid fa-phone text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Phone:</p>
+            <p class="text-xl tracking-wider hero-content">+977 984 784 5682</p>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="flex items-center justify-center gap-4 px-4 py-2">
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- mail -->
+            <i class="fa-solid fa-envelope text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Email:</p>
+            <p class="text-xl tracking-wider hero-content">
+              marklineinfo@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="relative bg-[#ECF1FE]">
+        <!-- background map image -->
+
+        <img
+          src="./assets/footer-bg.png"
+          alt="World Map"
+          class="hidden md:block absolute inset-0 mx-auto top-1/2 -translate-y-[30%] scale-110 max-w-3xl h-80 object-contain opacity-20 pointer-events-none z-0"
+        />
+
+        <div class="relative max-w-5xl mx-auto text-center py-14 px-4">
+          <h2
+            class="text-4xl md:text-5xl font-normal tracking-widest leading-snug text-[#02519e]"
+          >
+            Make Your Dream Ture<br class="hidden md:block" />
+            With Markline.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Middle content -->
+      <div class="bg-white/30 z-0">
+        <div
+          class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10 px-4 py-10"
+        >
+          <!-- Brand + about -->
+          <div>
+            <img
+              src="./assets/markline 1.png"
+              alt="markline"
+              class="h-10 w-auto"
+            />
+            <p class="mt-5 text-[#03519E] leading-7 font-light">
+              Guiding Nepalese students to top international universities with
+              expert support and care.
+            </p>
+            <!-- Socials -->
+            <div class="mt-6 flex items-center gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-facebook-f text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-instagram text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-linkedin-in text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-youtube text-[#09315B] text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-4 text-[#234]">
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                >
+                  › Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Study Destinations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Student Resources -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Student Resources
+            </h3>
+            <ul class="space-y-4 text-[#234]">
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› International Student Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Test Preparation Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Sample Documents</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Webinar Form</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Accreditation -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Accreditation
+            </h3>
+            <div class="grid grid-cols-3 gap-4">
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="border-t border-[#1F3A7A] flex flex-col md:flex-row justify-between items-center px-6 py-4 text-sm text-[#02519e] tracking-wide font-light"
+      >
+        <p>Copyright © 2025 Markline || All Rights Reserved</p>
+        <div
+          class="flex items-center gap-6 mt-2 md:mt-0 text-[#02519e] tracking-wider font-light"
+        >
+          <a href="#" class="">Terms & Conditions</a>|
+          <a href="#" class="">Privacy Policy</a>|
+          <a href="#" class="">Disclaimer</a>
+        </div>
+        <div class="flex justify-between gap-2">
+          <p class="mt-2 md:mt-0 flex items-center">Developed by</p>
+          <img src="./assets/Blue Logo.png" class="h-7 w-auto" alt="" />
+        </div>
+      </div>
+
+      <!-- Back to top -->
+      <div id="backToTop" class="fixed bottom-20 right-6 hidden">
+        <button
+          class="w-12 h-12 rounded-full border border-[#1F3A7A] text-[#1F3A7A]"
+        >
+          <i class="fa-solid fa-chevron-up text-2xl text-[#E31E26]"></i>
+        </button>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

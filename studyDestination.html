@@ -1,0 +1,2348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./assets/markline 1.png" type="image/png" />
+    <title>Markline</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--  top bar-->
+    <div class="bg-[#0E3A5A] text-white text-sm hidden md:block">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between py-2 gap-14">
+          <!-- Left-->
+
+          <ul class="flex items-center gap-5 ml-auto">
+            <li><a href="#" class="hover:text-amber-300">Accomodation</a></li>
+            <li><a href="#" class="hover:text-amber-300">Compare</a></li>
+            <li>
+              <a href="#" class="hover:text-amber-300">Date Converter</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-amber-300">Currency Converter</a>
+            </li>
+          </ul>
+
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="bg-[#E41E26] hover:bg-[#c71826] text-white font-medium px-4 py-2 rounded-md shadow-sm"
+            >
+              OHSC Payment
+            </a>
+
+            <div class="flex items-center bg-[#E21D2D] overflow-hidden">
+              <a
+                aria-label="Facebook"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                aria-label="Instagram"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                aria-label="LinkedIn"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                aria-label="YouTube"
+                href="#"
+                class="px-3 py-2 text-white hover:opacity-90"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Theme -->
+          <div class="flex items-center gap-2 relative">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <button
+              id="themeBtn"
+              class="flex items-center gap-2 hover:text-amber-300"
+            >
+              Theme <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+
+            <!-- (optional) dropdown; keep as-is if you already use it -->
+            <div
+              id="themeMenu"
+              class="dropdown-panel absolute right-0 top-full mt-2 w-40 bg-white text-slate-700 rounded-md shadow-lg p-2 opacity-0 pointer-events-none translate-y-1"
+            >
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                Default
+              </button>
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                Dark
+              </button>
+              <button
+                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+              >
+                High Contrast
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- navigation -->
+    <header
+      class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-md"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="./index.html" class="">
+            <img
+              src="./assets/markline 1.png"
+              alt="Markline Logo"
+              class="w-full rounded h-10"
+            />
+          </a>
+
+          <!-- Desktop Nav Links -->
+          <nav
+            class="hidden lg:flex items-center gap-6 text-[#02519e] font-light"
+          >
+            <a href="./index.html" class="hover:text-[#c71826]">Home</a>
+            <a href="./ourStory.html" class="hover:text-[#c71826]">Our Story</a>
+
+            <!-- services -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a
+                  href="./services.html"
+                  class="inline-flex items-center gap-2"
+                >
+                  Services
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <!-- Example dropdown panel -->
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Counseling</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Test Prep</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Visa Guidance</a
+                >
+              </div>
+            </div>
+            <!-- study desitination -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a
+                  href="./studyDestination.html"
+                  class="inline-flex items-center gap-2 hover:text-[#c71826]"
+                >
+                  Study Destinations
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Australia</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Canada</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >UK</a
+                >
+              </div>
+            </div>
+            <!-- events -->
+            <div class="relative group">
+              <div class="hover:text-[#c71826]">
+                <a href="./events.html" class="inline-flex items-center gap-2">
+                  Events &amp; Webinars
+                </a>
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+              </div>
+              <div
+                class="dropdown-panel absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+              >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Upcoming Events</a
+                >
+                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
+                  >Past Webinars</a
+                >
+              </div>
+            </div>
+
+            <a href="./blog.html" class="hover:text-[#c71826]">Blog</a>
+            <a href="./news.html" class="hover:text-[#c71826]">News</a>
+            <a href="faq.html" class="hover:text-[#c71826]">FAQ's</a>
+          </nav>
+
+          <div class="hidden sm:flex">
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 bg-[#02519e] text-white px-5 py-3 rounded-lg font-medium"
+            >
+              Contact Us <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-3 lg:hidden">
+            <a
+              href="#"
+              class="hidden xs:inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-3 py-2 rounded-md text-sm"
+              >Contact</a
+            >
+            <button
+              id="mainNavToggle"
+              class="inline-flex items-center justify-center w-10 h-10"
+            >
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden hidden border-t border-slate-200 bg-white"
+      >
+        <div class="max-w-7xl mx-auto px-4 py-4 space-y-2">
+          <a class="block py-2" href="#">Home</a>
+          <a class="block py-2" href="#">Our Story</a>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Services <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Counseling</a>
+              <a class="block py-1" href="#">Test Prep</a>
+              <a class="block py-1" href="#">Visa Guidance</a>
+            </div>
+          </details>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Study Destinations
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Australia</a>
+              <a class="block py-1" href="#">Canada</a>
+              <a class="block py-1" href="#">UK</a>
+            </div>
+          </details>
+          <details class="py-2">
+            <summary class="cursor-pointer flex items-center justify-between">
+              Events &amp; Webinars
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </summary>
+            <div class="pl-4 pt-2 space-y-1">
+              <a class="block py-1" href="#">Upcoming Events</a>
+              <a class="block py-1" href="#">Past Webinars</a>
+            </div>
+          </details>
+          <a class="block py-2" href="#">Blog</a>
+          <a class="block py-2" href="#">News</a>
+          <a class="block py-2" href="#">FAQ's</a>
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-4 py-2 rounded-md mt-2"
+            >Contact Us <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <!--study destination hero -->
+    <section class="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
+      <img
+        src="./assets/study-destination-hero.jpg"
+        alt="About Hero"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#03519E] to-transparent"
+      ></div>
+
+      <!-- Content -->
+      <div class="relative z-10 h-full">
+        <div class="mx-auto max-w-7xl h-full flex items-center">
+          <div class="px-6 py-20 md:py-0 md:px-6 text-white max-w-2xl">
+            <h1
+              class="tracking-wider leading-tight md:leading-[2.8rem] text-3xl md:text-4xl mb-6 hero-section-font"
+            >
+              Study in United Kingdom, <br class="hidden md:block" />
+              a complete guide
+            </h1>
+
+            <p
+              class="text-white/80 text-base leading-[1.5rem] max-w-lg font-light"
+            >
+              Explore top universities, courses, scholarships, visa process, and
+              everything you need to start your academic journey in the United
+              Kingdom
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center gap-3 bg-[#e41e26] hover:bg-[#c71826] text-white px-5 py-3 rounded-lg font-medium shadow mt-6"
+            >
+              Register Now <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tabs -->
+    <section class="hidden lg:block py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Tabs -->
+        <div
+          class="flex gap-2 border-b border-slate-200 pb-4 font-light tracking-wide"
+        >
+          <button class="shrink-0 px-3 pb-3 text-[#0f3a5b]">
+            Country Overview
+          </button>
+          <button
+            class="shrink-0 px-3 pb-3 text-slate-600 hover:text-[#0f3a5b]"
+          >
+            Education System
+          </button>
+          <button
+            class="shrink-0 px-3 pb-3 text-slate-600 hover:text-[#0f3a5b]"
+          >
+            Top Universities
+          </button>
+          <button
+            class="shrink-0 px-3 pb-3 text-slate-600 hover:text-[#0f3a5b]"
+          >
+            Application Process
+          </button>
+          <button
+            class="shrink-0 px-3 pb-3 text-slate-600 hover:text-[#0f3a5b]"
+          >
+            Requirements
+          </button>
+          <button
+            class="shrink-0 px-3 pb-3 text-slate-600 hover:text-[#0f3a5b]"
+          >
+            Estimated Costs
+          </button>
+          <button
+            class="shrink-0 px-3 pb-3 text-slate-600 hover:text-[#0f3a5b]"
+          >
+            Scholarships
+          </button>
+          <button
+            class="shrink-0 px-3 pb-3 text-slate-600 hover:text-[#0f3a5b]"
+          >
+            Work Opportunities
+          </button>
+        </div>
+
+        <!-- Top stats -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-10 mt-6">
+          <!-- item -->
+          <div
+            class="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-4"
+          >
+            <img src="./assets/study1.png" class="w-12 h-12" alt="" />
+            <div>
+              <p class="text-slate-700 text-sm">Population</p>
+              <p class="text-[#03519E] text-xs italic font-medium mt-2">
+                68 Mn
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
+          >
+            <img src="./assets/study2.png" class="w-12 h-12" alt="" />
+            <div>
+              <p class="text-slate-700 text-sm">Climate</p>
+              <p class="text-[#03519E] text-xs italic font-medium mt-2">
+                Seasonal
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
+          >
+            <img src="./assets/study3.png" class="w-12 h-12" alt="" />
+            <div>
+              <p class="text-slate-700 text-sm">Language</p>
+              <p class="text-[#03519E] text-xs italic font-medium mt-2">
+                English
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
+          >
+            <img src="./assets/study4.png" class="w-12 h-12" alt="" />
+            <div>
+              <p class="text-slate-700 text-sm">Safety</p>
+              <p class="text-[#03519E] text-xs italic font-medium mt-2">
+                Secure
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3"
+          >
+            <img src="./assets/study5.png" class="w-12 h-12" alt="" />
+            <div>
+              <p class="text-slate-700 text-sm">Universities</p>
+              <p class="text-[#03519E] text-xs italic font-medium mt-2">359</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- headline -->
+    <section class="py-10">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mt-10">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Why study in United Kingdom
+          </p>
+          <h2 class="sub-heading font-medium">
+            World-class education, vibrant culture,<br
+              class="hidden md:block"
+            />
+            and endless career opportunities await.
+          </h2>
+        </div>
+
+        <!-- Center image  -->
+        <div class="relative max-w-5xl mx-auto mt-10">
+          <!-- 1 -->
+          <div
+            class="hidden md:flex items-center w-fit rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] px-4 py-2 shadow-sm"
+          >
+            <span
+              class="flex items-center justify-center w-9 h-10 rounded-md bg-white text-[#1e4f97] font-semibold mr-3"
+            >
+              1
+            </span>
+            <!-- Text -->
+            <div class="text-left">
+              <p class="font-normal text-gray-800 text-sm md:text-base">
+                Excellent Academics
+              </p>
+              <p class="text-xs md:text-sm text-[#1e4f97] font-light">
+                Proven record of academic excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div
+            class="hidden md:flex items-center w-fit absolute right-0 top-0 rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] px-4 py-2 shadow-sm"
+          >
+            <span
+              class="flex items-center justify-center w-9 h-10 rounded-md bg-white text-[#1e4f97] font-semibold mr-3"
+            >
+              2
+            </span>
+            <!-- Text -->
+            <div class="text-left">
+              <p class="font-normal text-gray-800 text-sm md:text-base">
+                Financial Assistance
+              </p>
+              <p class="text-xs md:text-sm text-[#1e4f97] font-light">
+                Proven record of academic excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div
+            class="hidden md:flex items-center w-fit absolute -left-14 top-1/2 -translate-y-1/2 rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] px-4 py-2 shadow-sm"
+          >
+            <span
+              class="flex items-center justify-center w-9 h-10 rounded-md bg-white text-[#1e4f97] font-semibold mr-3"
+            >
+              3
+            </span>
+            <!-- Text -->
+            <div class="text-left">
+              <p class="font-normal text-gray-800 text-sm md:text-base">
+                High Quality Research
+              </p>
+              <p class="text-xs md:text-sm text-[#1e4f97] font-light">
+                Proven record of academic excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div
+            class="hidden md:flex items-center w-fit absolute -right-14 top-1/2 -translate-y-1/2 rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] px-4 py-2 shadow-sm"
+          >
+            <span
+              class="flex items-center justify-center w-9 h-10 rounded-md bg-white text-[#1e4f97] font-semibold mr-3"
+            >
+              4
+            </span>
+            <!-- Text -->
+            <div class="text-left">
+              <p class="font-normal text-gray-800 text-sm md:text-base">
+                Internships
+              </p>
+              <p class="text-xs md:text-sm text-[#1e4f97] font-light">
+                Proven record of academic excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div
+            class="hidden md:flex items-center w-fit absolute -left-0 bottom-8 rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] px-4 py-2 shadow-sm"
+          >
+            <span
+              class="flex items-center justify-center w-9 h-10 rounded-md bg-white text-[#1e4f97] font-semibold mr-3"
+            >
+              5
+            </span>
+            <!-- Text -->
+            <div class="text-left">
+              <p class="font-normal text-gray-800 text-sm md:text-base">
+                Flexibility in Course Curriculum
+              </p>
+              <p class="text-xs md:text-sm text-[#1e4f97] font-light">
+                Proven record of academic excellence.
+              </p>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div
+            class="hidden md:flex items-center w-fit absolute right-0 bottom-6 rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] px-4 py-2 shadow-sm"
+          >
+            <span
+              class="flex items-center justify-center w-9 h-10 rounded-md bg-white text-[#1e4f97] font-semibold mr-3"
+            >
+              6
+            </span>
+            <!-- Text -->
+            <div class="text-left">
+              <p class="font-normal text-gray-800 text-sm md:text-base">
+                Job Opportunities
+              </p>
+              <p class="text-xs md:text-sm text-[#1e4f97] font-light">
+                Proven record of academic excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- center image -->
+          <img
+            src="./assets/student-dest-1.png"
+            alt="Student"
+            class="relative z-10 mx-auto w-[200px] md:w-[250px] mask-gradient"
+          />
+
+          <!-- Mobile list -->
+          <div class="md:hidden grid grid-cols-2 gap-2">
+            <!-- 1 -->
+            <div
+              class="rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] p-3 shadow-sm"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="flex items-center justify-center w-14 h-14 rounded-lg bg-white text-[#1e4f97] font-semibold text-xl"
+                >
+                  1
+                </span>
+                <div class="text-left">
+                  <p class="font-medium text-slate-800 text-sm leading-5">
+                    Excellent Academics
+                  </p>
+                  <p class="text-[#0f3a5b] text-xs">
+                    Proven record of academic excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div
+              class="rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] p-3 shadow-sm"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="flex items-center justify-center w-14 h-14 rounded-lg bg-white text-[#1e4f97] font-semibold text-xl"
+                >
+                  2
+                </span>
+                <div class="text-left">
+                  <p class="font-medium text-slate-800 text-sm leading-5">
+                    Financial Assistance
+                  </p>
+                  <p class="text-[#0f3a5b] text-xs">
+                    Proven record of academic excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div
+              class="rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] p-3 shadow-sm"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="flex items-center justify-center w-14 h-14 rounded-lg bg-white text-[#1e4f97] font-semibold text-xl"
+                >
+                  3
+                </span>
+                <div class="text-left">
+                  <p class="font-medium text-slate-800 text-sm leading-5">
+                    High Quality Research
+                  </p>
+                  <p class="text-[#0f3a5b] text-xs">
+                    Proven record of academic excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div
+              class="rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] p-3 shadow-sm"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="flex items-center justify-center w-14 h-14 rounded-lg bg-white text-[#1e4f97] font-semibold text-xl"
+                >
+                  4
+                </span>
+                <div class="text-left">
+                  <p class="font-medium text-slate-800 text-sm leading-5">
+                    Internships
+                  </p>
+                  <p class="text-[#0f3a5b] text-xs">
+                    Proven record of academic excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div
+              class="rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] p-3 shadow-sm"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="flex items-center justify-center w-14 h-14 rounded-lg bg-white text-[#1e4f97] font-semibold text-xl"
+                >
+                  5
+                </span>
+                <div class="text-left">
+                  <p class="font-medium text-slate-800 text-sm leading-5">
+                    Flexibility in Course
+                  </p>
+                  <p class="text-[#0f3a5b] text-xs">
+                    Proven record of academic excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6 -->
+            <div
+              class="rounded-2xl bg-gradient-to-r from-[#c9d9ef] to-[#7aa4d8] p-3 shadow-sm"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="flex items-center justify-center w-14 h-14 rounded-lg bg-white text-[#1e4f97] font-semibold text-xl"
+                >
+                  6
+                </span>
+                <div class="text-left">
+                  <p class="font-medium text-slate-800 text-sm leading-5">
+                    Job Opportunities
+                  </p>
+                  <p class="text-[#0f3a5b] text-xs">
+                    Proven record of academic excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- education system-->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Section Heading -->
+        <div class="text-center max-w-4xl mx-auto mb-12">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Education System
+          </p>
+          <h2 <h2 class="sub-heading text-[#1e549f] text-3xl">
+            Innovative learning designed to unlock your full potential.
+          </h2>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-3">
+          <!-- Card 1-->
+          <div class="bg-[#F9FAFC] rounded-lg border border-[#E9F0FF] p-8">
+            <span
+              class="inline-flex items-center gap-2 px-4 py-1.5 text-base rounded-full bg-[#E4F1EA] text-green-800"
+            >
+              <i class="fa-solid fa-graduation-cap text-lg"></i>
+              Bachelor
+            </span>
+
+            <p class="mt-6 text-gray-500 text-[14px] leading-6">
+              Typically a 3-4 year undergraduate program focused on building a
+              strong foundation in your chosen field. It combines lectures,
+              seminars, and practical work to prepare you for professional or
+              academic paths.
+            </p>
+
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center gap-4 text-gray-700 font-normal text-sm"
+            >
+              Apply Now
+              <i class="fa-solid fa-chevron-right text-sm"></i>
+            </a>
+
+            <!-- Image -->
+            <img
+              src="./assets/educationsystem-1.jpg"
+              alt="Test Preparation"
+              class="mt-6 w-full h-48 object-cover rounded-2xl"
+            />
+          </div>
+          <!-- Card 2-->
+          <div class="bg-[#F9FAFC] rounded-lg border border-[#E9F0FF] p-8">
+            <span
+              class="inline-flex items-center gap-2 px-4 py-1.5 text-base rounded-full bg-[#E4EDFA] text-blue-600"
+            >
+              <i class="fa-solid fa-graduation-cap text-xl"></i>
+              Master
+            </span>
+
+            <p class="mt-6 text-gray-500 text-[14px] leading-6">
+              An advanced 1-2 year program that deepens your expertise through
+              specialized coursework and research. Ideal for gaining and
+              learning professional skills or preparing for doctoral studies.
+            </p>
+
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center gap-4 text-gray-700 font-normal text-sm"
+            >
+              Apply Now
+              <i class="fa-solid fa-chevron-right text-sm"></i>
+            </a>
+
+            <!-- Image -->
+            <img
+              src="./assets/educationsystem-2.jpg"
+              alt="Test Preparation"
+              class="mt-6 w-full h-48 object-cover rounded-2xl"
+            />
+          </div>
+          <!-- Card 3-->
+          <div class="bg-[#F9FAFC] rounded-lg border border-[#E9F0FF] p-8">
+            <span
+              class="inline-flex items-center gap-2 px-4 py-1.5 text-base rounded-full bg-[#FAEDE4] text-amber-500"
+            >
+              <i class="fa-solid fa-graduation-cap text-xl"></i>
+              PhD
+            </span>
+
+            <p class="mt-6 text-gray-500 text-[14px] leading-6">
+              Typically a 3-4 year undergraduate program focused on building a
+              strong foundation in your chosen field. It combines lectures,
+              seminars, and practical work to prepare you for professional or
+              academic paths.
+            </p>
+
+            <a
+              href="#"
+              class="mt-4 inline-flex items-center gap-4 text-gray-700 font-normal text-sm"
+            >
+              Apply Now
+              <i class="fa-solid fa-chevron-right text-sm"></i>
+            </a>
+
+            <!-- Image -->
+            <img
+              src="./assets/educationsystem-3.jpg"
+              alt="Test Preparation"
+              class="mt-6 w-full h-48 object-cover rounded-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- top uni-->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-7xl mx-auto mb-12">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Top Universities
+          </p>
+          <h2 class="sub-heading text-[#1e549f] text-3xl">
+            Study at globally ranked institutions with a reputation for academic
+            excellence.
+          </h2>
+        </div>
+        <!-- Carousel -->
+        <div class="relative">
+          <div
+            id="videoStrip"
+            class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide pb-2"
+            aria-label="Student video stories"
+          >
+            <!-- card 1 -->
+            <article
+              class="snap-start shrink-0 bg-white py-6 rounded-xl min-w-[320px] sm:min-w-[380px] md:min-w-[350px] xl:min-w-[400px]"
+            >
+              <div class="relative aspect-[16/9] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/uni1.jpg"
+                  alt="University of Oxford"
+                  class="absolute inset-0 w-full h-full object-cover block"
+                />
+
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <div class="absolute bottom-6 left-6">
+                  <span
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E4EDFF] shadow ring-1 ring-black/5"
+                  >
+                    <img
+                      src="./assets/Vector.png"
+                      alt="badge"
+                      class="w-9 h-9"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-6">
+                <h3
+                  class="hero-content tracking-wider text-lg md:text-xl font-medium text-[#1e549f]"
+                >
+                  University of Oxford
+                </h3>
+                <p class="mt-3 font-light text-sm md:text-base text-slate-500">
+                  Location, global rankings
+                </p>
+                <p class="mt-4 text-sm text-gray-600">
+                  <span>Tuition Fee : USD</span>
+                  <span class="text-[#f59e0b] font-medium ml-1"
+                    >$18k - $19k / year</span
+                  >
+                </p>
+                <button
+                  type="button"
+                  class="mt-4 w-full rounded-xl bg-[#e12626] hover:bg-[#cc1f1f] text-white text-md md:text-lg py-3 inline-flex items-center justify-center gap-3"
+                >
+                  Apply Now <i class="fa fa-chevron-right text-base mt-1"></i>
+                </button>
+              </div>
+            </article>
+            <!-- card 2 -->
+            <article
+              class="snap-start shrink-0 bg-white py-6 rounded-xl min-w-[320px] sm:min-w-[380px] md:min-w-[350px] xl:min-w-[400px]"
+            >
+              <div class="relative aspect-[16/9] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/cambridge.jpg"
+                  alt="University of Oxford"
+                  class="absolute inset-0 w-full h-full object-cover block"
+                />
+
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <div class="absolute bottom-6 left-6">
+                  <span
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E4EDFF] shadow ring-1 ring-black/5"
+                  >
+                    <img
+                      src="./assets/Vector.png"
+                      alt="badge"
+                      class="w-9 h-9"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-6">
+                <h3
+                  class="hero-content tracking-wider text-lg md:text-xl font-medium text-[#1e549f]"
+                >
+                  University of Cambridge
+                </h3>
+                <p class="mt-3 font-light text-sm md:text-base text-slate-500">
+                  Location, global rankings
+                </p>
+                <p class="mt-4 text-sm text-gray-600">
+                  <span>Tuition Fee : USD</span>
+                  <span class="text-[#f59e0b] font-medium ml-1"
+                    >$18k - $19k / year</span
+                  >
+                </p>
+                <button
+                  type="button"
+                  class="mt-4 w-full rounded-xl bg-[#e12626] hover:bg-[#cc1f1f] text-white text-md md:text-lg py-3 inline-flex items-center justify-center gap-3"
+                >
+                  Apply Now <i class="fa fa-chevron-right text-base mt-1"></i>
+                </button>
+              </div>
+            </article>
+            <!-- card 3 -->
+            <article
+              class="snap-start shrink-0 bg-white py-6 rounded-xl min-w-[320px] sm:min-w-[380px] md:min-w-[350px] xl:min-w-[400px]"
+            >
+              <div class="relative aspect-[16/9] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/imperial.jpg"
+                  alt="University of Oxford"
+                  class="absolute inset-0 w-full h-full object-cover block"
+                />
+
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <div class="absolute bottom-6 left-6">
+                  <span
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E4EDFF] shadow ring-1 ring-black/5"
+                  >
+                    <img
+                      src="./assets/Vector.png"
+                      alt="badge"
+                      class="w-9 h-9"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-6">
+                <h3
+                  class="hero-content tracking-wider text-lg md:text-xl font-medium text-[#1e549f]"
+                >
+                  Imperial College London
+                </h3>
+                <p class="mt-3 font-light text-sm md:text-base text-slate-500">
+                  Location, global rankings
+                </p>
+                <p class="mt-4 text-sm text-gray-600">
+                  <span>Tuition Fee : USD</span>
+                  <span class="text-[#f59e0b] font-medium ml-1"
+                    >$18k - $19k / year</span
+                  >
+                </p>
+                <button
+                  type="button"
+                  class="mt-4 w-full rounded-xl bg-[#e12626] hover:bg-[#cc1f1f] text-white text-md md:text-lg py-3 inline-flex items-center justify-center gap-3"
+                >
+                  Apply Now <i class="fa fa-chevron-right text-base mt-1"></i>
+                </button>
+              </div>
+            </article>
+            <!-- card 4 -->
+            <article
+              class="snap-start shrink-0 bg-white py-6 rounded-xl min-w-[320px] sm:min-w-[380px] md:min-w-[350px] xl:min-w-[400px]"
+            >
+              <div class="relative aspect-[16/9] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/edinburg.jpg"
+                  alt="University of Oxford"
+                  class="absolute inset-0 w-full h-full object-cover block"
+                />
+
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <div class="absolute bottom-6 left-6">
+                  <span
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E4EDFF] shadow ring-1 ring-black/5"
+                  >
+                    <img
+                      src="./assets/Vector.png"
+                      alt="badge"
+                      class="w-9 h-9"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-6">
+                <h3
+                  class="hero-content tracking-wider text-lg md:text-xl font-medium text-[#1e549f]"
+                >
+                  University of Edinburgh
+                </h3>
+                <p class="mt-3 font-light text-sm md:text-base text-slate-500">
+                  Location, global rankings
+                </p>
+                <p class="mt-4 text-sm text-gray-600">
+                  <span>Tuition Fee : USD</span>
+                  <span class="text-[#f59e0b] font-medium ml-1"
+                    >$18k - $19k / year</span
+                  >
+                </p>
+                <button
+                  type="button"
+                  class="mt-4 w-full rounded-xl bg-[#e12626] hover:bg-[#cc1f1f] text-white text-md md:text-lg py-3 inline-flex items-center justify-center gap-3"
+                >
+                  Apply Now <i class="fa fa-chevron-right text-base mt-1"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+          <!-- left and right arrow -->
+          <div class="mt-6 flex items-center gap-4">
+            <button
+              id="prevBtn"
+              class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
+              aria-label="Scroll left"
+            >
+              <i class="fa-solid fa-arrow-left text-[#03519E]"></i>
+            </button>
+            <button
+              id="nextBtn"
+              class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
+              aria-label="Scroll right"
+            >
+              <i class="fa-solid fa-arrow-right text-[#03519E]"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- application pro ecss -->
+    <section class="py-12 bg-white">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center max-w-5xl mx-auto mb-12">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Application Process
+          </p>
+          <h2 class="sub-heading text-[#1e549f] text-3xl">
+            Simple steps to get you closer to your UK university journey.
+          </h2>
+        </div>
+
+        <!-- accordion-->
+        <div id="app-accordion" class="flex flex-wrap gap-6">
+          <!-- ITEM 01 -->
+          <div
+            class="w-full lg:w-[calc(50%-0.75rem)] rounded-3xl border border-[#89B2FF]"
+          >
+            <div class="flex items-start gap-6 px-8 py-6">
+              <span class="text-[#09315B] font-normal text-xl">01.</span>
+              <div class="flex-1">
+                <h3 class="hero-content text-[#1e549f] text-xl font-medium">
+                  Research & Shortlist Courses
+                </h3>
+                <div
+                  id="acc-1"
+                  class="acc-panel overflow-hidden transition-[max-height] duration-300 ease-in-out"
+                  style="max-height: 0"
+                >
+                  <p
+                    class="mt-3 text-[#02519e] text-sm font-light tracking-wide"
+                  >
+                    Explore universities, courses, and locations based on your
+                    interests and academic goals.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="acc-toggle"
+                data-target="#acc-1"
+                aria-expanded="false"
+              >
+                <span
+                  class="acc-chevron inline-block transition-transform duration-300"
+                >
+                  <i class="fa-solid fa-arrow-right text-[#09315B] text-lg"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 02 -->
+          <div
+            class="w-full lg:w-[calc(50%-0.75rem)] rounded-3xl border border-[#89B2FF]"
+          >
+            <div class="flex items-start gap-6 px-8 py-6">
+              <span class="text-[#09315B] font-normal text-xl">02.</span>
+              <div class="flex-1">
+                <h3 class="hero-content text-[#1e549f] text-xl font-medium">
+                  Check Entry Requirements
+                </h3>
+                <div
+                  id="acc-3"
+                  class="acc-panel overflow-hidden transition-[max-height] duration-300 ease-in-out"
+                  style="max-height: 0"
+                >
+                  <p
+                    class="mt-3 text-[#02519e] text-sm font-light tracking-wide"
+                  >
+                    Explore universities, courses, and locations based on your
+                    interests and academic goals.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="acc-toggle"
+                data-target="#acc-3"
+                aria-expanded="false"
+              >
+                <span
+                  class="acc-chevron inline-block transition-transform duration-300"
+                >
+                  <i class="fa-solid fa-arrow-right text-[#09315B] text-lg"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+          <!-- ITEM 03 -->
+          <div
+            class="w-full lg:w-[calc(50%-0.75rem)] rounded-3xl border border-[#89B2FF]"
+          >
+            <div class="flex items-start gap-6 px-8 py-6">
+              <span class="text-[#09315B] font-normal text-xl">03.</span>
+              <div class="flex-1">
+                <h3 class="hero-content text-[#1e549f] text-xl font-medium">
+                  Prepare Documents
+                </h3>
+                <div
+                  id="acc-2"
+                  class="acc-panel overflow-hidden transition-[max-height] duration-300 ease-in-out"
+                  style="max-height: 0"
+                >
+                  <p
+                    class="mt-3 text-[#02519e] text-sm font-light tracking-wide"
+                  >
+                    Explore universities, courses, and locations based on your
+                    interests and academic goals.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="acc-toggle"
+                data-target="#acc-2"
+                aria-expanded="false"
+              >
+                <span
+                  class="acc-chevron inline-block transition-transform duration-300"
+                >
+                  <i class="fa-solid fa-arrow-right text-[#09315B] text-lg"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 04 -->
+          <div
+            class="w-full lg:w-[calc(50%-0.75rem)] rounded-3xl border border-[#89B2FF]"
+          >
+            <div class="flex items-start gap-6 px-8 py-6">
+              <span class="text-[#09315B] font-normal text-xl">04.</span>
+              <div class="flex-1">
+                <h3 class="hero-content text-[#1e549f] text-xl font-medium">
+                  Apply via UCAS or Direct
+                </h3>
+                <div
+                  id="acc-4"
+                  class="acc-panel overflow-hidden transition-[max-height] duration-300 ease-in-out"
+                  style="max-height: 0"
+                >
+                  <p
+                    class="mt-3 text-[#02519e] text-sm font-light tracking-wide"
+                  >
+                    Explore universities, courses, and locations based on your
+                    interests and academic goals.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="acc-toggle"
+                data-target="#acc-4"
+                aria-expanded="false"
+              >
+                <span
+                  class="acc-chevron inline-block transition-transform duration-300"
+                >
+                  <i class="fa-solid fa-arrow-right text-[#09315B] text-lg"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 05 -->
+          <div
+            class="w-full lg:w-[calc(50%-0.75rem)] rounded-3xl border border-[#89B2FF]"
+          >
+            <div class="flex items-start gap-6 px-8 py-6">
+              <span class="text-[#09315B] font-normal text-xl">05.</span>
+              <div class="flex-1">
+                <h3 class="hero-content text-[#1e549f] text-xl font-medium">
+                  Receive Offer Letter
+                </h3>
+                <div
+                  id="acc-5"
+                  class="acc-panel overflow-hidden transition-[max-height] duration-300 ease-in-out"
+                  style="max-height: 0"
+                >
+                  <p
+                    class="mt-3 text-[#02519e] text-sm font-light tracking-wide"
+                  >
+                    Explore universities, courses, and locations based on your
+                    interests and academic goals.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="acc-toggle"
+                data-target="#acc-5"
+                aria-expanded="false"
+              >
+                <span
+                  class="acc-chevron inline-block transition-transform duration-300"
+                >
+                  <i class="fa-solid fa-arrow-right text-[#09315B] text-lg"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 06 -->
+          <div
+            class="w-full lg:w-[calc(50%-0.75rem)] rounded-3xl border border-[#89B2FF]"
+          >
+            <div class="flex items-start gap-6 px-8 py-6">
+              <span class="text-[#09315B] font-normal text-xl">06.</span>
+              <div class="flex-1">
+                <h3 class="hero-content text-[#1e549f] text-xl font-medium">
+                  Accept the Offer & Pay Deposit
+                </h3>
+                <div
+                  id="acc-6"
+                  class="acc-panel overflow-hidden transition-[max-height] duration-300 ease-in-out"
+                  style="max-height: 0"
+                >
+                  <p
+                    class="mt-3 text-[#02519e] text-sm font-light tracking-wide"
+                  >
+                    Explore universities, courses, and locations based on your
+                    interests and academic goals.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="acc-toggle"
+                data-target="#acc-6"
+                aria-expanded="false"
+              >
+                <span
+                  class="acc-chevron inline-block transition-transform duration-300"
+                >
+                  <i class="fa-solid fa-arrow-right text-[#09315B] text-lg"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 07 -->
+          <div
+            class="w-full lg:w-[calc(50%-0.75rem)] rounded-3xl border border-[#89B2FF]"
+          >
+            <div class="flex items-start gap-6 px-8 py-6">
+              <span class="text-[#09315B] font-normal text-xl">07.</span>
+              <div class="flex-1">
+                <h3 class="hero-content text-[#1e549f] text-xl font-medium">
+                  Apply for Student Visa (Tier 4)
+                </h3>
+                <div
+                  id="acc-7"
+                  class="acc-panel overflow-hidden transition-[max-height] duration-300 ease-in-out"
+                  style="max-height: 0"
+                >
+                  <p
+                    class="mt-3 text-[#02519e] text-sm font-light tracking-wide"
+                  >
+                    Explore universities, courses, and locations based on your
+                    interests and academic goals.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="acc-toggle"
+                data-target="#acc-7"
+                aria-expanded="false"
+              >
+                <span
+                  class="acc-chevron inline-block transition-transform duration-300"
+                >
+                  <i class="fa-solid fa-arrow-right text-[#09315B] text-lg"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 08 -->
+          <div
+            class="w-full lg:w-[calc(50%-0.75rem)] rounded-3xl border border-[#89B2FF]"
+          >
+            <div class="flex items-start gap-6 px-8 py-6">
+              <span class="text-[#09315B] font-normal text-xl">08.</span>
+              <div class="flex-1">
+                <h3 class="hero-content text-[#1e549f] text-xl font-medium">
+                  Book Accommodation & Travel
+                </h3>
+                <div
+                  id="acc-8"
+                  class="acc-panel overflow-hidden transition-[max-height] duration-300 ease-in-out"
+                  style="max-height: 0"
+                >
+                  <p
+                    class="mt-3 text-[#02519e] text-sm font-light tracking-wide"
+                  >
+                    Explore universities, courses, and locations based on your
+                    interests and academic goals.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="acc-toggle"
+                data-target="#acc-8"
+                aria-expanded="false"
+              >
+                <span
+                  class="acc-chevron inline-block transition-transform duration-300"
+                >
+                  <i class="fa-solid fa-arrow-right text-[#09315B] text-lg"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- requirement -->
+    <section class="py-12 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-5xl mx-auto mb-12">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Requirements
+          </p>
+          <h2 class="sub-heading text-[#1e549f] text-3xl">
+            Your Checklist for a Successful UK Application.
+          </h2>
+        </div>
+
+        <!-- Two-column list -->
+        <div class="grid gap-x-16 gap-y-10 md:grid-cols-2">
+          <!-- LEFT COLUMN -->
+          <ul class="space-y-8">
+            <!-- Item -->
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/jpg.png" alt="JPG" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Passport Copy
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/words.png" alt="Word" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Academic Transcripts & Certificates
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/pdf.png" alt="PDF" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Statement of Purpose
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/pdf.png" alt="PDF" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Letters of Recommendation
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/pdf.png" alt="PDF" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Financial Statements
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/words.png" alt="Word" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  English Language Proficiency Test Scores
+                  <!-- <span class="font-normal">(IELTS, TOEFL)</span> -->
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- RIGHT COLUMN  -->
+          <ul class="space-y-8">
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/words.png" alt="Word" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Passport Copy
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/pdf.png" alt="Word" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Academic Transcripts & Certificates
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/words.png" alt="PDF" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Statement of Purpose
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/words.png" alt="PDF" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Letters of Recommendation
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/pdf.png" alt="PDF" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  Financial Statements
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-5">
+              <span
+                class="inline-flex w-16 h-16 rounded-lg bg-[#FDE8E8] items-center justify-center"
+              >
+                <img src="./assets/words.png" alt="Word" class="w-12 h-12" />
+              </span>
+              <div>
+                <h3
+                  class="hero-content text-[#09315B] text-lg md:text-xl font-medium"
+                >
+                  English Language Proficiency Test Scores
+                  <!-- <span class="font-normal">(IELTS, TOEFL)</span> -->
+                </h3>
+                <p class="font-light mt-2 text-slate-500 text-sm">
+                  Accepted formats: PDF, JPG, Word
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-10">
+          <a
+            href="#"
+            class="inline-flex items-center gap-4 bg-[#e12626] hover:bg-[#cc1f1f] text-white tracking-wide rounded-lg px-4 py-3"
+          >
+            View Sample Documents
+            <i class="fa fa-chevron-right text-base mt-1"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- estimated cost -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-7xl mx-auto mb-12">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Estimated Cost
+          </p>
+          <h2 class="sub-heading text-[#1e549f] text-3xl">
+            Plan your budget with a clear view of tuition fees and living
+            expenses.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+          <!-- left-->
+          <div class="space-y-10">
+            <!-- Tuition -->
+            <div>
+              <h3 class="hero-content text-gray-600 text-xl">
+                Average Tuition Fee Per Year
+              </h3>
+              <div
+                class="hero-content mt-6 grid grid-cols-1 sm:grid-cols-3 gap-8"
+              >
+                <div>
+                  <p class="text-[#0D713D] text-xl font-medium">
+                    <span class="text-[#15B763]">$</span> 12,630 - 13,390
+                  </p>
+                  <p class="mt-2 text-gray-500 font-light text-sm">
+                    Bachelor’s (USD$)
+                  </p>
+                </div>
+                <div>
+                  <p class="text-[#0D713D] text-xl font-medium">
+                    <span class="text-[#15B763]">$</span> 12,630 - 13,390
+                  </p>
+                  <p class="mt-2 text-gray-500 font-light text-sm">
+                    Master’s (USD$)
+                  </p>
+                </div>
+                <div>
+                  <p class="text-[#0D713D] text-xl font-medium">
+                    <span class="text-[#15B763]">$</span> 12,630 - 13,390
+                  </p>
+                  <p class="mt-2 text-gray-500 font-light text-sm">
+                    PhD (USD$)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Living -->
+            <div class="hero-content">
+              <h3 class="hero-content text-gray-600 text-xl">
+                Living and Accommodation (USD$)
+              </h3>
+              <p class="text-[#0D713D] text-xl font-medium">
+                <span class="text-[#15B763]">$</span> 10,000 - 15,000
+              </p>
+            </div>
+
+            <!-- Airfare -->
+            <div class="hero-content">
+              <h3 class="hero-content text-gray-600 text-xl">
+                Airfare from Nepal to UK (USD$)
+              </h3>
+              <p class="text-[#0D713D] text-xl font-medium">
+                <span class="text-[#15B763]">$</span> 1,000 - 1,500
+              </p>
+            </div>
+
+            <!-- Visa -->
+            <div class="hero-content">
+              <h3 class="hero-content text-gray-600 text-xl">
+                Visa Fees (Visa & SEVIS) (USD$)
+              </h3>
+              <p class="text-[#0D713D] text-xl font-medium">
+                <span class="text-[#15B763]">$</span> 800 - 1,000
+              </p>
+            </div>
+          </div>
+
+          <!-- right image-->
+          <div class="flex items-end justify-center md:justify-end">
+            <img
+              src="./assets/cost-graph.png"
+              alt="Tuition vs. other accommodation costs"
+              class="w-full max-w-[300px] md:max-w-[350px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- scholorship-->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-7xl mx-auto mb-12">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Scholarship
+          </p>
+          <h2 class="sub-heading text-[#1e549f] text-3xl">
+            Turn your dream into reality with financial support and funding
+            opportunities.
+          </h2>
+        </div>
+        <!-- Carousel -->
+        <div class="relative">
+          <div
+            id="videoStrip"
+            class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide pb-2"
+            aria-label="Student video stories"
+          >
+            <!-- card 1 -->
+            <article
+              class="snap-start shrink-0 bg-white py-6 rounded-xl min-w-[320px] sm:min-w-[380px] md:min-w-[350px] xl:min-w-[400px]"
+            >
+              <div class="relative aspect-[16/9] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/uni1.jpg"
+                  alt="University of Oxford"
+                  class="absolute inset-0 w-full h-full object-cover block"
+                />
+
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <div class="absolute bottom-6 left-6">
+                  <span
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E4EDFF] shadow ring-1 ring-black/5"
+                  >
+                    <img
+                      src="./assets/Vector.png"
+                      alt="badge"
+                      class="w-9 h-9"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-6">
+                <h3
+                  class="hero-content tracking-wider text-lg md:text-xl font-medium text-[#1e549f]"
+                >
+                  University of Oxford
+                </h3>
+                <p class="mt-3 font-light text-md text-slate-500 max-w-sm">
+                  Offers various fellowships at different levels from graduate
+                  to post-doctorate and from research to training fellowships.
+                </p>
+              </div>
+            </article>
+            <!-- card 2 -->
+            <article
+              class="snap-start shrink-0 bg-white py-6 rounded-xl min-w-[320px] sm:min-w-[380px] md:min-w-[350px] xl:min-w-[400px]"
+            >
+              <div class="relative aspect-[16/9] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/cambridge.jpg"
+                  alt="University of Oxford"
+                  class="absolute inset-0 w-full h-full object-cover block"
+                />
+
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <div class="absolute bottom-6 left-6">
+                  <span
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E4EDFF] shadow ring-1 ring-black/5"
+                  >
+                    <img
+                      src="./assets/Vector.png"
+                      alt="badge"
+                      class="w-9 h-9"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-6">
+                <h3
+                  class="hero-content tracking-wider text-lg md:text-xl font-medium text-[#1e549f]"
+                >
+                  University of Cambridge
+                </h3>
+                <p class="mt-3 font-light text-md text-slate-500 max-w-sm">
+                  Offers various fellowships at different levels from graduate
+                  to post-doctorate and from research to training fellowships.
+                </p>
+              </div>
+            </article>
+            <!-- card 3 -->
+            <article
+              class="snap-start shrink-0 bg-white py-6 rounded-xl min-w-[320px] sm:min-w-[380px] md:min-w-[350px] xl:min-w-[400px]"
+            >
+              <div class="relative aspect-[16/9] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/imperial.jpg"
+                  alt="University of Oxford"
+                  class="absolute inset-0 w-full h-full object-cover block"
+                />
+
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <div class="absolute bottom-6 left-6">
+                  <span
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E4EDFF] shadow ring-1 ring-black/5"
+                  >
+                    <img
+                      src="./assets/Vector.png"
+                      alt="badge"
+                      class="w-9 h-9"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-6">
+                <h3
+                  class="hero-content tracking-wider text-lg md:text-xl font-medium text-[#1e549f]"
+                >
+                  Imperial College London
+                </h3>
+                <p class="mt-3 font-light text-md text-slate-500 max-w-sm">
+                  Offers various fellowships at different levels from graduate
+                  to post-doctorate and from research to training fellowships.
+                </p>
+              </div>
+            </article>
+            <!-- card 4 -->
+            <article
+              class="snap-start shrink-0 bg-white py-6 rounded-xl min-w-[320px] sm:min-w-[380px] md:min-w-[350px] xl:min-w-[400px]"
+            >
+              <div class="relative aspect-[16/9] rounded-xl overflow-hidden">
+                <img
+                  src="./assets/edinburg.jpg"
+                  alt="University of Oxford"
+                  class="absolute inset-0 w-full h-full object-cover block"
+                />
+
+                <div class="absolute inset-0 bg-black/20"></div>
+
+                <div class="absolute bottom-6 left-6">
+                  <span
+                    class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E4EDFF] shadow ring-1 ring-black/5"
+                  >
+                    <img
+                      src="./assets/Vector.png"
+                      alt="badge"
+                      class="w-9 h-9"
+                    />
+                  </span>
+                </div>
+              </div>
+
+              <div class="pt-6">
+                <h3
+                  class="hero-content tracking-wider text-lg md:text-xl font-medium text-[#1e549f]"
+                >
+                  University of Edinburgh
+                </h3>
+                <p class="mt-3 font-light text-md text-slate-500 max-w-sm">
+                  Offers various fellowships at different levels from graduate
+                  to post-doctorate and from research to training fellowships.
+                </p>
+              </div>
+            </article>
+          </div>
+          <!-- left and right arrow -->
+          <div class="mt-6 flex items-center gap-4">
+            <button
+              id="prevBtn"
+              class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
+              aria-label="Scroll left"
+            >
+              <i class="fa-solid fa-arrow-left text-[#03519E]"></i>
+            </button>
+            <button
+              id="nextBtn"
+              class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
+              aria-label="Scroll right"
+            >
+              <i class="fa-solid fa-arrow-right text-[#03519E]"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- work opportunities -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-7xl mx-auto mb-12">
+          <p
+            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
+          >
+            Work Opportunities
+          </p>
+          <h2 class="sub-heading text-[#1e549f] text-3xl">
+            Gain real-world experience while you study in the UK.
+          </h2>
+        </div>
+        <div class="flex justify-between gap-10">
+          <div class="bg-[#ECF1FE] border border-[#AEC7FB] rounded-lg p-6">
+            <h2 class="text-[#03519E] text-lg font-medium tracking-wide">
+              Part-time job types commonly available to students.
+            </h2>
+            <p class="text-sm text-gray-500 font-light leading-5 mt-3">
+              Students in the UK can find a variety of part-time job
+              opportunities that fit around their study schedules. Common roles
+              include retail assistants, baristas, waitstaff, library helpers,
+              delivery riders, administrative assistants, and on-campus jobs
+              like student ambassadors or research assistants.
+            </p>
+          </div>
+          <div class="bg-[#ECF1FE] border border-[#AEC7FB] rounded-lg p-6">
+            <h2 class="text-[#03519E] text-lg font-medium tracking-wide">
+              Part-time job types commonly available to students.
+            </h2>
+            <p class="text-sm text-gray-500 font-light leading-5 mt-3">
+              Students in the UK can find a variety of part-time job
+              opportunities that fit around their study schedules. Common roles
+              include retail assistants, baristas, waitstaff, library helpers,
+              delivery riders, administrative assistants, and on-campus jobs
+              like student ambassadors or research assistants.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- last part -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid items-start gap-0 lg:grid-cols-[480px_minmax(0,1fr)]">
+          <div class="self-center">
+            <h2
+              class="hero-content text-[#1e549f] text-4xl md:text-5xl leading-tight"
+            >
+              Culture and<br />Lifestyle in UK
+            </h2>
+            <p class="mt-4 text-gray-500 font-light tracking-wide max-w-xs">
+              Studying abroad opens a new chapter in a Nepali student’s life
+              filled with growth, cultural exchange, and new responsibilities.
+              With the right consultancy support, students feel more confident
+              as they settle into academics, part-time jobs, and day-to-day life
+              in a new country.
+            </p>
+          </div>
+
+          <div class="relative lg:-ml-4 xl:-ml-20 overflow-hidden">
+            <div class="flex justify-between gap-4">
+              <div class="space-y-5 overflow-hidden">
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-1.png"
+                    alt="Students in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-2.png"
+                    alt="Campus life in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-3.png"
+                    alt="Studying outdoors in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+              <div class="mosaic-track space-y-5">
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-2.png"
+                    alt="Students in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-3.png"
+                    alt="Campus life in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-1.png"
+                    alt="Studying outdoors in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-2.png"
+                    alt="Students in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+              <div class="mosaic-track-down space-y-5" aria-hidden="true">
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-3.png"
+                    alt="Students in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-4.png"
+                    alt="Campus life in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure class="overflow-hidden">
+                  <img
+                    src="./assets/uk-img-2.png"
+                    alt="Studying outdoors in the UK"
+                    class="w-64 h-72 object-cover block"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="relative bg-[#ECF1FE] text-[#1F3A7A] mt-0 md:mt-32">
+      <div
+        class="grid md:grid-cols-3 border-y border-[#1F3A7A] bg-[#ECF1FE] z-0"
+      >
+        <!-- Address -->
+        <div class="flex items-center justify-center gap-4 px-4 py-2">
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- location pin -->
+            <i class="fa-solid fa-location-dot text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Address:</p>
+            <p class="text-xl tracking-wider hero-content">Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <!-- Phone -->
+        <div
+          class="flex items-center gap-4 px-4 py-2 justify-center border-t md:border-t-0 md:border-x border-[#1F3A7A]"
+        >
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- phone -->
+            <i class="fa-solid fa-phone text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Phone:</p>
+            <p class="text-xl tracking-wider hero-content">+977 984 784 5682</p>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="flex items-center justify-center gap-4 px-4 py-2">
+          <span
+            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
+          >
+            <!-- mail -->
+            <i class="fa-solid fa-envelope text-[#E31E26] text-2xl"></i>
+          </span>
+          <div>
+            <p class="font-light">Email:</p>
+            <p class="text-xl tracking-wider hero-content">
+              marklineinfo@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="relative bg-[#ECF1FE]">
+        <!-- background map image -->
+
+        <img
+          src="./assets/footer-bg.png"
+          alt="World Map"
+          class="hidden md:block absolute inset-0 mx-auto top-1/2 -translate-y-[30%] scale-110 max-w-3xl h-80 object-contain opacity-20 pointer-events-none z-0"
+        />
+
+        <div class="relative max-w-5xl mx-auto text-center py-14 px-4">
+          <h2
+            class="text-4xl md:text-5xl font-normal tracking-widest leading-snug text-[#02519e]"
+          >
+            Make Your Dream Ture<br class="hidden md:block" />
+            With Markline.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Middle content -->
+      <div class="bg-white/30 z-0">
+        <div
+          class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10 px-4 py-10"
+        >
+          <!-- Brand + about -->
+          <div>
+            <img
+              src="./assets/markline 1.png"
+              alt="markline"
+              class="h-10 w-auto"
+            />
+            <p class="mt-5 text-[#03519E] leading-7 font-light">
+              Guiding Nepalese students to top international universities with
+              expert support and care.
+            </p>
+            <!-- Socials -->
+            <div class="mt-6 flex items-center gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-facebook-f text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-instagram text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-linkedin-in text-[#09315B] text-lg"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 grid place-items-center rounded-full bg-white"
+              >
+                <i class="fa-brands fa-youtube text-[#09315B] text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Quick Links
+            </h3>
+            <ul class="space-y-4 text-[#234]">
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                >
+                  › Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Study Destinations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Student Resources -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Student Resources
+            </h3>
+            <ul class="space-y-4 text-[#234]">
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› International Student Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Test Preparation Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Sample Documents</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  >› Webinar Form</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Accreditation -->
+          <div>
+            <h3 class="text-xl font-semibold tracking-wide mb-4">
+              Accreditation
+            </h3>
+            <div class="grid grid-cols-3 gap-4">
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+              <img
+                src="./assets/qeac.png"
+                alt="QEAC"
+                class="bg-white p-3 rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="border-t border-[#1F3A7A] flex flex-col md:flex-row justify-between items-center px-6 py-4 text-sm text-[#02519e] tracking-wide font-light"
+      >
+        <p>Copyright © 2025 Markline || All Rights Reserved</p>
+        <div
+          class="flex items-center gap-6 mt-2 md:mt-0 text-[#02519e] tracking-wider font-light"
+        >
+          <a href="#" class="">Terms & Conditions</a>|
+          <a href="#" class="">Privacy Policy</a>|
+          <a href="#" class="">Disclaimer</a>
+        </div>
+        <div class="flex justify-between gap-2">
+          <p class="mt-2 md:mt-0 flex items-center">Developed by</p>
+          <img src="./assets/Blue Logo.png" class="h-7 w-auto" alt="" />
+        </div>
+      </div>
+
+      <!-- Back to top -->
+      <div id="backToTop" class="fixed bottom-20 right-6 hidden">
+        <button
+          class="w-12 h-12 rounded-full border border-[#1F3A7A] text-[#1F3A7A]"
+        >
+          <i class="fa-solid fa-chevron-up text-2xl text-[#E31E26]"></i>
+        </button>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
