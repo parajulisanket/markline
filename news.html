@@ -22,15 +22,22 @@
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex items-center justify-between py-2 gap-14">
           <!-- Left-->
-
-          <ul class="flex items-center gap-5 ml-auto">
-            <li><a href="#" class="hover:text-amber-300">Accomodation</a></li>
-            <li><a href="#" class="hover:text-amber-300">Compare</a></li>
+          <ul class="flex items-center gap-5 ml-auto font-light">
             <li>
-              <a href="#" class="hover:text-amber-300">Date Converter</a>
+              <a href="./accomodaion.html" class="hover:text-[#E41E26]"
+                >Accomodation</a
+              >
+            </li>
+            <li><a href="#" class="hover:text-[#E41E26]">Compare</a></li>
+            <li>
+              <a href="./dateConverter.html" class="hover:text-[#E41E26]"
+                >Date Converter</a
+              >
             </li>
             <li>
-              <a href="#" class="hover:text-amber-300">Currency Converter</a>
+              <a href="./currencyConverter.html" class="hover:text-[#E41E26]"
+                >Currency Converter</a
+              >
             </li>
           </ul>
 
@@ -75,34 +82,28 @@
           </div>
 
           <!-- Right: Theme -->
-          <div class="flex items-center gap-2 relative">
+          <div class="flex items-center gap-2 relative z-50">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
             <button
               id="themeBtn"
-              class="flex items-center gap-2 hover:text-amber-300"
+              class="flex items-center gap-2 hover:text-[#E41E26]"
             >
               Theme <i class="fa-solid fa-chevron-down text-xs"></i>
             </button>
 
-            <!-- (optional) dropdown; keep as-is if you already use it -->
             <div
               id="themeMenu"
-              class="dropdown-panel absolute right-0 top-full mt-2 w-40 bg-white text-slate-700 rounded-md shadow-lg p-2 opacity-0 pointer-events-none translate-y-1"
+              class="dropdown-panel absolute right-0 top-full mt-4 w-auto bg-white text-slate-700 opacity-0 pointer-events-none translate-y-1"
             >
               <button
-                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+                class="w-full text-center font-light p-2 rounded hover:bg-[#02519e] hover:text-white"
               >
-                Default
+                Light
               </button>
               <button
-                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
+                class="w-full text-center font-light p-2 rounded hover:bg-[#02519e] hover:text-white"
               >
                 Dark
-              </button>
-              <button
-                class="w-full text-left px-3 py-2 rounded hover:bg-slate-100"
-              >
-                High Contrast
               </button>
             </div>
           </div>
@@ -478,7 +479,9 @@
     </section>
 
     <!-- footer -->
-    <footer class="relative bg-[#ECF1FE] text-[#1F3A7A] mt-0 md:mt-32">
+    <footer
+      class="relative bg-[#ECF1FE] text-[#1F3A7A] mt-0 md:mt-32 hidden md:block"
+    >
       <div
         class="grid md:grid-cols-3 border-y border-[#1F3A7A] bg-[#ECF1FE] z-0"
       >
@@ -600,7 +603,7 @@
             <ul class="space-y-4 text-[#234]">
               <li>
                 <a
-                  href="#"
+                  href="./index.html"
                   class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
                 >
                   › Home
@@ -609,28 +612,28 @@
 
               <li>
                 <a
-                  href="#"
+                  href="./ourStory.html"
                   class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
                   >› Our Story</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="./services.html"
                   class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
                   >› Services</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="./studyDestination.html"
                   class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
                   >› Study Destinations</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="./contact.html"
                   class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
                   >› Contact Us</a
                 >
@@ -724,9 +727,9 @@
         <div
           class="flex items-center gap-6 mt-2 md:mt-0 text-[#02519e] tracking-wider font-light"
         >
-          <a href="#" class="">Terms & Conditions</a>|
-          <a href="#" class="">Privacy Policy</a>|
-          <a href="#" class="">Disclaimer</a>
+          <a href="./termsCondition.html" class="">Terms & Conditions</a>|
+          <a href="./privacy.html" class="">Privacy Policy</a>|
+          <a href="./disclaimer.html" class="">Disclaimer</a>
         </div>
         <div class="flex justify-between gap-2">
           <p class="mt-2 md:mt-0 flex items-center">Developed by</p>
@@ -741,6 +744,242 @@
         >
           <i class="fa-solid fa-chevron-up text-2xl text-[#E31E26]"></i>
         </button>
+      </div>
+    </footer>
+    <!-- mobile footer-->
+    <footer
+      class="md:hidden bg-[#ECF1FE] text-[#1F3A7A] border border-[#1F3A7A]"
+    >
+      <!-- Logo -->
+      <div class="px-5 pt-4 pb-2">
+        <img
+          src="./assets/markline 1.png"
+          alt="markline"
+          class="h-10 w-auto block mx-auto md:mx-0"
+        />
+      </div>
+
+      <!-- Contact blocks -->
+      <div class="px-5 pb-4 space-y-5 mt-5">
+        <!-- Address -->
+        <div class="flex items-center gap-4">
+          <span
+            class="grid place-items-center w-12 h-12 rounded-full border border-[#1F3A7A]"
+          >
+            <i class="fa-solid fa-location-dot text-[#E31E26] text-xl"></i>
+          </span>
+          <div class="flex-1">
+            <p class="text-sm opacity-80">Address:</p>
+            <p class="font-medium">Kathmandu, Nepal</p>
+          </div>
+        </div>
+        <hr class="border-[#1F3A7A]" />
+
+        <!-- Phone -->
+        <div class="flex items-center gap-4">
+          <span
+            class="grid place-items-center w-12 h-12 rounded-full border border-[#1F3A7A]"
+          >
+            <i class="fa-solid fa-phone text-[#E31E26] text-xl"></i>
+          </span>
+          <div class="flex-1">
+            <p class="text-sm opacity-80">Phone:</p>
+            <p class="font-medium">+977 984 784 5682</p>
+          </div>
+        </div>
+        <hr class="border-[#1F3A7A]" />
+
+        <!-- Email -->
+        <div class="flex items-center gap-4">
+          <span
+            class="grid place-items-center w-12 h-12 rounded-full border border-[#1F3A7A]"
+          >
+            <i class="fa-solid fa-envelope text-[#E31E26] text-xl"></i>
+          </span>
+          <div class="flex-1">
+            <p class="text-sm opacity-80">Email:</p>
+            <p class="font-medium break-words">marklineinfo@gmail.com</p>
+          </div>
+        </div>
+        <hr class="border-[#1F3A7A]" />
+      </div>
+
+      <!-- Quick Links -->
+      <div class="px-5 pb-4 mt-5">
+        <h3 class="font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-4">
+          <li>
+            <a class="flex items-center gap-3" href="#"><span>›</span> Home</a>
+          </li>
+          <li>
+            <a class="flex items-center gap-3" href="./ourStory.html"
+              ><span>›</span> Our Story</a
+            >
+          </li>
+          <li>
+            <a class="flex items-center gap-3" href="./services.html"
+              ><span>›</span> Services</a
+            >
+          </li>
+          <li>
+            <a class="flex items-center gap-3" href="./studyDestination.html"
+              ><span>›</span> Study Destinations</a
+            >
+          </li>
+          <li>
+            <a class="flex items-center gap-3" href="./contact.html"
+              ><span>›</span> Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Student Resources -->
+      <div class="px-5 pb-4 mt-5">
+        <h3 class="font-semibold mb-3">Student Resources</h3>
+        <ul class="space-y-4">
+          <li>
+            <a class="flex items-center gap-3" href="#"
+              ><span>›</span> International Student Guide</a
+            >
+          </li>
+          <li>
+            <a class="flex items-center gap-3" href="#"
+              ><span>›</span> Test Preparation Guide</a
+            >
+          </li>
+          <li>
+            <a class="flex items-center gap-3" href="#"
+              ><span>›</span> Sample Documents</a
+            >
+          </li>
+          <li>
+            <a class="flex items-center gap-3" href="#"
+              ><span>›</span> Webinar Form</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Accreditation -->
+      <div class="px-5 pb-6 mt-5">
+        <h3 class="font-semibold mb-3">Accreditation</h3>
+        <div class="grid grid-cols-3 gap-3">
+          <img
+            src="./assets/qeac.png"
+            alt="QEAC"
+            class="bg-white p-2 rounded shadow"
+          />
+          <img
+            src="./assets/qeac.png"
+            alt="QEAC"
+            class="bg-white p-2 rounded shadow"
+          />
+          <img
+            src="./assets/qeac.png"
+            alt="QEAC"
+            class="bg-white p-2 rounded shadow"
+          />
+          <img
+            src="./assets/qeac.png"
+            alt="QEAC"
+            class="bg-white p-2 rounded shadow"
+          />
+          <img
+            src="./assets/qeac.png"
+            alt="QEAC"
+            class="bg-white p-2 rounded shadow"
+          />
+          <img
+            src="./assets/qeac.png"
+            alt="QEAC"
+            class="bg-white p-2 rounded shadow"
+          />
+        </div>
+      </div>
+
+      <!-- Social icons -->
+      <div class="px-5 pb-6">
+        <div class="flex justify-center gap-4">
+          <a
+            href="#"
+            class="w-10 h-10 grid place-items-center rounded-full bg-white text-[#09315B]"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 grid place-items-center rounded-full bg-white text-[#09315B]"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 grid place-items-center rounded-full bg-white text-[#09315B]"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            href="#"
+            class="w-10 h-10 grid place-items-center rounded-full bg-white text-[#09315B]"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="px-5 pb-3 text-center text-xs opacity-80 font-light">
+        Copyright © 2025Markline || All Rights Reserved
+      </div>
+
+      <!-- Policy links -->
+      <div class="px-5 pb-5 text-center text-sm font-light">
+        <a href="./termsCondition.html" class="px-2">Terms &amp; Conditions</a>
+        <span class="opacity-50">|</span>
+        <a href="./privacy.html" class="px-2">Privacy Policy</a>
+        <span class="opacity-50">|</span>
+        <a href="./disclaimer.html" class="px-2">Disclaimer</a>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="border-y border-[#1F3A7A] px-5 py-3 text-sm flex items-center justify-center gap-4"
+      >
+        <span class="opacity-80">Designed By</span>
+        <img src="./assets/Blue Logo.png" class="h-5 w-auto" alt="KIT" />
+      </div>
+
+      <div class="bg-[#0E3A5A] py-3">
+        <div class="max-w-sm mx-auto flex items-center justify-center gap-5">
+          <a
+            href="#"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#03519E] hover:bg-[#0D5198] text-white"
+          >
+            <span class="w-6 h-6 grid place-items-center">
+              <img src="./assets/WhatsApp.webp" alt="" />
+            </span>
+            <span class="text-sm tracking-wide">Consult</span>
+          </a>
+
+          <!-- Messenger -->
+          <a
+            href="#"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#03519E] hover:bg-[#0D5198] text-white"
+          >
+            <span class="w-5 h-5 grid place-items-center">
+              <img src="./assets/messanger.png" alt="" />
+            </span>
+            <span class="text-sm tracking-wide">Consult</span>
+          </a>
+
+          <!-- Enquire -->
+          <a
+            href="#"
+            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#03519E] hover:bg-[#0D5198] text-white"
+          >
+            <span class="w-6 h-6 grid place-items-center">
+              <i class="fa-regular fa-rectangle-list text-white text-lg"></i>
+            </span>
+            <span class="text-sm tracking-wide">Enquire</span>
+          </a>
+        </div>
       </div>
     </footer>
 

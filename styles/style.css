@@ -111,7 +111,8 @@ body {
 
 /* csss of study desitinatoion last part */
 
-@keyframes marqueeY {
+/*  up */
+@keyframes marqueeUp {
   0% {
     transform: translateY(0);
   }
@@ -120,19 +121,15 @@ body {
   }
 }
 
-.mosaic-track {
+.mosaic-track-up {
   display: flex;
   flex-direction: column;
-  animation: marqueeY 5s linear infinite;
+  animation: marqueeUp 15s linear infinite;
   will-change: transform;
 }
 
-
-.mosaic-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes marqueeY {
+/* down */
+@keyframes marqueeDown {
   0% {
     transform: translateY(-50%);
   }
@@ -144,11 +141,12 @@ body {
 .mosaic-track-down {
   display: flex;
   flex-direction: column;
-  animation: marqueeY 20s linear infinite;
+  animation: marqueeDown 10s linear infinite;
   will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .mosaic-track-up,
   .mosaic-track-down {
     animation: none;
   }
