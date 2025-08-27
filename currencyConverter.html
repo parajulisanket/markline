@@ -133,84 +133,966 @@
             <a href="./ourStory.html" class="hover:text-[#c71826]">Our Story</a>
 
             <!-- services -->
-            <div class="relative group">
-              <div class="hover:text-[#c71826]">
+            <div>
+              <div class="flex items-center gap-2 group">
                 <a
                   href="./services.html"
-                  class="inline-flex items-center gap-2"
+                  class="inline-flex items-center gap-2 group-hover:text-[#c71826]"
                 >
                   Services
                 </a>
-                <i class="fa-solid fa-chevron-down text-xs"></i>
+
+                <button id="svcArrow" type="button" class="p-1">
+                  <i
+                    id="svcChevron"
+                    class="fa-solid fa-chevron-down text-xs transition-transform group-hover:text-[#c71826]"
+                  ></i>
+                </button>
               </div>
-              <!-- Example dropdown panel -->
+
+              <!-- Mega menu -->
               <div
-                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+                id="svcMega"
+                class="absolute left-0 right-0 top-full border-t w-screen bg-white px-6 opacity-0 pointer-events-none scale-95 transition duration-200"
               >
-                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
-                  >Counseling</a
+                <!-- Center wrapper -->
+                <div
+                  class="max-w-7xl mx-auto grid grid-cols-[30%_70%] gap-10 min-h-[280px]"
                 >
-                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
-                  >Test Prep</a
-                >
-                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
-                  >Visa Guidance</a
-                >
-              </div>
-            </div>
-            <!-- study desitination -->
-            <div class="relative group">
-              <div class="hover:text-[#c71826]">
-                <a
-                  href="./studyDestination.html"
-                  class="inline-flex items-center gap-2 hover:text-[#c71826]"
-                >
-                  Study Destinations
-                </a>
-                <i class="fa-solid fa-chevron-down text-xs"></i>
-              </div>
-              <div
-                class="dropdown-panel absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
-              >
-                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
-                  >Australia</a
-                >
-                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
-                  >Canada</a
-                >
-                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
-                  >UK</a
-                >
-              </div>
-            </div>
-            <!-- events -->
-            <div class="relative group">
-              <div class="hover:text-[#c71826]">
-                <a href="./events.html" class="inline-flex items-center gap-2">
-                  Events &amp; Webinars
-                </a>
-                <i class="fa-solid fa-chevron-down text-xs"></i>
-              </div>
-              <div
-                class="dropdown-panel absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md p-2 opacity-0 pointer-events-none translate-y-1 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
-              >
-                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
-                  >Upcoming Events</a
-                >
-                <a class="block px-3 py-2 rounded hover:bg-slate-100" href="#"
-                  >Past Webinars</a
-                >
+                  <!-- Left list -->
+                  <ul id="svcTabs" class="space-y-5 p-10 border-r">
+                    <li>
+                      <button
+                        data-tab="testprep"
+                        class="svc-tab active flex w-full items-center justify-between text-left text-lg text-[#1e549f]"
+                      >
+                        <span>Test Preparation</span>
+                        <i
+                          class="fa-solid fa-chevron-right text-xs text-[#1e549f]"
+                        ></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        data-tab="abroad"
+                        class="svc-tab active flex w-full items-center justify-between text-left text-lg text-gray-800"
+                      >
+                        <span>Study Abroad Guidance</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        data-tab="visa"
+                        class="svc-tab active flex w-full items-center justify-between text-left text-lg text-gray-800"
+                      >
+                        <span>Visa Assistance</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                      </button>
+                    </li>
+                  </ul>
+
+                  <!-- Right content -->
+                  <div id="svcPanels" class="relative">
+                    <!-- Test Prep panel -->
+                    <div
+                      data-panel="testprep"
+                      class="svc-panel grid grid-cols-2 xl:grid-cols-4 gap-6 my-10"
+                    >
+                      <a
+                        class="group flex items-center gap-4 rounded-md bg-[#e8f1ff] px-3 py-2 ring-1 ring-[#cfe0ff] hover:ring-[#a9c6ff] w-fit hover:bg-[#0a4a92]"
+                      >
+                        <img
+                          src="assets/ielsts.png"
+                          class="w-14 h-10 rounded object-cover"
+                          alt="IELTS"
+                        />
+                        <span
+                          class="text-sm tracking-wide text-slate-700 group-hover:text-white"
+                        >
+                          IELTS
+                        </span>
+                      </a>
+                      <a
+                        class="group flex items-center gap-4 rounded-md bg-[#e8f1ff] px-3 py-2 ring-1 ring-[#cfe0ff] hover:ring-[#a9c6ff] w-fit hover:bg-[#0a4a92]"
+                      >
+                        <img
+                          src="assets/pte.jpg"
+                          class="w-14 h-10 rounded object-cover"
+                          alt="IELTS"
+                        />
+                        <span
+                          class="text-sm tracking-wide text-slate-700 group-hover:text-white"
+                        >
+                          PTE
+                        </span>
+                      </a>
+                      <a
+                        class="group flex items-center gap-4 rounded-md bg-[#e8f1ff] px-3 py-2 ring-1 ring-[#cfe0ff] hover:ring-[#a9c6ff] w-fit hover:bg-[#0a4a92]"
+                      >
+                        <img
+                          src="assets/tofel.jpg"
+                          class="w-14 h-10 rounded object-cover"
+                          alt="IELTS"
+                        />
+                        <span
+                          class="text-sm tracking-wide text-slate-700 group-hover:text-white"
+                        >
+                          TOFEL
+                        </span>
+                      </a>
+                      <a
+                        class="group flex items-center gap-4 rounded-md bg-[#e8f1ff] px-3 py-2 ring-1 ring-[#cfe0ff] hover:ring-[#a9c6ff] w-fit hover:bg-[#0a4a92]"
+                      >
+                        <img
+                          src="assets/sat.jpg"
+                          class="w-14 h-10 rounded object-cover"
+                          alt="IELTS"
+                        />
+                        <span
+                          class="text-sm tracking-wide text-slate-700 group-hover:text-white"
+                        >
+                          SAT
+                        </span>
+                      </a>
+                      <a
+                        class="group flex items-center gap-4 rounded-md bg-[#e8f1ff] px-3 py-2 ring-1 ring-[#cfe0ff] hover:ring-[#a9c6ff] w-fit hover:bg-[#0a4a92]"
+                      >
+                        <img
+                          src="assets/gre.jpg"
+                          class="w-14 h-10 rounded object-cover"
+                          alt="IELTS"
+                        />
+                        <span
+                          class="text-sm tracking-wide text-slate-700 group-hover:text-white"
+                        >
+                          GRE
+                        </span>
+                      </a>
+                      <a
+                        class="group flex items-center gap-4 rounded-md bg-[#e8f1ff] px-3 py-2 ring-1 ring-[#cfe0ff] hover:ring-[#a9c6ff] w-fit hover:bg-[#0a4a92]"
+                      >
+                        <img
+                          src="assets/gmat.jpeg"
+                          class="w-14 h-10 rounded object-cover"
+                          alt="IELTS"
+                        />
+                        <span
+                          class="text-sm tracking-wide text-slate-700 group-hover:text-white"
+                        >
+                          GMAT
+                        </span>
+                      </a>
+                      <a
+                        class="group flex items-center gap-4 rounded-md bg-[#e8f1ff] px-3 py-2 ring-1 ring-[#cfe0ff] hover:ring-[#a9c6ff] w-fit hover:bg-[#0a4a92]"
+                      >
+                        <img
+                          src="assets/duolingo.png"
+                          class="w-14 h-10 rounded object-cover"
+                          alt="IELTS"
+                        />
+                        <span
+                          class="text-sm tracking-wide text-slate-700 group-hover:text-white"
+                        >
+                          Duolingo English Test
+                        </span>
+                      </a>
+
+                      <!-- Explore button -->
+                      <div class="col-span-full">
+                        <a
+                          href="./services.html#test-prep"
+                          class="inline-flex items-center gap-2 rounded-lg bg-[#0a4a92] px-4 py-2 text-white text-base"
+                        >
+                          Explore Now
+                          <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- guidence -->
+                    <div data-panel="abroad" class="svc-panel hidden">
+                      <div
+                        class="grid grid-cols-1 md:grid-cols-[30%_70%] items-center my-10 gap-5"
+                      >
+                        <div>
+                          <img
+                            src="assets/guidence.jpg"
+                            alt="Study Abroad Guidance"
+                            class="rounded-xl w-full h-64 object-cover"
+                          />
+                        </div>
+
+                        <div class="self-start">
+                          <h3
+                            class="text-xl tracking-wider font-normal text-[#0a356a] mb-3"
+                          >
+                            Study Abroad Guidance
+                          </h3>
+                          <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                            Our counselors help you identify the best-fit
+                            destination, course, and university based on your
+                            academic background, career aspirations, and budget.
+                          </p>
+                          <a
+                            href="./studyAbroad.html"
+                            class="inline-flex items-center gap-2 text-xs rounded-md bg-[#0a4a92] px-4 py-2 text-white hover:bg-[#072d5c] transition"
+                          >
+                            Read More
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div data-panel="visa" class="svc-panel hidden">
+                      <div
+                        class="grid grid-cols-1 md:grid-cols-[30%_70%] items-center my-10 gap-5"
+                      >
+                        <div>
+                          <img
+                            src="assets/visa-ass.jpg"
+                            alt="Study Abroad Guidance"
+                            class="rounded-xl w-full h-64 object-cover"
+                          />
+                        </div>
+
+                        <div class="self-start">
+                          <h3
+                            class="text-xl tracking-wider font-normal text-[#0a356a] mb-3"
+                          >
+                            Visa Assistance
+                          </h3>
+                          <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                            Our counselors help you identify the best-fit
+                            destination, course, and university based on your
+                            academic background, career aspirations, and budget.
+                          </p>
+                          <a
+                            href="./visaAssistance.html"
+                            class="inline-flex items-center gap-2 text-xs rounded-md bg-[#0a4a92] px-4 py-2 text-white hover:bg-[#072d5c] transition"
+                          >
+                            Read More
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <a href="./blog.html" class="hover:text-[#c71826]">Blog</a>
-            <a href="./news.html" class="hover:text-[#c71826]">News</a>
-            <a href="./faq.html" class="hover:text-[#c71826]">FAQ's</a>
+            <!-- Study Destinations -->
+            <div class="relative">
+              <div class="flex items-center gap-2 group">
+                <a
+                  href="./studyDestination.html"
+                  class="inline-flex items-center gap-2 group-hover:text-[#c71826]"
+                >
+                  Study Destinations
+                </a>
+                <button id="destArrow" type="button" class="p-1">
+                  <i
+                    id="destChevron"
+                    class="fa-solid fa-chevron-down text-xs transition-transform group-hover:text-[#c71826]"
+                  ></i>
+                </button>
+              </div>
+
+              <!-- dropdown panel -->
+              <div
+                id="destMenu"
+                class="absolute left-0 mt-3 bg-white rounded-3xl shadow-2xl px-6 py-5 opacity-0 pointer-events-none translate-y-1 transition duration-200 w-[600px] max-w-lg"
+              >
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6">
+                  <!-- item -->
+                  <a href="#" class="flex items-center gap-4">
+                    <span
+                      class="inline-grid place-items-center w-14 h-10 rounded-xl bg-slate-100"
+                    >
+                      <img src="assets/usa.webp" alt="USA" class="h-6 w-auto" />
+                    </span>
+                    <span
+                      class="text-xl tracking-wide font-medium text-gray-700 hover:text-[#02519e]"
+                      >USA</span
+                    >
+                  </a>
+
+                  <a href="#" class="flex items-center gap-4">
+                    <span
+                      class="inline-grid place-items-center w-14 h-10 rounded-xl bg-slate-100"
+                    >
+                      <img
+                        src="assets/japan.png"
+                        alt="Japan"
+                        class="h-6 w-auto"
+                      />
+                    </span>
+                    <span
+                      class="text-xl tracking-wide font-medium text-gray-700 hover:text-[#02519e]"
+                      >Japan</span
+                    >
+                  </a>
+
+                  <a href="#" class="flex items-center gap-4">
+                    <span
+                      class="inline-grid place-items-center w-14 h-10 rounded-xl bg-slate-100"
+                    >
+                      <img
+                        src="assets/canada.png"
+                        alt="Canada"
+                        class="h-6 w-auto"
+                      />
+                    </span>
+                    <span
+                      class="text-xl tracking-wide font-medium text-gray-700 hover:text-[#02519e]"
+                      >Canada</span
+                    >
+                  </a>
+
+                  <a href="#" class="flex items-center gap-4">
+                    <span
+                      class="inline-grid place-items-center w-14 h-10 rounded-xl bg-slate-100"
+                    >
+                      <img
+                        src="assets/s-korea.png"
+                        alt="South Korea"
+                        class="h-6 w-auto"
+                      />
+                    </span>
+                    <span
+                      class="text-xl tracking-wide font-medium text-gray-700 hover:text-[#02519e]"
+                      >South Korea</span
+                    >
+                  </a>
+
+                  <a href="#" class="flex items-center gap-4">
+                    <span
+                      class="inline-grid place-items-center w-14 h-10 rounded-xl bg-slate-100"
+                    >
+                      <img
+                        src="assets/australia.png"
+                        alt="Australia"
+                        class="h-6 w-auto"
+                      />
+                    </span>
+                    <span
+                      class="text-xl tracking-wide font-medium text-gray-700 hover:text-[#02519e]"
+                      >Australia</span
+                    >
+                  </a>
+
+                  <a href="#" class="flex items-center gap-4">
+                    <span
+                      class="inline-grid place-items-center w-14 h-10 rounded-xl bg-slate-100"
+                    >
+                      <img
+                        src="assets/france.png"
+                        alt="France"
+                        class="h-6 w-auto"
+                      />
+                    </span>
+                    <span
+                      class="text-xl tracking-wide font-medium text-gray-700 hover:text-[#02519e]"
+                      >France</span
+                    >
+                  </a>
+
+                  <a href="#" class="flex items-center gap-4">
+                    <span
+                      class="inline-grid place-items-center w-14 h-10 rounded-xl bg-slate-100"
+                    >
+                      <img src="assets/uk.avif" alt="UK" class="h-6 w-auto" />
+                    </span>
+                    <span
+                      class="text-xl tracking-wide font-medium text-gray-700 hover:text-[#02519e]"
+                      >UK</span
+                    >
+                  </a>
+
+                  <a href="#" class="flex items-center gap-4">
+                    <span
+                      class="inline-grid place-items-center w-14 h-10 rounded-xl bg-slate-100"
+                    >
+                      <img
+                        src="assets/german.png"
+                        alt="Germany"
+                        class="h-6 w-auto"
+                      />
+                    </span>
+                    <span
+                      class="text-xl tracking-wide font-medium text-gray-700 hover:text-[#02519e]"
+                      >Germany</span
+                    >
+                  </a>
+
+                  <a href="#" class="flex items-center gap-4">
+                    <span
+                      class="inline-grid place-items-center w-14 h-10 rounded-xl bg-slate-100"
+                    >
+                      <img
+                        src="assets/finland.png"
+                        alt="Finland"
+                        class="h-6 w-auto"
+                      />
+                    </span>
+                    <span
+                      class="text-xl tracking-wide font-medium text-gray-700 hover:text-[#02519e]"
+                      >Finland</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- events -->
+            <div>
+              <div class="flex items-center gap-2 group">
+                <a
+                  href="./events.html"
+                  class="inline-flex items-center gap-2 group-hover:text-[#c71826]"
+                >
+                  Events &amp; Webinars
+                </a>
+                <!-- Arrow toggles -->
+                <button id="eventsArrow" type="button" class="p-1">
+                  <i
+                    id="eventsChevron"
+                    class="fa-solid fa-chevron-down text-xs transition-transform group-hover:text-[#c71826]"
+                  ></i>
+                </button>
+              </div>
+
+              <!-- Mega panel  -->
+              <div
+                id="eventsMega"
+                class="absolute inset-x-0 border-t top-full w-full bg-white px-6 py-6 opacity-0 pointer-events-none translate-y-1 transition duration-200"
+              >
+                <div
+                  class="max-w-7xl mx-auto grid grid-cols-[30%_70%] gap-10 min-h-[280px]"
+                >
+                  <!-- Left tabs -->
+                  <ul id="eventsTabs" class="space-y-5 p-10 border-r">
+                    <li>
+                      <button
+                        data-tab="upcoming"
+                        class="evt-tab active flex w-full items-center justify-between text-left text-lg text-[#1e549f]"
+                      >
+                        <span>Upcoming Events</span>
+                        <i
+                          class="fa-solid fa-chevron-right text-sm text-[#1e549f]"
+                        ></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        data-tab="fairs"
+                        class="evt-tab flex w-full items-center justify-between text-left text-lg text-gray-800"
+                      >
+                        <span>Education Fairs</span>
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        data-tab="recorded"
+                        class="evt-tab flex w-full items-center justify-between text-left text-lg text-gray-800"
+                      >
+                        <span>Recorded Webinars</span>
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                      </button>
+                    </li>
+                  </ul>
+
+                  <!-- Right panels -->
+                  <div id="eventsPanels" class="relative">
+                    <!-- upcoming -->
+                    <div
+                      data-panel="upcoming"
+                      class="evt-panel grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    >
+                      <!-- card 1 -->
+                      <article class="rounded-2xl overflow-hidden bg-white">
+                        <div class="relative">
+                          <img
+                            src="assets/events-img.jpg"
+                            alt=""
+                            class="w-full h-40 object-cover rounded-2xl"
+                          />
+                          <div class="absolute right-3 top-3">
+                            <div
+                              class="rounded-xl bg-white/95 backdrop-blur px-3 py-2 text-center leading-tight shadow"
+                            >
+                              <div
+                                class="text-slate-700 text-base font-semibold"
+                              >
+                                16
+                              </div>
+                              <div class="text-slate-600 text-xs">Jan</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="py-4 px-1">
+                          <a
+                            href="#"
+                            class="block text-[#338FF7] text-sm font-normal leading-relaxed"
+                          >
+                            Get expert guidance on studying in Canada, UK,
+                            Australia, and more!
+                          </a>
+                          <p class="mt-2 text-gray-500 text-xs">
+                            Study in Canada • Kathmandu • Hybrid
+                          </p>
+                          <p
+                            class="mt-2 text-gray-500 text-xs flex items-center gap-2"
+                          >
+                            <i
+                              class="fa-regular fa-clock text-[#338FF7] text-xs"
+                            ></i>
+                            11:00 AM – 3:00 PM
+                          </p>
+                          <div class="mt-4">
+                            <a
+                              href="./events.html"
+                              class="inline-flex items-center gap-2 font-light text-xs rounded-lg bg-[#0a4a92] px-5 py-2 text-white"
+                            >
+                              View Detail
+                              <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- card 2 -->
+                      <article class="rounded-2xl overflow-hidden bg-white">
+                        <div class="relative">
+                          <img
+                            src="assets/event-3.jpg"
+                            alt=""
+                            class="w-full h-40 object-cover rounded-2xl"
+                          />
+                          <div class="absolute right-3 top-3">
+                            <div
+                              class="rounded-xl bg-white/95 backdrop-blur px-3 py-2 text-center leading-tight shadow"
+                            >
+                              <div
+                                class="text-slate-700 text-base font-semibold"
+                              >
+                                24
+                              </div>
+                              <div class="text-slate-600 text-xs">Jan</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="py-4 px-1">
+                          <a
+                            href="#"
+                            class="block text-[#338FF7] text-sm font-normal leading-relaxed"
+                          >
+                            Get expert guidance on studying in Canada, UK,
+                            Australia, and more!
+                          </a>
+                          <p class="mt-2 text-gray-500 text-xs">
+                            Study in Canada • Kathmandu • Hybrid
+                          </p>
+                          <p
+                            class="mt-2 text-gray-500 text-xs flex items-center gap-2"
+                          >
+                            <i
+                              class="fa-regular fa-clock text-[#338FF7] text-xs"
+                            ></i>
+                            11:00 AM – 3:00 PM
+                          </p>
+                          <div class="mt-4">
+                            <a
+                              href="./events.html"
+                              class="inline-flex items-center gap-2 font-light text-xs rounded-lg bg-[#0a4a92] px-5 py-2 text-white"
+                            >
+                              View Detail
+                              <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- card 3 -->
+                      <article class="rounded-2xl overflow-hidden bg-white">
+                        <div class="relative">
+                          <img
+                            src="assets/event-2.jpg"
+                            alt=""
+                            class="w-full h-40 object-cover rounded-2xl"
+                          />
+                          <div class="absolute right-3 top-3">
+                            <div
+                              class="rounded-xl bg-white/95 backdrop-blur px-3 py-2 text-center leading-tight shadow"
+                            >
+                              <div
+                                class="text-slate-700 text-base font-semibold"
+                              >
+                                31
+                              </div>
+                              <div class="text-slate-600 text-xs">Jan</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="py-4 px-1">
+                          <a
+                            href="#"
+                            class="block text-[#338FF7] text-sm font-normal leading-relaxed"
+                          >
+                            Get expert guidance on studying in Canada, UK,
+                            Australia, and more!
+                          </a>
+                          <p class="mt-2 text-gray-500 text-xs">
+                            Study in Canada • Kathmandu • Hybrid
+                          </p>
+                          <p
+                            class="mt-2 text-gray-500 text-xs flex items-center gap-2"
+                          >
+                            <i
+                              class="fa-regular fa-clock text-[#338FF7] text-xs"
+                            ></i>
+                            11:00 AM – 3:00 PM
+                          </p>
+                          <div class="mt-4">
+                            <a
+                              href="./events.html"
+                              class="inline-flex items-center gap-2 font-light text-xs rounded-lg bg-[#0a4a92] px-5 py-2 text-white"
+                            >
+                              View Detail
+                              <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <!-- FAIRS -->
+                    <div
+                      data-panel="fairs"
+                      class="evt-panel hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    >
+                      <!-- card 1 -->
+                      <article class="rounded-2xl overflow-hidden bg-white">
+                        <div class="relative">
+                          <img
+                            src="assets/educationsystem-1.jpg"
+                            alt=""
+                            class="w-full h-40 object-cover rounded-2xl"
+                          />
+                          <div class="absolute right-3 top-3">
+                            <div
+                              class="rounded-xl bg-white/95 backdrop-blur px-3 py-2 text-center leading-tight shadow"
+                            >
+                              <div
+                                class="text-slate-700 text-base font-semibold"
+                              >
+                                16
+                              </div>
+                              <div class="text-slate-600 text-xs">Jan</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="py-4 px-1">
+                          <a
+                            href="#"
+                            class="block text-[#338FF7] text-sm font-normal leading-relaxed"
+                          >
+                            Global Edu Fair 2025
+                          </a>
+                          <p class="mt-2 text-gray-500 text-xs">
+                            Meet 30+ universities from the UK, Canada...
+                          </p>
+                          <p
+                            class="mt-2 text-gray-500 text-xs flex items-center gap-2"
+                          >
+                            <i
+                              class="fa-regular fa-clock text-[#338FF7] text-xs"
+                            ></i>
+                            11:00 AM – 3:00 PM
+                          </p>
+                          <div class="mt-4">
+                            <a
+                              href="./events.html"
+                              class="inline-flex items-center gap-2 font-light text-xs rounded-lg bg-[#0a4a92] px-5 py-2 text-white"
+                            >
+                              View Detail
+                              <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- card 2 -->
+                      <article class="rounded-2xl overflow-hidden bg-white">
+                        <div class="relative">
+                          <img
+                            src="assets/educationsystem-2.jpg"
+                            alt=""
+                            class="w-full h-40 object-cover rounded-2xl"
+                          />
+                          <div class="absolute right-3 top-3">
+                            <div
+                              class="rounded-xl bg-white/95 backdrop-blur px-3 py-2 text-center leading-tight shadow"
+                            >
+                              <div
+                                class="text-slate-700 text-base font-semibold"
+                              >
+                                24
+                              </div>
+                              <div class="text-slate-600 text-xs">Jan</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="py-4 px-1">
+                          <a
+                            href="#"
+                            class="block text-[#338FF7] text-sm font-normal leading-relaxed"
+                          >
+                            Global Edu Fair 2025
+                          </a>
+                          <p class="mt-2 text-gray-500 text-xs">
+                            Meet 30+ universities from the UK, Canada...
+                          </p>
+                          <p
+                            class="mt-2 text-gray-500 text-xs flex items-center gap-2"
+                          >
+                            <i
+                              class="fa-regular fa-clock text-[#338FF7] text-xs"
+                            ></i>
+                            11:00 AM – 3:00 PM
+                          </p>
+                          <div class="mt-4">
+                            <a
+                              href="./events.html"
+                              class="inline-flex items-center gap-2 font-light text-xs rounded-lg bg-[#0a4a92] px-5 py-2 text-white"
+                            >
+                              View Detail
+                              <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- card 3 -->
+                      <article class="rounded-2xl overflow-hidden bg-white">
+                        <div class="relative">
+                          <img
+                            src="assets/educationsystem-3.jpg"
+                            alt=""
+                            class="w-full h-40 object-cover rounded-2xl"
+                          />
+                          <div class="absolute right-3 top-3">
+                            <div
+                              class="rounded-xl bg-white/95 backdrop-blur px-3 py-2 text-center leading-tight shadow"
+                            >
+                              <div
+                                class="text-slate-700 text-base font-semibold"
+                              >
+                                31
+                              </div>
+                              <div class="text-slate-600 text-xs">Jan</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="py-4 px-1">
+                          <a
+                            href="#"
+                            class="block text-[#338FF7] text-sm font-normal leading-relaxed"
+                          >
+                            Global Edu Fair 2025
+                          </a>
+                          <p class="mt-2 text-gray-500 text-xs">
+                            Meet 30+ universities from the UK, Canada...
+                          </p>
+                          <p
+                            class="mt-2 text-gray-500 text-xs flex items-center gap-2"
+                          >
+                            <i
+                              class="fa-regular fa-clock text-[#338FF7] text-xs"
+                            ></i>
+                            11:00 AM – 3:00 PM
+                          </p>
+                          <div class="mt-4">
+                            <a
+                              href="./events.html"
+                              class="inline-flex items-center gap-2 font-light text-xs rounded-lg bg-[#0a4a92] px-5 py-2 text-white"
+                            >
+                              View Detail
+                              <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <!-- RECORDED -->
+                    <div
+                      data-panel="recorded"
+                      class="evt-panel hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    >
+                      <!-- card 1 -->
+                      <article class="rounded-2xl overflow-hidden bg-white">
+                        <div class="relative">
+                          <img
+                            src="assets/educationsystem-1.jpg"
+                            alt=""
+                            class="w-full h-40 object-cover rounded-2xl"
+                          />
+                          <div class="absolute right-3 top-3">
+                            <div
+                              class="rounded-xl bg-white/95 backdrop-blur px-3 py-2 text-center leading-tight shadow"
+                            >
+                              <div
+                                class="text-slate-700 text-base font-semibold"
+                              >
+                                16
+                              </div>
+                              <div class="text-slate-600 text-xs">Jan</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="py-4 px-1">
+                          <a
+                            href="#"
+                            class="block text-[#338FF7] text-sm font-normal leading-relaxed"
+                          >
+                            Global Edu Fair 2025
+                          </a>
+                          <p class="mt-2 text-gray-500 text-xs">
+                            Meet 30+ universities from the UK, Canada...
+                          </p>
+                          <p
+                            class="mt-2 text-gray-500 text-xs flex items-center gap-2"
+                          >
+                            <i
+                              class="fa-regular fa-clock text-[#338FF7] text-xs"
+                            ></i>
+                            11:00 AM – 3:00 PM
+                          </p>
+                          <div class="mt-4">
+                            <a
+                              href="./events.html"
+                              class="inline-flex items-center gap-2 font-light text-xs rounded-lg bg-[#0a4a92] px-5 py-2 text-white"
+                            >
+                              View Detail
+                              <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- card 2 -->
+                      <article class="rounded-2xl overflow-hidden bg-white">
+                        <div class="relative">
+                          <img
+                            src="assets/educationsystem-2.jpg"
+                            alt=""
+                            class="w-full h-40 object-cover rounded-2xl"
+                          />
+                          <div class="absolute right-3 top-3">
+                            <div
+                              class="rounded-xl bg-white/95 backdrop-blur px-3 py-2 text-center leading-tight shadow"
+                            >
+                              <div
+                                class="text-slate-700 text-base font-semibold"
+                              >
+                                24
+                              </div>
+                              <div class="text-slate-600 text-xs">Jan</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="py-4 px-1">
+                          <a
+                            href="#"
+                            class="block text-[#338FF7] text-sm font-normal leading-relaxed"
+                          >
+                            Global Edu Fair 2025
+                          </a>
+                          <p class="mt-2 text-gray-500 text-xs">
+                            Meet 30+ universities from the UK, Canada...
+                          </p>
+                          <p
+                            class="mt-2 text-gray-500 text-xs flex items-center gap-2"
+                          >
+                            <i
+                              class="fa-regular fa-clock text-[#338FF7] text-xs"
+                            ></i>
+                            11:00 AM – 3:00 PM
+                          </p>
+                          <div class="mt-4">
+                            <a
+                              href="./events.html"
+                              class="inline-flex items-center gap-2 font-light text-xs rounded-lg bg-[#0a4a92] px-5 py-2 text-white"
+                            >
+                              View Detail
+                              <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- card 3 -->
+                      <article class="rounded-2xl overflow-hidden bg-white">
+                        <div class="relative">
+                          <img
+                            src="assets/educationsystem-3.jpg"
+                            alt=""
+                            class="w-full h-40 object-cover rounded-2xl"
+                          />
+                          <div class="absolute right-3 top-3">
+                            <div
+                              class="rounded-xl bg-white/95 backdrop-blur px-3 py-2 text-center leading-tight shadow"
+                            >
+                              <div
+                                class="text-slate-700 text-base font-semibold"
+                              >
+                                31
+                              </div>
+                              <div class="text-slate-600 text-xs">Jan</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="py-4 px-1">
+                          <a
+                            href="#"
+                            class="block text-[#338FF7] text-sm font-normal leading-relaxed"
+                          >
+                            Global Edu Fair 2025
+                          </a>
+                          <p class="mt-2 text-gray-500 text-xs">
+                            Meet 30+ universities from the UK, Canada...
+                          </p>
+                          <p
+                            class="mt-2 text-gray-500 text-xs flex items-center gap-2"
+                          >
+                            <i
+                              class="fa-regular fa-clock text-[#338FF7] text-xs"
+                            ></i>
+                            11:00 AM – 3:00 PM
+                          </p>
+                          <div class="mt-4">
+                            <a
+                              href="./events.html"
+                              class="inline-flex items-center gap-2 font-light text-xs rounded-lg bg-[#0a4a92] px-5 py-2 text-white"
+                            >
+                              View Detail
+                              <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="/blog.html" class="hover:text-[#c71826]">Blog</a>
+            <a href="/news.html" class="hover:text-[#c71826]">News</a>
+            <a href="/faq.html" class="hover:text-[#c71826]">FAQ's</a>
           </nav>
 
           <div class="hidden sm:flex">
             <a
-              href="./contact.html"
+              href="/contact.html"
               class="inline-flex items-center gap-2 bg-[#02519e] text-white px-5 py-3 rounded-lg font-medium"
             >
               Contact Us <i class="fa-solid fa-chevron-right"></i>
@@ -239,44 +1121,112 @@
         class="lg:hidden hidden border-t border-slate-200 bg-white"
       >
         <div class="max-w-7xl mx-auto px-4 py-4 space-y-2">
-          <a class="block py-2" href="#">Home</a>
-          <a class="block py-2" href="#">Our Story</a>
-          <details class="py-2">
-            <summary class="cursor-pointer flex items-center justify-between">
-              Services <i class="fa-solid fa-chevron-down text-xs"></i>
+          <a class="block py-2" href="./index.html">Home</a>
+          <a class="block py-2" href="./ourStory.html">Our Story</a>
+          <details class="" id="servicesMenu">
+            <summary class="list-none cursor-pointer">
+              <div class="flex items-center justify-between">
+                <a
+                  href="./services.html"
+                  class="hover:text-[#E41E26]"
+                  onclick="event.stopPropagation()"
+                >
+                  Services
+                </a>
+
+                <button
+                  type="button"
+                  class="p-2 -mr-2"
+                  onclick="event.preventDefault(); event.stopPropagation(); const d=this.closest('details'); d.open=!d.open; this.firstElementChild.classList.toggle('rotate-180');"
+                >
+                  <i
+                    class="fa-solid fa-chevron-down text-xs transition-transform"
+                  ></i>
+                </button>
+              </div>
             </summary>
+
             <div class="pl-4 pt-2 space-y-1">
               <a class="block py-1" href="#">Counseling</a>
               <a class="block py-1" href="#">Test Prep</a>
               <a class="block py-1" href="#">Visa Guidance</a>
             </div>
           </details>
-          <details class="py-2">
-            <summary class="cursor-pointer flex items-center justify-between">
-              Study Destinations
-              <i class="fa-solid fa-chevron-down text-xs"></i>
+
+          <details class="" id="destinationsMenu">
+            <summary class="list-none cursor-pointer">
+              <div class="flex items-center justify-between">
+                <a
+                  href="./studyDestination.html"
+                  class="hover:text-[#E41E26]"
+                  onclick="event.stopPropagation()"
+                >
+                  Study Destinations
+                </a>
+
+                <button
+                  type="button"
+                  class="p-2 -mr-2"
+                  aria-expanded="false"
+                  aria-controls="destinationsSubmenu"
+                  onclick="event.preventDefault(); event.stopPropagation();
+                 const d=this.closest('details'); d.open=!d.open;
+                 this.setAttribute('aria-expanded', d.open);
+                 this.firstElementChild.classList.toggle('rotate-180');"
+                >
+                  <i
+                    class="fa-solid fa-chevron-down text-xs transition-transform"
+                  ></i>
+                </button>
+              </div>
             </summary>
-            <div class="pl-4 pt-2 space-y-1">
+
+            <div id="destinationsSubmenu" class="pl-4 pt-2 space-y-1">
               <a class="block py-1" href="#">Australia</a>
               <a class="block py-1" href="#">Canada</a>
               <a class="block py-1" href="#">UK</a>
             </div>
           </details>
-          <details class="py-2">
-            <summary class="cursor-pointer flex items-center justify-between">
-              Events &amp; Webinars
-              <i class="fa-solid fa-chevron-down text-xs"></i>
+
+          <details class="" id="eventsMenu">
+            <summary class="list-none cursor-pointer">
+              <div class="flex items-center justify-between">
+                <a
+                  href="./events.html"
+                  class="hover:text-[#E41E26]"
+                  onclick="event.stopPropagation()"
+                >
+                  Events &amp; Webinars
+                </a>
+
+                <button
+                  type="button"
+                  class="p-2 -mr-2"
+                  aria-expanded="false"
+                  aria-controls="eventsSubmenu"
+                  onclick="event.preventDefault(); event.stopPropagation();
+                 const d=this.closest('details'); d.open=!d.open;
+                 this.setAttribute('aria-expanded', d.open);
+                 this.firstElementChild.classList.toggle('rotate-180');"
+                >
+                  <i
+                    class="fa-solid fa-chevron-down text-xs transition-transform"
+                  ></i>
+                </button>
+              </div>
             </summary>
-            <div class="pl-4 pt-2 space-y-1">
+
+            <div id="eventsSubmenu" class="pl-4 pt-2 space-y-1">
               <a class="block py-1" href="#">Upcoming Events</a>
               <a class="block py-1" href="#">Past Webinars</a>
             </div>
           </details>
-          <a class="block py-2" href="#">Blog</a>
-          <a class="block py-2" href="#">News</a>
-          <a class="block py-2" href="#">FAQ's</a>
+
+          <a class="block py-2" href="./blog.html">Blog</a>
+          <a class="block py-2" href="./news.html">News</a>
+          <a class="block py-2" href="./faq.html">FAQ's</a>
           <a
-            href="#"
+            href="./contact.html"
             class="inline-flex items-center gap-2 bg-[#0f3a5b] text-white px-4 py-2 rounded-md mt-2"
             >Contact Us <i class="fa-solid fa-arrow-right"></i
           ></a>
@@ -870,6 +1820,7 @@
 
     <!-- scripts -->
     <script src="./scripts/menu.js"></script>
+    <script src="./scripts/navbar.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
