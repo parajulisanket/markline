@@ -148,3 +148,41 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+
+// hero section animation
+(function () {
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+  const START_DELAY_MS = 120;
+
+  function play() {
+    const left = document.getElementById("heroLeft");
+    const right = document.getElementById("heroRight");
+    if (!left || !right) return;
+
+    if (reduceMotion) {
+      left.classList.remove("enter-init");
+      right.classList.remove("enter-init");
+      return;
+    }
+
+    // ensure initial hidden state applied
+    left.classList.add("enter-init");
+    right.classList.add("enter-init");
+
+    // kick both at the exact same time
+    setTimeout(() => {
+      left.classList.remove("enter-init");
+      right.classList.remove("enter-init");
+      left.classList.add("in-up");
+      right.classList.add("in-down");
+    }, START_DELAY_MS);
+  }
+
+  window.addEventListener("DOMContentLoaded", play);
+  // handle back/forward cache restores too
+  window.addEventListener("pageshow", (e) => {
+    if (e.persisted) play();
+  });
+})();

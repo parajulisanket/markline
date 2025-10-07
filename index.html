@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="./assets/markline 1.png" type="image/png" />
+    <link rel="icon" href="./assets/markline.png" type="image/png" />
     <title>Markline</title>
     <link rel="stylesheet" href="./styles/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -107,7 +107,6 @@
         </div>
       </div>
     </div>
-
     <!-- navigation -->
     <header
       class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-md"
@@ -125,7 +124,7 @@
 
           <!-- Desktop Nav Links -->
           <nav
-            class="hidden lg:flex items-center gap-6 text-[#02519e] font-light"
+            class="hidden lg:flex items-center gap-6 text-[#02519e] font-medium"
           >
             <a href="./index.html" class="hover:text-[#c71826]">Home</a>
             <a href="./ourStory.html" class="hover:text-[#c71826]">Our Story</a>
@@ -1231,30 +1230,39 @@
         </div>
       </div>
     </header>
-
     <!-- hero section -->
     <section
       class="hidden md:grid lg:grid-cols-2 gap-10 items-center relative max-w-7xl mx-auto px-4 py-16"
     >
       <!-- Left copy -->
-      <div class="space-y-8">
-        <h1 class="text-5xl font-semibold text-[#02519e] hero-section-font">
+      <div id="heroLeft" class="space-y-8 enter-init" data-delay="0">
+        <h1
+          class="text-5xl font-semibold text-[#02519e] hero-section-font"
+          data-reveal
+          data-delay="100"
+        >
           Nepal’s Most Trusted Study
         </h1>
-        <h1 class="text-5xl font-semibold text-[#02519e] hero-section-font">
+        <h1
+          class="text-5xl font-semibold text-[#02519e] hero-section-font"
+          data-reveal
+          data-delay="180"
+        >
           Abroad Experts
         </h1>
         <p
           class="text-slate-600 max-w-xl hero-content leading-6 font-light tracking-wide text-lg"
+          data-reveal
+          data-delay="260"
         >
           We have helped thousands of students study in the UK, USA, Australia,
           Canada, and beyond offering full support, absolutely free.
         </p>
 
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-6" data-reveal data-delay="340">
           <a
             href="#"
-            class="inline-flex items-center gap-3 bg-[#02519e] text-white px-5 py-3 rounded-lg font-medium shadow"
+            class="inline-flex items-center gap-3 bg-[#02519e] text-white px-5 py-3 rounded-lg font-medium shadow hover:shadow-lg hover:translate-y-[-1px] transition"
           >
             Get Free Counseling <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -1289,15 +1297,19 @@
       </div>
 
       <!-- Right visual -->
-      <div class="relative">
+      <div id="heroRight" class="relative enter-init" data-delay="120">
         <img
           src="./assets/hero-img.png"
           alt="Happy student"
           class="w-full max-w-sm mx-auto object-cover"
         />
 
+        <!-- stat cards (floaty + slight stagger on load) -->
         <div
-          class="absolute -left-6 top-64 bg-[#f0f4fe] backdrop-blur shadow-lg rounded-xl px-4 py-3 flex items-center gap-3"
+          class="absolute -left-6 top-64 bg-[#f0f4fe] backdrop-blur shadow-lg rounded-xl px-4 py-3 flex items-center gap-3 floaty"
+          style="animation-delay: 0.2s"
+          data-reveal
+          data-delay="240"
         >
           <span
             class="grid place-items-center w-10 h-10 rounded-lg bg-[#1e549f] text-white"
@@ -1311,7 +1323,10 @@
         </div>
 
         <div
-          class="absolute right-4 top-80 bg-[#f0f4fe] backdrop-blur shadow-lg rounded-xl px-4 py-3 flex items-center gap-3"
+          class="absolute right-4 top-80 bg-[#f0f4fe] backdrop-blur shadow-lg rounded-xl px-4 py-3 flex items-center gap-3 floaty"
+          style="animation-delay: 0.4s"
+          data-reveal
+          data-delay="300"
         >
           <span
             class="grid place-items-center w-10 h-10 rounded-lg bg-[#1e549f] text-white"
@@ -1325,7 +1340,10 @@
         </div>
 
         <div
-          class="absolute left-10 -bottom-4 bg-[#f0f4fe] backdrop-blur shadow-lg rounded-xl px-4 py-3 flex items-center gap-3"
+          class="absolute left-10 -bottom-4 bg-[#f0f4fe] backdrop-blur shadow-lg rounded-xl px-4 py-3 flex items-center gap-3 floaty"
+          style="animation-delay: 0.6s"
+          data-reveal
+          data-delay="360"
         >
           <span
             class="grid place-items-center w-10 h-10 rounded-lg bg-[#1e549f] text-white"
@@ -1339,34 +1357,34 @@
         </div>
       </div>
 
-      <div class="hidden xl:flex flex-col gap-4 fixed right-0 top-1/3 z-50">
+      <!-- sticky rails -->
+      <div
+        class="hidden xl:flex flex-col gap-4 fixed right-0 top-1/3 z-50"
+        data-reveal
+        data-delay="420"
+      >
         <a
           href="#"
-          class="flex flex-col items-center justify-between bg-[#02519e] text-white w-12 h-40 rounded-l-lg py-4"
+          class="flex flex-col items-center justify-between bg-[#02519e] text-white w-12 h-40 rounded-l-lg py-4 hover:opacity-90 transition"
         >
           <span
             class="text-sm tracking-wide [writing-mode:vertical-rl] rotate-180"
+            >Consult Now</span
           >
-            Consult Now
-          </span>
-
           <img
             src="./assets/WhatsApp.webp"
             class="h-8 w-8 -rotate-90"
             alt="WhatsApp"
           />
         </a>
-
         <a
           href="#"
-          class="flex flex-col items-center justify-between bg-[#02519e] text-white w-12 h-40 rounded-l-lg py-4"
+          class="flex flex-col items-center justify-between bg-[#02519e] text-white w-12 h-40 rounded-l-lg py-4 hover:opacity-90 transition"
         >
           <span
             class="tracking-wide text-sm [writing-mode:vertical-rl] rotate-180"
+            >Consult now</span
           >
-            Consult Now
-          </span>
-
           <img
             src="./assets/messanger.png"
             class="h-7 w-7 -rotate-90"
@@ -1375,6 +1393,77 @@
         </a>
       </div>
     </section>
+    <!-- logos part -->
+    <div class="py-12 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="relative flex overflow-hidden">
+          <!-- scrolling wrapper -->
+          <div class="animate-scroll flex items-center gap-16 shrink-0">
+            <img
+              src="./assets/logo2.png"
+              alt="Partner 1"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo3.png"
+              alt="Partner 2"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo1.png"
+              alt="Partner 3"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo4.png"
+              alt="Partner 4"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo5.png"
+              alt="Partner 5"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo3.png"
+              alt="Partner 6"
+              class="h-8 w-auto object-contain"
+            />
+            <!-- duplicate logos for seamless loop -->
+            <img
+              src="./assets/logo2.png"
+              alt="Partner 1"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo3.png"
+              alt="Partner 2"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo1.png"
+              alt="Partner 3"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo4.png"
+              alt="Partner 4"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo5.png"
+              alt="Partner 5"
+              class="h-8 w-auto object-contain"
+            />
+            <img
+              src="./assets/logo3.png"
+              alt="Partner 6"
+              class="h-8 w-auto object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- mobile hero -->
     <section class="relative w-full h-screen overflow-hidden md:hidden">
       <img
@@ -1473,15 +1562,14 @@
         </div>
       </div>
     </section>
+
     <!-- second block -->
     <section
       class="mt-0 md:mt-28 grid lg:grid-cols-2 items-center gap-10 relative max-w-7xl mx-auto px-4 py-16 overflow-hidden lg:overflow-visible"
     >
       <!-- Left content -->
       <div class="order-2 lg:order-1 px-10 md:px-0">
-        <p class="text-[#e41e26] text-lg font-light mb-2">
-          Who says dreams don’t fly?
-        </p>
+        <p class="heading">Who says dreams don’t fly?</p>
         <h2 class="sub-heading">
           We Make Study Abroad Look Easy<br />
           (Because It Can Be)
@@ -1542,10 +1630,12 @@
     <!-- why students trust us -->
     <section class="py-16">
       <div class="max-w-7xl mx-auto px-4">
-        <h2 class="sub-heading text-center mb-12">Why Students Trust Us</h2>
+        <h2 class="heading text-[#e41e26] text-center">
+          Why Students Trust Us
+        </h2>
 
         <div
-          class="flex overflow-x-auto gap-4 sm:gap-6 md:gap-8 px-1 snap-x snap-mandatory scroll-smooth md:grid md:grid-cols-3 lg:grid-cols-5 md:overflow-visible md:px-0 hero-content"
+          class="mt-8 flex overflow-x-auto gap-4 sm:gap-6 md:gap-8 px-1 snap-x snap-mandatory scroll-smooth md:grid md:grid-cols-3 lg:grid-cols-5 md:overflow-visible md:px-0 hero-content"
           id="trust-scroll"
         >
           <!-- Card 1 -->
@@ -1640,11 +1730,7 @@
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center max-w-4xl mx-auto">
           <!-- Small red subtitle -->
-          <p
-            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
-          >
-            Who says dreams don’t fly?
-          </p>
+          <p class="heading">Who says dreams don’t fly?</p>
 
           <h2 class="sub-heading">
             Our students have secured admissions at some of the world’s top
@@ -2153,25 +2239,21 @@
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center max-w-4xl mx-auto mb-10">
-          <p
-            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
-          >
-            Student stories
-          </p>
+          <p class="heading">Student stories</p>
           <h2 class="sub-heading">
             Our highlighted students revealing their success stories.
           </h2>
         </div>
 
         <!-- Carousel -->
-        <div class="relative">
+        <div class="relative overflow-hidden">
           <!-- Scrollable strip -->
           <div
             id="videoStrip"
             class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide pb-2"
             aria-label="Student video stories"
           >
-            <!-- Card 1 -->
+            <!-- CARD 1  -->
             <article
               class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
             >
@@ -2181,30 +2263,30 @@
                   preload="none"
                   playsinline
                   muted
-                  data-caption="Mukesh Kumar, Canada"
                   poster="./assets/photo1.jpeg"
                   src="YOUR_VIDEO_1.mp4"
                 ></video>
-
-                <!-- Play overlay -->
                 <button
-                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
-                  aria-label="Play video"
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/40"
+                  type="button"
                 >
                   <i
                     class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
                   ></i>
                 </button>
-
-                <!-- Caption -->
-                <p
-                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
-                >
-                  Mukesh Kumar, Canada
-                </p>
+                <div class="absolute bottom-4 left-4 text-white leading-tight">
+                  <p class="font-semibold text-lg">
+                    Mukesh Kumar
+                    <span class="text-white/80 font-normal">| Canada</span>
+                  </p>
+                  <p class="text-md italic text-amber-300 mt-0.5 tracking-wide">
+                    University of Toronto
+                  </p>
+                </div>
               </div>
             </article>
-            <!-- Card 2 -->
+
+            <!-- CARD 2 -->
             <article
               class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
             >
@@ -2214,30 +2296,30 @@
                   preload="none"
                   playsinline
                   muted
-                  data-caption="Mukesh Kumar, Canada"
                   poster="./assets/photo2.jpg"
-                  src="YOUR_VIDEO_1.mp4"
+                  src="YOUR_VIDEO_2.mp4"
                 ></video>
-
-                <!-- Play overlay -->
                 <button
-                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
-                  aria-label="Play video"
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/40"
+                  type="button"
                 >
                   <i
                     class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
                   ></i>
                 </button>
-
-                <!-- Caption -->
-                <p
-                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
-                >
-                  Mukesh Kumar, Canada
-                </p>
+                <div class="absolute bottom-4 left-4 text-white leading-tight">
+                  <p class="font-semibold text-lg">
+                    Anjali Sharma
+                    <span class="text-white/80 font-normal">| Australia</span>
+                  </p>
+                  <p class="text-md italic text-amber-300 mt-0.5 tracking-wide">
+                    University of Melbourne
+                  </p>
+                </div>
               </div>
             </article>
-            <!-- Card 3 -->
+
+            <!-- CARD 3 -->
             <article
               class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
             >
@@ -2247,30 +2329,30 @@
                   preload="none"
                   playsinline
                   muted
-                  data-caption="Mukesh Kumar, Canada"
                   poster="./assets/photo3.jpg"
-                  src="YOUR_VIDEO_1.mp4"
+                  src="YOUR_VIDEO_3.mp4"
                 ></video>
-
-                <!-- Play overlay -->
                 <button
-                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
-                  aria-label="Play video"
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/40"
+                  type="button"
                 >
                   <i
                     class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
                   ></i>
                 </button>
-
-                <!-- Caption -->
-                <p
-                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
-                >
-                  Mukesh Kumar, Canada
-                </p>
+                <div class="absolute bottom-4 left-4 text-white leading-tight">
+                  <p class="font-semibold text-lg">
+                    Ravi Thapa
+                    <span class="text-white/80 font-normal">| USA</span>
+                  </p>
+                  <p class="text-md italic text-amber-300 mt-0.5 tracking-wide">
+                    Harvard University
+                  </p>
+                </div>
               </div>
             </article>
-            <!-- Card 4 -->
+
+            <!-- CARD 4 -->
             <article
               class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
             >
@@ -2280,30 +2362,30 @@
                   preload="none"
                   playsinline
                   muted
-                  data-caption="Mukesh Kumar, Canada"
                   poster="./assets/photo4.jpg"
-                  src="YOUR_VIDEO_1.mp4"
+                  src="YOUR_VIDEO_4.mp4"
                 ></video>
-
-                <!-- Play overlay -->
                 <button
-                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
-                  aria-label="Play video"
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/40"
+                  type="button"
                 >
                   <i
                     class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
                   ></i>
                 </button>
-
-                <!-- Caption -->
-                <p
-                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
-                >
-                  Mukesh Kumar, Canada
-                </p>
+                <div class="absolute bottom-4 left-4 text-white leading-tight">
+                  <p class="font-semibold text-lg">
+                    Priya Karki
+                    <span class="text-white/80 font-normal">| UK</span>
+                  </p>
+                  <p class="text-md italic text-amber-300 mt-0.5 tracking-wide">
+                    University of Oxford
+                  </p>
+                </div>
               </div>
             </article>
-            <!-- Card-5 -->
+
+            <!-- CARD 5  -->
             <article
               class="min-w-[300px] rounded-xl overflow-hidden snap-start bg-white shadow-sm"
             >
@@ -2313,43 +2395,43 @@
                   preload="none"
                   playsinline
                   muted
-                  data-caption="Mukesh Kumar, Canada"
                   poster="./assets/photo5.jpg"
-                  src="YOUR_VIDEO_1.mp4"
+                  src="YOUR_VIDEO_5.mp4"
                 ></video>
-
-                <!-- Play overlay -->
                 <button
-                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/20"
-                  aria-label="Play video"
+                  class="play-btn absolute inset-0 flex items-center justify-center bg-black/40"
+                  type="button"
                 >
                   <i
                     class="fa-solid fa-circle-play text-5xl text-[#C7C7C7]"
                   ></i>
                 </button>
-
-                <!-- Caption -->
-                <p
-                  class="absolute bottom-2 left-12 text-white text-sm font-medium drop-shadow"
-                >
-                  Mukesh Kumar, Canada
-                </p>
+                <div class="absolute bottom-4 left-4 text-white leading-tight">
+                  <p class="font-semibold text-lg">
+                    Suman Gurung
+                    <span class="text-white/80 font-normal">| Canada</span>
+                  </p>
+                  <p class="text-md italic text-amber-300 mt-0.5 tracking-wide">
+                    McGill University
+                  </p>
+                </div>
               </div>
             </article>
           </div>
-          <!-- left and right arrow -->
+
+          <!-- NAVIGATION BUTTONS -->
           <div class="mt-6 flex items-center gap-4">
             <button
               id="prevBtn"
               class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
-              aria-label="Scroll left"
+              type="button"
             >
               <i class="fa-solid fa-arrow-left text-[#03519E]"></i>
             </button>
             <button
               id="nextBtn"
               class="bg-[#E4EDFF] hover:bg-indigo-100 h-10 w-10 rounded-full grid place-items-center shadow-sm"
-              aria-label="Scroll right"
+              type="button"
             >
               <i class="fa-solid fa-arrow-right text-[#03519E]"></i>
             </button>
@@ -2362,11 +2444,7 @@
       <div class="max-w-7xl mx-auto px-4">
         <!-- Section Heading -->
         <div class="text-center max-w-4xl mx-auto mb-12">
-          <p
-            class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
-          >
-            What We Do
-          </p>
+          <p class="heading">What We Do</p>
           <h2 class="sub-heading text-[#1e549f]">
             we don’t just offer services we serve solutions.
           </h2>
@@ -2490,7 +2568,7 @@
             </p>
 
             <p class="text-[#02519e]">
-              More FAQ’s
+              <a href="./faq.html">More FAQ’s</a>
               <i class="fa fa-chevron-right"></i>
             </p>
           </div>
@@ -2653,11 +2731,7 @@
         <div class="grid grid-cols-1 md:grid-cols-[40%_60%] gap-10 items-start">
           <!-- LEFT  -->
           <div class="space-y-6">
-            <p
-              class="text-[#e41e26] text-sm md:text-lg font-light mb-3 tracking-wide"
-            >
-              Let’s Talk
-            </p>
+            <p class="heading">Let’s Talk</p>
             <h2
               class="text-[#1e549f] font-semibold text-3xl md:text-4xl hero-section-font leading-8"
             >
@@ -2675,10 +2749,10 @@
                 <input
                   type="text"
                   placeholder="Full Name*"
-                  class="w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] placeholder:text-[#1e549f] placeholder:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                  class="w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] placeholder:text-[#1e549f]/70 focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
                 />
                 <span
-                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]/70"
                 >
                   <i class="fa-regular fa-user"></i>
                 </span>
@@ -2689,10 +2763,10 @@
                 <input
                   type="tel"
                   placeholder="Mobile"
-                  class="w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] placeholder:text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                  class="w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] placeholder:text-[#1e549f]/70 focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
                 />
                 <span
-                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]/70"
                 >
                   <i class="fa-solid fa-mobile-screen"></i>
                 </span>
@@ -2703,10 +2777,10 @@
                 <input
                   type="email"
                   placeholder="Email Address*"
-                  class="w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] placeholder:text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                  class="w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] placeholder:text-[#1e549f]/70 focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
                 />
                 <span
-                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]/70"
                 >
                   <i class="fa-regular fa-envelope"></i>
                 </span>
@@ -2715,7 +2789,7 @@
               <!-- Nearest Office -->
               <div class="relative">
                 <select
-                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f]/70 focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
                 >
                   <option selected>Nearest Markline Office</option>
                   <option>Kathmandu</option>
@@ -2723,7 +2797,7 @@
                   <option>Lalitpur</option>
                 </select>
                 <span
-                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]/70"
                 >
                   <i class="fa-solid fa-chevron-down"></i>
                 </span>
@@ -2732,7 +2806,7 @@
               <!-- Preferred destination -->
               <div class="relative">
                 <select
-                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f]/70 focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
                 >
                   <option selected>Preferred destination</option>
                   <option>Canada</option>
@@ -2741,7 +2815,7 @@
                   <option>Australia</option>
                 </select>
                 <span
-                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]/70"
                 >
                   <i class="fa-solid fa-chevron-down"></i>
                 </span>
@@ -2750,7 +2824,7 @@
               <!-- Preferred intake -->
               <div class="relative">
                 <select
-                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f]/70 focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
                 >
                   <option selected>Preferred intake</option>
                   <option>Spring</option>
@@ -2759,7 +2833,7 @@
                   <option>Winter</option>
                 </select>
                 <span
-                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]/70"
                 >
                   <i class="fa-solid fa-chevron-down"></i>
                 </span>
@@ -2768,7 +2842,7 @@
               <!-- Preferred mode of counseling -->
               <div class="relative">
                 <select
-                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f] focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
+                  class="appearance-none w-full h-11 rounded-lg bg-[#E9F0FF]/70 border border-[#D7E4FF] px-4 pr-12 text-[#1e549f]/70 focus:outline-none focus:ring-2 focus:ring-[#1e549f]/30"
                 >
                   <option selected>Preferred mode of counseling</option>
                   <option>In-person</option>
@@ -2776,7 +2850,7 @@
                   <option>Phone</option>
                 </select>
                 <span
-                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]"
+                  class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#1e549f]/70"
                 >
                   <i class="fa-solid fa-chevron-down"></i>
                 </span>
@@ -2797,553 +2871,427 @@
         </div>
       </div>
     </section>
-    <!-- logos part -->
-    <section class="py-12 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div
-          class="flex flex-wrap gap-x-10 gap-y-10 items-center justify-between"
-        >
-          <img
-            src="./assets/logo2.png"
-            alt="Partner 1"
-            class="h-8 w-auto object-contain"
-          />
-          <img
-            src="./assets/logo3.png"
-            alt="Partner 2"
-            class="h-8 w-auto object-contain"
-          />
-          <img
-            src="./assets/logo1.png"
-            alt="Partner 1"
-            class="h-8 w-auto object-contain"
-          />
-          <img
-            src="./assets/logo4.png"
-            alt="Partner 3"
-            class="h-8 w-auto object-contain"
-          />
-          <img
-            src="./assets/logo5.png"
-            alt="Partner 4"
-            class="h-8 w-auto object-contain"
-          />
-          <img
-            src="./assets/logo3.png"
-            alt="Partner 4"
-            class="h-8 w-auto object-contain"
-          />
-        </div>
-      </div>
-    </section>
 
     <!-- footer -->
-    <footer
-      class="relative bg-[#ECF1FE] text-[#1F3A7A] mt-0 md:mt-32 hidden md:block"
-    >
-      <div
-        class="grid md:grid-cols-3 border-y border-[#1F3A7A] bg-[#ECF1FE] z-0"
-      >
-        <!-- Address -->
-        <div class="flex items-center justify-center gap-4 px-4 py-2">
-          <span
-            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
-          >
-            <!-- location pin -->
-            <i class="fa-solid fa-location-dot text-[#E31E26] text-2xl"></i>
-          </span>
-          <div>
-            <p class="font-light">Address:</p>
-            <p class="text-xl tracking-wider hero-content">Kathmandu, Nepal</p>
-          </div>
-        </div>
-        <!-- Phone -->
-        <div
-          class="flex items-center gap-4 px-4 py-2 justify-center border-t md:border-t-0 md:border-x border-[#1F3A7A]"
-        >
-          <span
-            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
-          >
-            <!-- phone -->
-            <i class="fa-solid fa-phone text-[#E31E26] text-2xl"></i>
-          </span>
-          <div>
-            <p class="font-light">Phone:</p>
-            <p class="text-xl tracking-wider hero-content">+977 984 784 5682</p>
-          </div>
-        </div>
-        <!-- Email -->
-        <div class="flex items-center justify-center gap-4 px-4 py-2">
-          <span
-            class="grid place-items-center w-14 h-14 rounded-full border border-[#1F3A7A]"
-          >
-            <!-- mail -->
-            <i class="fa-solid fa-envelope text-[#E31E26] text-2xl"></i>
-          </span>
-          <div>
-            <p class="font-light">Email:</p>
-            <p class="text-xl tracking-wider hero-content">
-              marklineinfo@gmail.com
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Map -->
-      <div class="relative bg-[#ECF1FE]">
-        <!-- background map image -->
-
+    <footer class="relative bg-[#ECF1FE] text-[#03519E] mt-0 md:mt-32">
+      <!-- Top: 5 columns -->
+      <div class="relative">
+        <!-- world map bg -->
         <img
           src="./assets/footer-bg.png"
-          alt="World Map"
-          class="hidden md:block absolute inset-0 mx-auto top-1/2 -translate-y-[30%] scale-110 max-w-3xl h-80 object-contain opacity-20 pointer-events-none z-0"
+          alt=""
+          class="pointer-events-none select-none absolute inset-0 mx-auto top-[100%] -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-10 max-w-4xl w-full h-auto"
         />
 
-        <div class="relative max-w-5xl mx-auto text-center py-14 px-4">
-          <h2
-            class="text-4xl md:text-5xl font-normal tracking-widest leading-snug text-[#02519e]"
-          >
-            Make Your Dream Ture<br class="hidden md:block" />
-            With Markline.
-          </h2>
-        </div>
-      </div>
-
-      <!-- Middle content -->
-      <div class="bg-white/30 z-0">
+        <!-- content -->
         <div
-          class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10 px-4 py-10"
+          class="relative max-w-7xl mx-auto grid lg:grid-cols-5 gap-10 px-4 pt-12"
         >
-          <!-- Brand + about -->
-          <div>
-            <img
-              src="./assets/markline 1.png"
-              alt="markline"
-              class="h-10 w-auto"
-            />
-            <p class="mt-5 text-[#03519E] leading-7 font-light">
-              Guiding Nepalese students to top international universities with
-              expert support and care.
-            </p>
-            <!-- Socials -->
-            <div class="mt-6 flex items-center gap-4">
-              <a
-                href="#"
-                class="w-10 h-10 grid place-items-center rounded-full bg-white"
-              >
-                <i class="fa-brands fa-facebook-f text-[#09315B] text-lg"></i>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 grid place-items-center rounded-full bg-white"
-              >
-                <i class="fa-brands fa-instagram text-[#09315B] text-lg"></i>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 grid place-items-center rounded-full bg-white"
-              >
-                <i class="fa-brands fa-linkedin-in text-[#09315B] text-lg"></i>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 grid place-items-center rounded-full bg-white"
-              >
-                <i class="fa-brands fa-youtube text-[#09315B] text-lg"></i>
-              </a>
-            </div>
-          </div>
-
           <!-- Quick Links -->
           <div>
-            <h3 class="text-xl font-semibold tracking-wide mb-4">
-              Quick Links
-            </h3>
-            <ul class="space-y-4 text-[#234]">
+            <h3 class="text-xl font-medium tracking-wide mb-4">Quick Links</h3>
+            <ul class="text-[#03519E] space-y-1.5">
               <li>
                 <a
                   href="./index.html"
-                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
                 >
-                  › Home
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Home
                 </a>
               </li>
-
               <li>
                 <a
                   href="./ourStory.html"
-                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
-                  >› Our Story</a
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
                 >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Our Story
+                </a>
               </li>
               <li>
                 <a
                   href="./services.html"
-                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
-                  >› Services</a
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
                 >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Services
+                </a>
               </li>
               <li>
                 <a
                   href="./studyDestination.html"
-                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
-                  >› Study Destinations</a
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
                 >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Study Destinations
+                </a>
               </li>
               <li>
                 <a
                   href="./contact.html"
-                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
-                  >› Contact Us</a
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
                 >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Contact Us
+                </a>
               </li>
             </ul>
           </div>
 
           <!-- Student Resources -->
           <div>
-            <h3 class="text-xl font-semibold tracking-wide mb-4">
+            <h3 class="text-xl font-medium tracking-wide mb-4">
               Student Resources
             </h3>
-            <ul class="space-y-4 text-[#234]">
+            <ul class="text-[#03519E] space-y-1.5">
               <li>
                 <a
                   href="#"
-                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
-                  >› International Student Guide</a
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
                 >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Test Preparation Guide
+                </a>
               </li>
               <li>
                 <a
                   href="#"
-                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
-                  >› Test Preparation Guide</a
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
                 >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Sample Documents
+                </a>
               </li>
               <li>
                 <a
                   href="#"
-                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
-                  >› Sample Documents</a
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
                 >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Webinar Form
+                </a>
               </li>
               <li>
                 <a
                   href="#"
-                  class="font-light hover:font-normal flex items-center transform transition duration-200 hover:translate-x-2 hover:text-[#c71826]"
-                  >› Webinar Form</a
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
                 >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  International Student Guide
+                </a>
               </li>
             </ul>
           </div>
 
-          <!-- Accreditation -->
+          <!-- Destinations -->
           <div>
-            <h3 class="text-xl font-semibold tracking-wide mb-4">
-              Accreditation
+            <h3 class="text-xl font-medium tracking-wide mb-4">Destinations</h3>
+            <ul class="text-[#03519E] space-y-1.5">
+              <li>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Australia
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  UK
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  USA
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Canada
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  New Zealand
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Test Preparation -->
+          <div>
+            <h3 class="text-xl font-medium tracking-wide mb-4">
+              Test Preparation
             </h3>
-            <div class="grid grid-cols-3 gap-4">
-              <img
-                src="./assets/qeac.png"
-                alt="QEAC"
-                class="bg-white p-3 rounded shadow"
-              />
-              <img
-                src="./assets/qeac.png"
-                alt="QEAC"
-                class="bg-white p-3 rounded shadow"
-              />
-              <img
-                src="./assets/qeac.png"
-                alt="QEAC"
-                class="bg-white p-3 rounded shadow"
-              />
-              <img
-                src="./assets/qeac.png"
-                alt="QEAC"
-                class="bg-white p-3 rounded shadow"
-              />
-              <img
-                src="./assets/qeac.png"
-                alt="QEAC"
-                class="bg-white p-3 rounded shadow"
-              />
-              <img
-                src="./assets/qeac.png"
-                alt="QEAC"
-                class="bg-white p-3 rounded shadow"
-              />
+            <ul class="text-[#03519E] space-y-1.5">
+              <li>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  IELTS
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  PTE
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  TOEFL
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="text-xl font-medium tracking-wide mb-4">Company</h3>
+            <ul class="text-[#03519E] space-y-1.5">
+              <li>
+                <a
+                  href="./contact.html"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./ourStory.html"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./privacy.html"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./termsCondition.html"
+                  class="inline-flex items-center gap-2 py-1 font-normal hover:font-medium hover:text-[#c71826] transition"
+                >
+                  <i class="fa fa-chevron-right text-[10px] leading-none"></i>
+                  Terms & Conditions
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand + Location + Social -->
+      <div class="max-w-7xl mx-auto px-4 pb-10 my-10">
+        <div
+          class="relative rounded-2xl border border-[#1F3A7A]/30 overflow-hidden shadow-sm"
+        >
+          <!-- translucent overlay -->
+          <div class="absolute inset-0 bg-white/50"></div>
+
+          <div
+            class="absolute inset-0 backdrop-blur-lg backdrop-saturate-150"
+          ></div>
+
+          <!-- content -->
+          <div class="relative p-6 md:p-8">
+            <div
+              class="grid gap-8 md:grid-cols-3 md:divide-x md:divide-[#1F3A7A]/20"
+            >
+              <!-- Left: Brand -->
+              <div class="md:pr-6">
+                <div class="flex items-center gap-3">
+                  <img
+                    src="./assets/markline 1.png"
+                    alt="markline"
+                    class="h-10 w-auto"
+                  />
+                </div>
+                <p class="mt-4 text-[#03519E] leading-7 font-light">
+                  Guiding Nepalese students to top international universities
+                  with expert support and care.
+                </p>
+              </div>
+
+              <!-- Center: Location -->
+              <div class="md:px-6">
+                <h4 class="text-xl font-medium tracking-wide mb-4">Location</h4>
+                <ul class="space-y-3 text-[#234]">
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-location-dot text-[#E31E26] mt-1"></i>
+                    <span>Kathmandu, Nepal</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-phone text-[#E31E26] mt-1"></i>
+                    <span>+977 984 784 5682</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-envelope text-[#E31E26] mt-1"></i>
+                    <span>marklineinfo@gmail.com</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Right: Social -->
+              <div class="md:pl-6">
+                <h4 class="text-xl font-medium tracking-wide mb-4">
+                  Follow Us
+                </h4>
+                <div class="flex items-center gap-4">
+                  <a
+                    href="#"
+                    class="w-11 h-11 grid place-items-center rounded-full bg-white shadow hover:shadow-md transition"
+                  >
+                    <i
+                      class="fa-brands fa-facebook-f text-[#09315B] text-lg"
+                    ></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-11 h-11 grid place-items-center rounded-full bg-white shadow hover:shadow-md transition"
+                  >
+                    <i
+                      class="fa-brands fa-instagram text-[#09315B] text-lg"
+                    ></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-11 h-11 grid place-items-center rounded-full bg-white shadow hover:shadow-md transition"
+                  >
+                    <i
+                      class="fa-brands fa-linkedin-in text-[#09315B] text-lg"
+                    ></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-11 h-11 grid place-items-center rounded-full bg-white shadow hover:shadow-md transition"
+                  >
+                    <i class="fa-brands fa-youtube text-[#09315B] text-lg"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Bottom bar -->
-      <div
-        class="border-t border-[#1F3A7A] flex flex-col md:flex-row justify-between items-center px-6 py-4 text-sm text-[#02519e] tracking-wide font-light"
-      >
-        <p>Copyright © 2025 Markline || All Rights Reserved</p>
-        <div
-          class="flex items-center gap-6 mt-2 md:mt-0 text-[#02519e] tracking-wider font-light"
-        >
-          <a href="./termsCondition.html" class="">Terms & Conditions</a>|
-          <a href="./privacy.html" class="">Privacy Policy</a>|
-          <a href="./disclaimer.html" class="">Disclaimer</a>
+      <!-- Accreditation row  -->
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <img
+            src="./assets/qeac.png"
+            class="bg-white p-3 rounded shadow h-14 w-28 object-contain"
+            alt="acc"
+          />
+          <img
+            src="./assets/qeac.png"
+            class="bg-white p-3 rounded shadow h-14 w-28 object-contain"
+            alt="acc"
+          />
+          <img
+            src="./assets/qeac.png"
+            class="bg-white p-3 rounded shadow h-14 w-28 object-contain"
+            alt="acc"
+          />
+          <img
+            src="./assets/qeac.png"
+            class="bg-white p-3 rounded shadow h-14 w-28 object-contain"
+            alt="acc"
+          />
+          <img
+            src="./assets/qeac.png"
+            class="bg-white p-3 rounded shadow h-14 w-28 object-contain"
+            alt="acc"
+          />
+          <img
+            src="./assets/qeac.png"
+            class="bg-white p-3 rounded shadow h-14 w-28 object-contain"
+            alt="acc"
+          />
         </div>
-        <div class="flex justify-between gap-2">
-          <p class="mt-2 md:mt-0 flex items-center">Developed by</p>
-          <img src="./assets/Blue Logo.png" class="h-7 w-auto" alt="" />
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="mt-10 border-t border-[#1F3A7A]/30">
+        <div
+          class="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#02519e]"
+        >
+          <!-- Left: Markline logo + copyright -->
+          <div class="flex items-center gap-3">
+            <p>Copyright © 2025 Markline • All Rights Reserved</p>
+          </div>
+
+          <!-- Center: policies -->
+          <div class="flex items-center gap-4">
+            <a href="./termsCondition.html" class="hover:text-[#c71826]"
+              >Terms & Conditions</a
+            >
+            <span class="opacity-40">|</span>
+            <a href="./privacy.html" class="hover:text-[#c71826]"
+              >Privacy Policy</a
+            >
+            <span class="opacity-40">|</span>
+            <a href="./disclaimer.html" class="hover:text-[#c71826]"
+              >Disclaimer</a
+            >
+          </div>
+
+          <!-- Right: Developed by KIT -->
+          <div class="flex items-center gap-2">
+            <span class="text-[#03519E]">Developed by</span>
+            <img src="./assets/Blue Logo.png" class="h-7 w-auto" alt="KIT" />
+          </div>
         </div>
       </div>
 
       <!-- Back to top -->
       <div id="backToTop" class="fixed bottom-20 right-6 hidden">
         <button
-          class="w-12 h-12 rounded-full border border-[#1F3A7A] text-[#1F3A7A]"
+          class="w-12 h-12 rounded-full border border-[#1F3A7A] text-[#1F3A7A] bg-white/70 backdrop-blur"
         >
           <i class="fa-solid fa-chevron-up text-2xl text-[#E31E26]"></i>
         </button>
       </div>
     </footer>
-    <!-- mobile footer-->
-    <footer
-      class="md:hidden bg-[#ECF1FE] text-[#1F3A7A] border border-[#1F3A7A]"
-    >
-      <!-- Logo -->
-      <div class="px-5 pt-4 pb-2">
-        <img
-          src="./assets/markline 1.png"
-          alt="markline"
-          class="h-10 w-auto block mx-auto md:mx-0"
-        />
-      </div>
-
-      <!-- Contact blocks -->
-      <div class="px-5 pb-4 space-y-5 mt-5">
-        <!-- Address -->
-        <div class="flex items-center gap-4">
-          <span
-            class="grid place-items-center w-12 h-12 rounded-full border border-[#1F3A7A]"
-          >
-            <i class="fa-solid fa-location-dot text-[#E31E26] text-xl"></i>
-          </span>
-          <div class="flex-1">
-            <p class="text-sm opacity-80">Address:</p>
-            <p class="font-medium">Kathmandu, Nepal</p>
-          </div>
-        </div>
-        <hr class="border-[#1F3A7A]" />
-
-        <!-- Phone -->
-        <div class="flex items-center gap-4">
-          <span
-            class="grid place-items-center w-12 h-12 rounded-full border border-[#1F3A7A]"
-          >
-            <i class="fa-solid fa-phone text-[#E31E26] text-xl"></i>
-          </span>
-          <div class="flex-1">
-            <p class="text-sm opacity-80">Phone:</p>
-            <p class="font-medium">+977 984 784 5682</p>
-          </div>
-        </div>
-        <hr class="border-[#1F3A7A]" />
-
-        <!-- Email -->
-        <div class="flex items-center gap-4">
-          <span
-            class="grid place-items-center w-12 h-12 rounded-full border border-[#1F3A7A]"
-          >
-            <i class="fa-solid fa-envelope text-[#E31E26] text-xl"></i>
-          </span>
-          <div class="flex-1">
-            <p class="text-sm opacity-80">Email:</p>
-            <p class="font-medium break-words">marklineinfo@gmail.com</p>
-          </div>
-        </div>
-        <hr class="border-[#1F3A7A]" />
-      </div>
-
-      <!-- Quick Links -->
-      <div class="px-5 pb-4 mt-5">
-        <h3 class="font-semibold mb-3">Quick Links</h3>
-        <ul class="space-y-4">
-          <li>
-            <a class="flex items-center gap-3" href="#"><span>›</span> Home</a>
-          </li>
-          <li>
-            <a class="flex items-center gap-3" href="./ourStory.html"
-              ><span>›</span> Our Story</a
-            >
-          </li>
-          <li>
-            <a class="flex items-center gap-3" href="./services.html"
-              ><span>›</span> Services</a
-            >
-          </li>
-          <li>
-            <a class="flex items-center gap-3" href="./studyDestination.html"
-              ><span>›</span> Study Destinations</a
-            >
-          </li>
-          <li>
-            <a class="flex items-center gap-3" href="./contact.html"
-              ><span>›</span> Contact Us</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <!-- Student Resources -->
-      <div class="px-5 pb-4 mt-5">
-        <h3 class="font-semibold mb-3">Student Resources</h3>
-        <ul class="space-y-4">
-          <li>
-            <a class="flex items-center gap-3" href="#"
-              ><span>›</span> International Student Guide</a
-            >
-          </li>
-          <li>
-            <a class="flex items-center gap-3" href="#"
-              ><span>›</span> Test Preparation Guide</a
-            >
-          </li>
-          <li>
-            <a class="flex items-center gap-3" href="#"
-              ><span>›</span> Sample Documents</a
-            >
-          </li>
-          <li>
-            <a class="flex items-center gap-3" href="#"
-              ><span>›</span> Webinar Form</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <!-- Accreditation -->
-      <div class="px-5 pb-6 mt-5">
-        <h3 class="font-semibold mb-3">Accreditation</h3>
-        <div class="grid grid-cols-3 gap-3">
-          <img
-            src="./assets/qeac.png"
-            alt="QEAC"
-            class="bg-white p-2 rounded shadow"
-          />
-          <img
-            src="./assets/qeac.png"
-            alt="QEAC"
-            class="bg-white p-2 rounded shadow"
-          />
-          <img
-            src="./assets/qeac.png"
-            alt="QEAC"
-            class="bg-white p-2 rounded shadow"
-          />
-          <img
-            src="./assets/qeac.png"
-            alt="QEAC"
-            class="bg-white p-2 rounded shadow"
-          />
-          <img
-            src="./assets/qeac.png"
-            alt="QEAC"
-            class="bg-white p-2 rounded shadow"
-          />
-          <img
-            src="./assets/qeac.png"
-            alt="QEAC"
-            class="bg-white p-2 rounded shadow"
-          />
-        </div>
-      </div>
-
-      <!-- Social icons -->
-      <div class="px-5 pb-6">
-        <div class="flex justify-center gap-4">
-          <a
-            href="#"
-            class="w-10 h-10 grid place-items-center rounded-full bg-white text-[#09315B]"
-            ><i class="fa-brands fa-facebook-f"></i
-          ></a>
-          <a
-            href="#"
-            class="w-10 h-10 grid place-items-center rounded-full bg-white text-[#09315B]"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="#"
-            class="w-10 h-10 grid place-items-center rounded-full bg-white text-[#09315B]"
-            ><i class="fa-brands fa-linkedin-in"></i
-          ></a>
-          <a
-            href="#"
-            class="w-10 h-10 grid place-items-center rounded-full bg-white text-[#09315B]"
-            ><i class="fa-brands fa-youtube"></i
-          ></a>
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="px-5 pb-3 text-center text-xs opacity-80 font-light">
-        Copyright © 2025Markline || All Rights Reserved
-      </div>
-
-      <!-- Policy links -->
-      <div class="px-5 pb-5 text-center text-sm font-light">
-        <a href="./termsCondition.html" class="px-2">Terms &amp; Conditions</a>
-        <span class="opacity-50">|</span>
-        <a href="./privacy.html" class="px-2">Privacy Policy</a>
-        <span class="opacity-50">|</span>
-        <a href="./disclaimer.html" class="px-2">Disclaimer</a>
-      </div>
-
-      <!-- Bottom bar -->
-      <div
-        class="border-y border-[#1F3A7A] px-5 py-3 text-sm flex items-center justify-center gap-4"
-      >
-        <span class="opacity-80">Designed By</span>
-        <img src="./assets/Blue Logo.png" class="h-5 w-auto" alt="KIT" />
-      </div>
-
-      <div class="bg-[#0E3A5A] py-3">
-        <div class="max-w-sm mx-auto flex items-center justify-center gap-5">
-          <a
-            href="#"
-            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#03519E] hover:bg-[#0D5198] text-white"
-          >
-            <span class="w-6 h-6 grid place-items-center">
-              <img src="./assets/WhatsApp.webp" alt="" />
-            </span>
-            <span class="text-sm tracking-wide">Consult</span>
-          </a>
-
-          <!-- Messenger -->
-          <a
-            href="#"
-            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#03519E] hover:bg-[#0D5198] text-white"
-          >
-            <span class="w-5 h-5 grid place-items-center">
-              <img src="./assets/messanger.png" alt="" />
-            </span>
-            <span class="text-sm tracking-wide">Consult</span>
-          </a>
-
-          <!-- Enquire -->
-          <a
-            href="#"
-            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#03519E] hover:bg-[#0D5198] text-white"
-          >
-            <span class="w-6 h-6 grid place-items-center">
-              <i class="fa-regular fa-rectangle-list text-white text-lg"></i>
-            </span>
-            <span class="text-sm tracking-wide">Enquire</span>
-          </a>
-        </div>
-      </div>
-    </footer>
-
     <!-- scripts -->
     <script src="./scripts/menu.js"></script>
+    <script src="./scripts/index-video.js"></script>
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
