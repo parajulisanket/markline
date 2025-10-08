@@ -186,3 +186,23 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.persisted) play();
   });
 })();
+
+// footer scroll up
+document.addEventListener("DOMContentLoaded", () => {
+  const footer = document.getElementById("footerSection");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          footer.classList.remove("opacity-0", "translate-y-10");
+          footer.classList.add("opacity-100", "translate-y-0");
+          observer.unobserve(footer);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer.observe(footer);
+});

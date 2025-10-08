@@ -241,3 +241,19 @@ body {
 #videoStrip.no-snap {
   scroll-snap-type: none !important;
 }
+
+/* for who says dreams dont fly part */
+.hero-content div.overflow-y-auto {
+  scroll-behavior: smooth;
+}
+
+.hero-content div.overflow-y-auto::-webkit-scrollbar {
+  width: 3px;
+}
+.hero-content div.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: #c7d2fe;
+  border-radius: 6px;
+}
+.hero-content div.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f9fafc;
+}
