@@ -45,6 +45,14 @@ body {
   word-spacing: 2px;
   margin-bottom: 12px;
 }
+@media (max-width: 640px) {
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    word-spacing: 1px;
+    line-height: 1.25;
+  }
+}
 
 .sub-heading {
   font-family: "Montserrat", sans-serif;

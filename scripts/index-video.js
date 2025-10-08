@@ -4,48 +4,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.getElementById("nextBtn");
   if (!strip) return;
 
-  // Duplicate content twice for perfect infinite loop
+  // ====== Infinite Loop Setup (same idea) ======
   const original = strip.innerHTML;
   strip.insertAdjacentHTML("beforeend", original + original);
-
   let loopWidth = strip.scrollWidth / 2;
-  let speed = 2.8; // adjust flow speed
+  let speed = 2.8; // marquee speed
   let paused = false;
 
   strip.classList.add("no-snap");
 
-  // Smooth infinite loop
   function animate() {
     if (!paused) {
       strip.scrollLeft += speed;
-      if (strip.scrollLeft >= loopWidth) {
-        strip.scrollLeft = 0;
-      }
+      if (strip.scrollLeft >= loopWidth) strip.scrollLeft = 0;
     }
     requestAnimationFrame(animate);
   }
   requestAnimationFrame(animate);
 
-  // Pause/resume handlers
   const pause = () => (paused = true);
   const resume = () => (paused = false);
 
-  // Pause when hovering only inside carousel area
   strip.addEventListener("mouseenter", pause);
   strip.addEventListener("mouseleave", resume);
-
-  // Recalculate on resize
   window.addEventListener("resize", () => (loopWidth = strip.scrollWidth / 2));
 
-  // === Manual Arrow Controls ===
-  const step = 324; // distance per click
+  // ====== Arrow Controls (wrap-safe) ======
+  const step = 324; // distance per click (card width + gap)
   prevBtn?.addEventListener("click", () => {
     pause();
     strip.scrollLeft -= step;
     if (strip.scrollLeft < 0) strip.scrollLeft += loopWidth;
-    setTimeout(resume, 400); // resume after short delay
+    setTimeout(resume, 400);
   });
-
   nextBtn?.addEventListener("click", () => {
     pause();
     strip.scrollLeft += step;
@@ -53,15 +44,61 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(resume, 400);
   });
 
-  // === Video Play Logic ===
+  // ====== Modal / Iframe Setup ======
+  const modal = document.getElementById("videoModal");
+  const frame = document.getElementById("videoFrame");
+  const closeBtn = document.getElementById("closeVideo");
+
+  function openModal(embedUrl) {
+    try {
+      const url = new URL(embedUrl, window.location.href);
+      // Autoplay niceties
+      if (!url.searchParams.has("autoplay"))
+        url.searchParams.set("autoplay", "1");
+      if (!url.searchParams.has("rel")) url.searchParams.set("rel", "0");
+      frame.src = url.toString();
+    } catch {
+      frame.src = embedUrl; // if already a full URL
+    }
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.classList.add("overflow-hidden");
+    pause(); // pause marquee while modal is open
+  }
+
+  function closeModal() {
+    frame.src = ""; // stop playback
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.classList.remove("overflow-hidden");
+    resume();
+  }
+
+  closeBtn?.addEventListener("click", closeModal);
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal(); // overlay click
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+  });
+
+  // ====== Click handler on the strip (delegated) ======
   strip.addEventListener("click", (e) => {
     const btn = e.target.closest(".play-btn");
     if (!btn) return;
 
-    const video = btn.previousElementSibling;
-    if (!video) return;
+    // 1) Preferred: open iframe modal if data-embed is present
+    const embed = btn.getAttribute("data-embed");
+    if (embed) {
+      openModal(embed);
+      return;
+    }
 
-    // Stop all other videos
+    // 2) Fallback: inline <video> play/pause (if you didn't add data-embed)
+    const video = btn.previousElementSibling;
+    if (!video || video.tagName.toLowerCase() !== "video") return;
+
+    // Stop other inline videos
     strip.querySelectorAll("video").forEach((v) => {
       if (v !== video) {
         v.pause();
@@ -71,18 +108,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Toggle current video
     if (video.paused) {
       video.play().catch(() => {});
       btn.classList.add("hidden");
-      pause(); // stop marquee while playing
+      pause();
     } else {
       video.pause();
       btn.classList.remove("hidden");
-      resume(); // resume marquee
+      resume();
     }
 
-    // Resume when video ends
     video.onended = () => {
       btn.classList.remove("hidden");
       resume();
