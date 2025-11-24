@@ -100,9 +100,9 @@ backToTopButton.addEventListener("click", () => {
 });
 
 // accordion for study destination page
-
 document.addEventListener("DOMContentLoaded", () => {
   const accRoot = document.getElementById("app-accordion");
+  if (!accRoot) return;
 
   accRoot.addEventListener("click", (e) => {
     const btn = e.target.closest(".acc-toggle");
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!panel) return;
 
-    // 1) Close everything else first
+    // Close all other items
     accRoot
       .querySelectorAll('.acc-toggle[aria-expanded="true"]')
       .forEach((openBtn) => {
@@ -123,18 +123,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const p = accRoot.querySelector(openBtn.dataset.target);
         if (p) p.style.maxHeight = "0px";
         openBtn.setAttribute("aria-expanded", "false");
-        openBtn.querySelector(".acc-chevron")?.classList.remove("rotate-90");
+        openBtn.querySelector(".acc-chevron")?.classList.remove("rotate-180");
       });
 
-    // 2) Toggle the clicked one
+    // Toggle clicked item
     if (isOpen) {
       btn.setAttribute("aria-expanded", "false");
       panel.style.maxHeight = "0px";
-      icon?.classList.remove("rotate-90"); // arrow points right
+      icon?.classList.remove("rotate-180");
     } else {
       btn.setAttribute("aria-expanded", "true");
       panel.style.maxHeight = panel.scrollHeight + "px";
-      icon?.classList.add("rotate-90"); // arrow rotates down
+      icon?.classList.add("rotate-180");
     }
   });
 
@@ -205,4 +205,49 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   observer.observe(footer);
+});
+
+// js for estemed cost
+document.addEventListener("DOMContentLoaded", () => {
+  const tuitionSelect = document.getElementById("tuition-select");
+  const lowSpan = document.getElementById("tuition-low");
+  const highSpan = document.getElementById("tuition-high");
+  const labelEl = document.getElementById("tuition-label");
+
+  if (!tuitionSelect || !lowSpan || !highSpan || !labelEl) return;
+
+  // You can change these numbers to your real values
+  const tuitionData = {
+    bachelors: {
+      low: "12,630",
+      high: "13,390",
+      label: "Bachelor’s (USD$)",
+    },
+    masters: {
+      low: "13,500",
+      high: "15,000",
+      label: "Master’s (USD$)",
+    },
+    phd: {
+      low: "10,000",
+      high: "12,000",
+      label: "PhD (USD$)",
+    },
+  };
+
+  const updateTuition = (level) => {
+    const data = tuitionData[level];
+    if (!data) return;
+
+    lowSpan.textContent = data.low;
+    highSpan.textContent = data.high;
+    labelEl.textContent = data.label;
+  };
+
+  // initial state (matches default option)
+  updateTuition(tuitionSelect.value);
+
+  tuitionSelect.addEventListener("change", () => {
+    updateTuition(tuitionSelect.value);
+  });
 });
