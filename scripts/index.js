@@ -212,26 +212,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const tuitionSelect = document.getElementById("tuition-select");
   const lowSpan = document.getElementById("tuition-low");
   const highSpan = document.getElementById("tuition-high");
-  const labelEl = document.getElementById("tuition-label");
 
-  if (!tuitionSelect || !lowSpan || !highSpan || !labelEl) return;
+  if (!tuitionSelect || !lowSpan || !highSpan) return;
 
-  // You can change these numbers to your real values
   const tuitionData = {
     bachelors: {
       low: "12,630",
       high: "13,390",
-      label: "Bachelor’s (USD$)",
     },
     masters: {
       low: "13,500",
       high: "15,000",
-      label: "Master’s (USD$)",
     },
     phd: {
       low: "10,000",
       high: "12,000",
-      label: "PhD (USD$)",
     },
   };
 
@@ -241,10 +236,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     lowSpan.textContent = data.low;
     highSpan.textContent = data.high;
-    labelEl.textContent = data.label;
   };
 
-  // initial state (matches default option)
   updateTuition(tuitionSelect.value);
 
   tuitionSelect.addEventListener("change", () => {
